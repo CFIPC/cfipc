@@ -36,7 +36,7 @@
 
         .nav-link {
             letter-spacing: 0.12em;
-            font-size: 0.7rem;
+            font-size: 0.9rem; /* Increased from 0.7rem */
             font-weight: 700;
             text-transform: uppercase;
             color: var(--forest);
@@ -57,7 +57,7 @@
             transform: translateX(-50%);
             background: var(--parchment);
             border: 1px solid rgba(27, 42, 39, 0.1);
-            min-width: 180px;
+            min-width: 200px;
             display: none;
             box-shadow: 0 15px 30px rgba(0,0,0,0.08);
             z-index: 100;
@@ -75,8 +75,8 @@
 
         .dropdown-item {
             display: block;
-            padding: 0.6rem 1.25rem;
-            font-size: 0.7rem;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem; /* Increased from 0.7rem */
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: var(--forest);
@@ -130,8 +130,8 @@
         @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
 
         .mobile-group { margin-bottom: 2.5rem; }
-        .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
-        .mobile-link { display: block; padding: 0.6rem 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; }
+        .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
+        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; }
 
         .brand-logo {
             text-align: center;
@@ -142,14 +142,14 @@
         }
         
         .logo-image {
-            height: 100px; /* Doubled from 50px */
+            height: 100px;
             width: auto;
             object-fit: contain;
             transition: height 0.3s ease;
         }
         
         @media (min-width: 768px) {
-            .logo-image { height: 150px; } /* Doubled from 75px */
+            .logo-image { height: 150px; }
         }
 
         ::-webkit-scrollbar { width: 4px; }
@@ -223,7 +223,7 @@
     <!-- Main Navigation Header -->
     <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
         <div class="max-w-[1600px] mx-auto px-4 md:px-8">
-            <div class="flex justify-between items-center h-32 md:h-48"> <!-- Increased height to fit larger logo -->
+            <div class="flex justify-between items-center h-32 md:h-48">
                 
                 <!-- Left Section -->
                 <div class="flex-1 flex justify-start items-center">
@@ -259,7 +259,7 @@
                     </div>
                 </div>
 
-                <!-- Central Identity (Logo Doubled) -->
+                <!-- Central Identity -->
                 <div class="brand-logo cursor-pointer group px-2" onclick="showPage('home')">
                     <img src="Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
                     <div id="fallback-logo" class="hidden text-center">
@@ -298,13 +298,13 @@
         </div>
     </nav>
 
-    <main class="pt-32 md:pt-48"> <!-- Adjusted padding for taller header -->
+    <main class="pt-32 md:pt-48">
 
         <!-- PAGE: HOME -->
         <section id="home" class="page-section active">
-            <!-- Hero (Updated background to home.png) -->
+            <!-- Hero -->
             <div class="relative min-h-[85vh] flex items-center bg-forest overflow-hidden">
-                <div class="absolute inset-0 opacity-20 grayscale">
+                <div class="absolute inset-0 opacity-90">
                     <img src="home.png" class="w-full h-full object-cover" alt="Competition Home" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">
                 </div>
                 <div class="max-w-[1400px] mx-auto px-8 relative z-10 w-full">
