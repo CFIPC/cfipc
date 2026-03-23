@@ -302,6 +302,619 @@
 
         <!-- PAGE: HOME -->
         <section id="home" class="page-section active">
+            <div class="relative min-h-[85vh] flex items-center bg-forest overflow-hidden">
+                <div class="absolute inset-0 opacity-80">
+                    <img src="home.png" class="w-full h-full object-cover" alt="Competition Home" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">
+                </div>
+                <div class="max-w-[1400px] mx-auto px-8 relative z-10 w-full">
+                    <div class="max-w-4xl">
+                        <h1 class="text-copper italic font-bold text-3xl md:text-5xl lg:text-6xl serif leading-none mb-3">
+                            César Franck International Piano Competition
+                        </h1>
+                        <p class="text-copper text-[10px] md:text-xs uppercase tracking-[0.4em] mb-12">
+                            14th Edition | 18-20 December 2026
+                        </p>
+                        
+                        <div class="flex flex-col md:flex-row items-center gap-10">
+                            <button onclick="showPage('contact')" class="btn-copper px-10 py-5 text-[10px] uppercase font-bold tracking-[0.3em] rounded-sm hover:opacity-90 transition w-full md:w-auto">Apply Now</button>
+                            <div class="flex flex-col">
+                                <p class="text-copper text-sm font-light leading-relaxed max-w-sm text-center md:text-left">
+                                    Honoring the legacy of César Franck. Providing an international stage for the next generation of musical talent in Brussels.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="py-32 px-8 bg-[#F2F0E9]">
+                <div class="max-w-[1000px] mx-auto">
+                    <div class="text-center mb-16">
+                        <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Our Mission</h4>
+                        <h2 class="text-4xl md:text-5xl serif italic text-forest">Artistic Excellence & Education</h2>
+                    </div>
+                    <div class="space-y-10 text-stone-500 text-lg md:text-xl font-light leading-relaxed text-center">
+                        <p>Established in 2013 by Belgian pianist Philippe Raskin, the CFIPC mission is to encourage new generations of young pianists to transcend their own capabilities by providing an international platform.</p>
+                        <p>With 70 participants originating from more than 25 different countries and an internationally acclaimed jury in 2024, the César Franck has already established itself as a leading competition for young musicians worldwide.</p>
+                        <p>The incorporation of the competition, concerts and education program as a yearly event symbolizes our commitment and passion to the advancement of culture and education.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-32 px-8 bg-[#1B2A27]">
+                <div class="max-w-[1400px] mx-auto">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
+                        <div class="text-copper flex-grow max-w-2xl text-left">
+                            <h2 class="text-5xl md:text-6xl serif italic mb-10 text-parchment leading-tight">Competition & <br><span class="text-copper">Concert Venue</span></h2>
+                            <div class="space-y-8">
+                                <div>
+                                    <h5 class="text-[10px] uppercase font-bold text-copper mb-2 tracking-[0.2em]">Location</h5>
+                                    <p class="text-2xl md:text-3xl serif italic">GC De Lijsterbes</p>
+                                    <p class="font-light mt-2 leading-relaxed text-lg">Lijsterbessenbomenlaan 6,<br>1950 Kraainem BELGIUM</p>
+                                </div>
+                                <div class="pt-4">
+                                    <a href="https://maps.google.com/maps?q=Lijsterbessenbomenlaan%206,%201950%20Kraainem,%20Belgium" target="_blank" class="btn-copper inline-block px-8 py-4 text-[9px] uppercase font-bold tracking-widest rounded-sm hover:opacity-90 transition shadow-lg">Get Directions</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-[640px] aspect-[16/9] bg-stone-800 shadow-2xl overflow-hidden rounded-sm relative grayscale hover:grayscale-0 transition-all duration-700 border border-copper/20 flex-shrink-0">
+                            <iframe width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5732126284687!2d4.473286977209176!3d50.85761665774052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3db377f0f0815%3A0x6d8b2847c29377f0!2sDe%20Lijsterbes!5e0!3m2!1sen!2sbe!4v1710584447385!5m2!1sen!2sbe"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-24 px-8 border-t border-forest/5 bg-white">
+                <div class="max-w-[1400px] mx-auto text-center">
+                    <h4 class="text-stone-400 uppercase tracking-[0.4em] text-[8px] font-bold mb-12">Our Partners</h4>
+                    <div class="flex justify-center items-center">
+                        <img src="partners.png" alt="CFIPC Partners" class="max-w-full h-auto opacity-70 hover:opacity-100 transition duration-700" onerror="this.src='https://via.placeholder.com/1200x200?text=Partners+Image+Logo+Strip'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE: RULES (COMPREHENSIVE UPDATE) -->
+        <section id="rules" class="page-section py-32 px-4 md:px-8">
+            <div class="max-w-[1200px] mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-24">
+                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Regulations 2026</h4>
+                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Rules & Regulations</h2>
+                    <p class="text-stone-400 uppercase tracking-[0.2em] text-[10px] mt-6">Application Deadline: November 1st, 2026</p>
+                </div>
+
+                <!-- 1. APPLICATION & CATEGORIES -->
+                <div class="mb-32">
+                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Application & Categories</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                        <!-- Category A -->
+                        <div class="bg-white p-8 border border-forest/5 shadow-sm rounded-sm text-center">
+                            <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest mb-4">Category A</h4>
+                            <p class="text-xl serif mb-2 italic">Ages 10 & Under</p>
+                            <p class="text-stone-400 text-[10px] uppercase tracking-widest mb-6">Fee: €80</p>
+                            <div class="space-y-2 pt-4 border-t border-forest/5 text-xs text-stone-500">
+                                <p>Semi-Final: 6 min</p>
+                                <p>Final: 10 min</p>
+                            </div>
+                        </div>
+                        <!-- Category B -->
+                        <div class="bg-white p-8 border border-forest/5 shadow-sm rounded-sm text-center">
+                            <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest mb-4">Category B</h4>
+                            <p class="text-xl serif mb-2 italic">Ages 11 — 13</p>
+                            <p class="text-stone-400 text-[10px] uppercase tracking-widest mb-6">Fee: €90</p>
+                            <div class="space-y-2 pt-4 border-t border-forest/5 text-xs text-stone-500">
+                                <p>Semi-Final: 8 min</p>
+                                <p>Final: 12 min</p>
+                            </div>
+                        </div>
+                        <!-- Category C -->
+                        <div class="bg-white p-8 border border-forest/5 shadow-sm rounded-sm text-center">
+                            <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest mb-4">Category C</h4>
+                            <p class="text-xl serif mb-2 italic">Ages 14 — 16</p>
+                            <p class="text-stone-400 text-[10px] uppercase tracking-widest mb-6">Fee: €100</p>
+                            <div class="space-y-2 pt-4 border-t border-forest/5 text-xs text-stone-500">
+                                <p>Semi-Final: 10 min</p>
+                                <p>Final: 15 min</p>
+                            </div>
+                        </div>
+                        <!-- Category D -->
+                        <div class="bg-white p-8 border border-forest/5 shadow-sm rounded-sm text-center">
+                            <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest mb-4">Category D</h4>
+                            <p class="text-xl serif mb-2 italic">Ages 17 — 21</p>
+                            <p class="text-stone-400 text-[10px] uppercase tracking-widest mb-6">Fee: €110</p>
+                            <div class="space-y-2 pt-4 border-t border-forest/5 text-xs text-stone-500">
+                                <p>Semi-Final: 15 min</p>
+                                <p>Final: 30 min</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-10 border-l-4 border-copper shadow-sm">
+                            <h5 class="serif text-2xl italic mb-6">Bank Transfer Details</h5>
+                            <div class="space-y-3 text-sm text-stone-600 font-light">
+                                <p><span class="font-bold text-forest">Account Name:</span> CFIPC</p>
+                                <p><span class="font-bold text-forest">Bank:</span> BNP Paribas Fortis</p>
+                                <p><span class="font-bold text-forest">IBAN:</span> BE28 0016 9098 3620</p>
+                                <p><span class="font-bold text-forest">BIC:</span> GEBABEBB</p>
+                                <p class="pt-4 italic text-stone-400">Reference: CFIPC 2026 + Full Name + Category</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-10 border-l-4 border-forest shadow-sm">
+                            <h5 class="serif text-2xl italic mb-6">PayPal Option</h5>
+                            <p class="text-sm text-stone-600 mb-6 font-light">Pay via PayPal to <span class="font-bold">office@cfipc.com</span>.</p>
+                            <div class="bg-parchment p-6 rounded-sm">
+                                <p class="text-xs text-forest/70 uppercase tracking-widest font-bold">Important Note</p>
+                                <p class="text-sm italic mt-2">Please note that there is a €5 surcharge for the transfer fee on top of the application fee should you wish to pay using PayPal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. PROGRAM -->
+                <div class="mb-32">
+                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Program Requirements</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div class="space-y-8 text-stone-600 font-light leading-relaxed">
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-copper/10 text-copper flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                                <p>Free program for Categories A & B. Categories C & D must include at least <span class="text-forest font-bold">one movement from a "Viennese Classic"</span> composer (Haydn, Mozart, or Beethoven) in their Finals program.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-copper/10 text-copper flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                                <p>It is recommended (but not obligatory) to include at least one piece by a <span class="text-forest font-bold">Belgian composer</span> in either round.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-copper/10 text-copper flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                                <p><span class="text-forest font-bold">Memory interpretation</span> is required for both rounds, except for certain contemporary pieces (approval required).</p>
+                            </div>
+                        </div>
+                        <div class="space-y-8 text-stone-600 font-light leading-relaxed">
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-forest/5 text-forest flex items-center justify-center flex-shrink-0 font-bold">4</div>
+                                <p>Semi-final programs cannot be changed after submission. Finals programs may be updated until <span class="text-forest font-bold">15th November 2026</span>.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 rounded-full bg-forest/5 text-forest flex items-center justify-center flex-shrink-0 font-bold">5</div>
+                                <p>Finalists must scan and send their scores (Urtext/Original) to office@cfipc.com before 15th November. Failure to submit risks disqualification.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. SEMI-FINALS (ONLINE) -->
+                <div class="mb-32 bg-forest p-12 md:p-20 rounded-sm text-parchment shadow-2xl">
+                    <h3 class="serif text-4xl italic mb-12 text-copper">Semi-Finals (Online)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm opacity-90 leading-relaxed font-light">
+                        <ul class="space-y-6">
+                            <li class="flex gap-4"><span class="text-copper">•</span> No audio editing permitted; edited videos will be disqualified.</li>
+                            <li class="flex gap-4"><span class="text-copper">•</span> Recordings must be made in 2026 in one single take without cuts.</li>
+                            <li class="flex gap-4"><span class="text-copper">•</span> Upload to YouTube, Vimeo, Dropbox, etc. (No WeTransfer/DVD).</li>
+                        </ul>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4"><span class="text-copper">•</span> Upright pianos and smartphone recordings are accepted and will not be penalized.</li>
+                            <li class="flex gap-4"><span class="text-copper">•</span> A maximum of 5 finalists per category will be selected.</li>
+                            <li class="flex gap-4"><span class="text-copper">•</span> Results announced on 10th November 2026.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. PRIZES -->
+                <div class="mb-32">
+                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4 text-center">Prizes</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+                        <div class="p-8 border border-copper/20 text-center">
+                            <h4 class="text-copper font-bold text-xs mb-4">CAT A</h4>
+                            <p class="text-sm">1st: €100 / 2nd: €50</p>
+                            <p class="text-[10px] mt-2 italic">3rd: IMF Paris Masterclass</p>
+                        </div>
+                        <div class="p-8 border border-copper/20 text-center">
+                            <h4 class="text-copper font-bold text-xs mb-4">CAT B</h4>
+                            <p class="text-sm">1st: €200 / 2nd: €80</p>
+                            <p class="text-[10px] mt-2 italic">3rd: IMF Paris Masterclass</p>
+                        </div>
+                        <div class="p-8 border border-copper/20 text-center">
+                            <h4 class="text-copper font-bold text-xs mb-4">CAT C</h4>
+                            <p class="text-sm">1st: €300 / 2nd: €120</p>
+                            <p class="text-[10px] mt-2 italic">3rd: IMF Paris Masterclass</p>
+                        </div>
+                        <div class="p-8 border border-copper/20 text-center">
+                            <h4 class="text-copper font-bold text-xs mb-4">CAT D</h4>
+                            <p class="text-sm">1st: €1000 / 2nd: €400</p>
+                            <p class="text-[10px] mt-2 italic">3rd: IMF Paris Masterclass</p>
+                        </div>
+                    </div>
+                    <div class="bg-copper text-forest p-10 text-center rounded-sm">
+                        <h5 class="serif text-3xl italic mb-4">Special Performance Opportunities</h5>
+                        <p class="max-w-3xl mx-auto font-light leading-relaxed">1st Prize winners from each category will have the opportunity to <span class="font-bold">play with orchestra in April 2027</span>. Additionally, a concert opportunity in Milano will be offered to one winner by Vincenzo Balzani.</p>
+                    </div>
+                </div>
+
+                <!-- 5. GENERAL RULES -->
+                <div>
+                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">General Regulations</h3>
+                    <div class="space-y-6 text-sm text-stone-600 font-light max-w-4xl">
+                        <p>1. Open to pianists of all nationalities aged 21 or less at the time of the Finals (Dec 18-20, 2026).</p>
+                        <p>2. Application requires: CV, high-res photo, passport scan, supervising adult scan (if under 18), proof of payment, and program details.</p>
+                        <p>3. Candidacy confirmed only after application fee receipt.</p>
+                        <p>4. Jury decisions are final and not subject to reviews or appeals.</p>
+                        <p>5. Organizers reserve the right to record all performances for broadcast and archival purposes.</p>
+                        <p>6. Minors must be accompanied by a responsible adult at all times during the competition period.</p>
+                        <p>7. Travel and accommodation costs are the responsibility of the participants.</p>
+                        <p>8. The competition venue is Community Centre De Lijsterbes. Participants are advised to check personal insurance coverage.</p>
+                        <p>9. Teacher names are not printed in the jury program; jury members do not vote for their own students.</p>
+                        <p>10. Rules may be subject to change without notice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OTHER PAGES -->
+        <section id="about" class="page-section py-32 px-8">
+            <div class="max-w-[1200px] mx-auto text-center">
+                <h2 class="text-5xl serif italic mb-24">The Legacy</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center text-left">
+                    <div>
+                        <p class="text-stone-500 text-lg font-light leading-relaxed mb-8">Founded in 2013 by Belgian pianist <strong>Philippe Raskin</strong>, the CFIPC was born from a desire to encourage young pianists to transcend their own capabilities.</p>
+                        <p class="text-stone-500 text-lg font-light leading-relaxed mb-8">Located in the heart of Europe, the competition has welcomed participants from over 30 countries, establishing itself as a premier destination for piano education and excellence.</p>
+                    </div>
+                    <div class="bg-forest p-12 rounded-sm text-parchment italic shadow-xl">
+                        <p class="serif text-2xl mb-8 leading-relaxed">"Music is the expression of the movement of the soul. We listen to that movement in every artist who performs with us."</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-copper">— President's Note</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="masterclasses" class="page-section py-32 px-8"></section>
+        <section id="jury" class="page-section py-32 px-8"></section>
+        <section id="laureates" class="page-section py-32 px-8"></section>
+        <section id="media" class="page-section py-32 px-8"></section>
+        <section id="gallery" class="page-section py-32 px-8"></section>
+        <section id="contact" class="page-section py-32 px-8"></section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-forest text-copper pt-32 pb-16 px-8 mt-20">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="flex flex-col lg:flex-row justify-start items-start gap-16 lg:gap-32 mb-24">
+                <div class="w-full lg:max-w-xl">
+                    <h4 class="text-copper text-[10px] uppercase tracking-widest font-bold mb-8">Get in Touch</h4>
+                    <form action="#" method="POST" class="space-y-4">
+                        <input type="text" name="name" placeholder="Full Name" required class="footer-input">
+                        <input type="email" name="email" placeholder="Email Address" required class="footer-input">
+                        <textarea name="message" placeholder="Your Message" rows="3" required class="footer-input resize-none"></textarea>
+                        <button type="submit" class="w-full py-3 bg-copper text-forest text-[10px] uppercase font-bold tracking-widest rounded hover:opacity-90 transition">Send Message</button>
+                    </form>
+                </div>
+                <div class="w-full lg:w-auto">
+                    <h4 class="text-copper text-[10px] uppercase tracking-widest font-bold mb-8">Follow Us</h4>
+                    <div class="flex space-x-3 mb-8">
+                        <a href="https://facebook.com" class="social-box footer-social-box" target="_blank"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="https://instagram.com" class="social-box footer-social-box" target="_blank"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="mailto:office@cfipc.com" class="social-box footer-social-box"><i data-lucide="mail" class="w-5 h-5"></i></a>
+                    </div>
+                    <div class="text-sm font-light">
+                        <p class="mb-2">office@cfipc.com</p>
+                        <p>Brussels, Belgium</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[0.3em] font-light text-center md:text-left space-y-4 md:space-y-0">
+                <p>&copy; The Music Agency 2026</p>
+                <div class="flex space-x-8">
+                    <a href="#" class="hover:underline transition">Privacy Policy</a>
+                    <a href="#" class="hover:underline transition">Terms & Conditions</a>
+                    <a href="#" class="hover:underline transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(s => s.classList.remove('active'));
+            
+            const target = document.getElementById(pageId);
+            if(target) {
+                target.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobile-nav-overlay');
+            if (overlay.classList.contains('open')) {
+                overlay.classList.remove('open');
+                setTimeout(() => { overlay.style.display = 'none'; }, 400);
+                document.body.style.overflow = 'auto';
+            } else {
+                overlay.style.display = 'flex';
+                setTimeout(() => { overlay.classList.add('open'); }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.replace('#', '');
+            if(hash) showPage(hash);
+        });
+    </script>
+</body>
+</html>        .nav-link {
+            letter-spacing: 0.12em;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--forest);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+        .nav-link:hover { color: var(--copper); }
+
+        .dropdown-container { position: relative; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--parchment);
+            border: 1px solid rgba(27, 42, 39, 0.1);
+            min-width: 200px;
+            display: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            z-index: 100;
+            padding: 0.75rem 0;
+        }
+        .dropdown-container:hover .dropdown-menu { 
+            display: block; 
+            animation: fadeIn 0.3s ease; 
+        }
+        
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translate(-50%, 5px); } 
+            to { opacity: 1; transform: translate(-50%, 0); } 
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--forest);
+            transition: all 0.2s;
+            text-align: center;
+        }
+        .dropdown-item:hover { 
+            background: var(--forest); 
+            color: var(--copper); 
+        }
+
+        .social-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border: 1.5px solid #1B2A27;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            color: #1B2A27;
+        }
+        .social-box:hover {
+            background-color: var(--forest);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .footer-social-box {
+            border-color: var(--copper);
+            color: var(--copper);
+        }
+        .footer-social-box:hover {
+            background-color: var(--copper);
+            color: var(--forest);
+        }
+
+        #mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: var(--forest);
+            z-index: 200;
+            display: none;
+            flex-direction: column;
+            padding: 4rem 2rem;
+            overflow-y: auto;
+            color: var(--parchment);
+        }
+        #mobile-nav-overlay.open { display: flex; animation: overlayIn 0.4s ease forwards; }
+        
+        @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .mobile-group { margin-bottom: 2.5rem; }
+        .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
+        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; }
+
+        .brand-logo {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-image {
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+            transition: height 0.3s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .logo-image { height: 150px; }
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--parchment); }
+        ::-webkit-scrollbar-thumb { background: var(--sage); border-radius: 10px; }
+
+        .bg-forest { background-color: var(--forest); }
+        .text-copper { color: var(--copper); }
+        .btn-copper { background-color: var(--copper); color: white; transition: all 0.3s ease; }
+        .btn-copper:hover { background-color: var(--forest); }
+        
+        .footer-input {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--copper);
+            padding: 0.75rem 1rem;
+            width: 100%;
+            font-size: 0.85rem;
+            color: var(--copper);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .footer-input::placeholder {
+            color: var(--copper);
+            opacity: 0.5;
+        }
+        .footer-input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-nav-overlay">
+        <div class="flex justify-between items-center mb-12">
+            <span class="serif italic text-2xl text-parchment">Menu</span>
+            <button onclick="toggleMobileMenu()" class="text-copper text-4xl leading-none">&times;</button>
+        </div>
+
+        <div class="mobile-group">
+            <span class="mobile-label">Competition</span>
+            <button onclick="showPage('rules'); toggleMobileMenu()" class="mobile-link">Rules</button>
+            <button onclick="showPage('contact'); toggleMobileMenu()" class="mobile-link">Application</button>
+            <button onclick="showPage('jury'); toggleMobileMenu()" class="mobile-link">Jury</button>
+            <button onclick="showPage('laureates'); toggleMobileMenu()" class="mobile-link">Laureates</button>
+        </div>
+
+        <div class="mobile-group">
+            <span class="mobile-label">Masterclasses</span>
+            <button onclick="showPage('masterclasses'); toggleMobileMenu()" class="mobile-link">Winter Festival</button>
+            <button onclick="showPage('masterclasses'); toggleMobileMenu()" class="mobile-link">Spring Festival</button>
+            <button onclick="showPage('masterclasses'); toggleMobileMenu()" class="mobile-link">Summer Festival</button>
+        </div>
+
+        <div class="mobile-group">
+            <span class="mobile-label">About</span>
+            <button onclick="showPage('contact'); toggleMobileMenu()" class="mobile-link">Contact Us</button>
+            <button onclick="showPage('about'); toggleMobileMenu()" class="mobile-link">Legacy</button>
+        </div>
+
+        <div class="mobile-group">
+            <span class="mobile-label">Gallery</span>
+            <button onclick="showPage('media'); toggleMobileMenu()" class="mobile-link">Media</button>
+            <button onclick="showPage('gallery'); toggleMobileMenu()" class="mobile-link">Pictures</button>
+        </div>
+
+        <button onclick="showPage('home'); toggleMobileMenu()" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</button>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
+        <div class="max-w-[1600px] mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-center h-32 md:h-48">
+                
+                <!-- Left Section -->
+                <div class="flex-1 flex justify-start items-center">
+                    <button class="md:hidden flex flex-col items-center justify-center space-y-1 p-2 hover:bg-forest/5 transition" onclick="toggleMobileMenu()">
+                        <div class="w-6 h-[1.5px] bg-forest"></div>
+                        <div class="w-6 h-[1.5px] bg-forest"></div>
+                    </button>
+
+                    <div class="hidden md:flex items-center space-x-6 lg:space-x-12">
+                        <div class="dropdown-container">
+                            <button class="nav-link">
+                                Competition 
+                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" onclick="showPage('rules')" class="dropdown-item">Rules</a>
+                                <a href="#" onclick="showPage('contact')" class="dropdown-item">Application</a>
+                                <a href="#" onclick="showPage('jury')" class="dropdown-item">Jury</a>
+                                <a href="#" onclick="showPage('laureates')" class="dropdown-item">Laureates</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-container">
+                            <button class="nav-link">
+                                Masterclasses 
+                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" onclick="showPage('masterclasses')" class="dropdown-item">Winter Festival</a>
+                                <a href="#" onclick="showPage('masterclasses')" class="dropdown-item">Spring Festival</a>
+                                <a href="#" onclick="showPage('masterclasses')" class="dropdown-item">Summer Festival</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Central Identity -->
+                <div class="brand-logo cursor-pointer group px-2" onclick="showPage('home')">
+                    <img src="Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
+                    <div id="fallback-logo" class="hidden text-center">
+                        <span class="serif italic text-2xl text-copper">CFIPC</span>
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="flex-1 flex justify-end items-center">
+                    <div class="hidden md:flex items-center space-x-6 lg:space-x-12">
+                        <div class="dropdown-container">
+                            <button class="nav-link">
+                                About 
+                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" onclick="showPage('contact')" class="dropdown-item">Contact Us</a>
+                                <a href="#" onclick="showPage('about')" class="dropdown-item">Legacy</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-container">
+                            <button class="nav-link">
+                                Gallery 
+                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" onclick="showPage('media')" class="dropdown-item">Media</a>
+                                <a href="#" onclick="showPage('gallery')" class="dropdown-item">Pictures</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:hidden w-10"></div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 md:pt-48">
+
+        <!-- PAGE: HOME -->
+        <section id="home" class="page-section active">
             <!-- Hero -->
             <div class="relative min-h-[85vh] flex items-center bg-forest overflow-hidden">
                 <div class="absolute inset-0 opacity-80">
