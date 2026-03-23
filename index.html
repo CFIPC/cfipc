@@ -178,7 +178,6 @@
             box-shadow: 0 4px 12px rgba(212, 163, 115, 0.1);
         }
 
-        /* Prize Specific Glass boxes */
         .prize-column-box {
             background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(10px);
@@ -218,6 +217,26 @@
             transition: all 0.3s ease;
             border-radius: 2px;
         }
+
+        /* Jury Specific Styling */
+        .jury-card {
+            background: white;
+            padding: 2rem;
+            border: 1px solid rgba(212, 163, 115, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .jury-card:hover {
+            border-color: var(--copper);
+            box-shadow: 0 10px 30px rgba(27, 42, 39, 0.03);
+        }
+        .jury-name { font-size: 1.25rem; font-weight: 600; color: var(--forest); margin-bottom: 0.25rem; }
+        .jury-country { font-size: 0.8rem; text-transform: uppercase; color: var(--copper); letter-spacing: 0.1em; font-weight: 600; }
+        .jury-role { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--sage); margin-top: 0.5rem; }
     </style>
 </head>
 <body>
@@ -347,6 +366,127 @@
                             <p class="text-copper text-sm font-light leading-relaxed max-w-sm text-center md:text-left">
                                 Honoring the legacy of César Franck. Providing an international stage for the next generation of musical talent in Brussels.
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE: JURY 2025 -->
+        <section id="jury" class="page-section py-32 px-4 md:px-8">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="text-center mb-24">
+                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">The Artistic Panel</h4>
+                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Jury 2025</h2>
+                    <p class="text-stone-400 uppercase tracking-widest text-[11px] mt-6">JURY 2026 TO BE ANNOUNCED SOON !</p>
+                </div>
+
+                <!-- Finals Jury: President -->
+                <div class="mb-20">
+                    <div class="flex items-center gap-6 mb-12">
+                        <h3 class="serif text-4xl italic text-forest">Finals Jury</h3>
+                        <div class="h-[1px] flex-grow bg-forest/5"></div>
+                    </div>
+                    
+                    <div class="flex justify-center mb-12">
+                        <div class="jury-card w-full md:w-[400px] border-copper bg-white">
+                            <div class="jury-role text-copper font-bold uppercase tracking-widest text-[10px] mb-3 not-italic">President</div>
+                            <h4 class="jury-name text-3xl">Olga Kern</h4>
+                            <span class="jury-country text-base">Russia / USA</span>
+                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                        </div>
+                    </div>
+
+                    <!-- Main Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="jury-card">
+                            <h4 class="jury-name">Svetlana Eganian</h4>
+                            <span class="jury-country">France / Armenia</span>
+                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                        </div>
+                        <div class="jury-card">
+                            <h4 class="jury-name">Gisele Nacif</h4>
+                            <span class="jury-country">USA</span>
+                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                        </div>
+                        <div class="jury-card">
+                            <h4 class="jury-name">Vincenzo Balzani</h4>
+                            <span class="jury-country">Italy</span>
+                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                        </div>
+                        <div class="jury-card">
+                            <h4 class="jury-name">Andreas Frölich</h4>
+                            <span class="jury-country">Germany</span>
+                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                        </div>
+                        <div class="jury-card">
+                            <h4 class="jury-name">Leonel Morales</h4>
+                            <span class="jury-country">Spain</span>
+                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                        </div>
+                        <div class="jury-card">
+                            <h4 class="jury-name">Fabio Witkowski</h4>
+                            <span class="jury-country">USA</span>
+                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                        </div>
+                        <div class="jury-card">
+                            <h4 class="jury-name">Guido Jardon</h4>
+                            <span class="jury-country">Belgium</span>
+                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                        </div>
+                        <div class="jury-card border-copper/40 bg-copper/5">
+                            <h4 class="jury-name">Philippe Raskin</h4>
+                            <span class="jury-country">Belgium</span>
+                            <div class="jury-role">Artistic Director</div>
+                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                        </div>
+                        <div class="jury-card">
+                            <h4 class="jury-name">Alexandre Moutouzkine</h4>
+                            <span class="jury-country">Russia / USA</span>
+                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                        </div>
+                        <div class="jury-card">
+                            <h4 class="jury-name">Steven De Mesmaeker</h4>
+                            <span class="jury-country">Belgium</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Semi-Finals Jury -->
+                <div class="bg-forest p-12 md:p-24 rounded-sm shadow-2xl text-copper relative overflow-hidden">
+                    <div class="flex items-center gap-6 mb-12">
+                        <h3 class="serif text-4xl italic text-copper">Semi-Finals Jury</h3>
+                        <div class="h-[1px] flex-grow bg-copper/20"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="glass-box">
+                            <p class="font-bold text-lg mb-1">Svetlana Eganian</p>
+                            <p class="text-xs uppercase tracking-widest opacity-60">France / Armenia</p>
+                        </div>
+                        <div class="glass-box">
+                            <p class="font-bold text-lg mb-1">Vincenzo Balzani</p>
+                            <p class="text-xs uppercase tracking-widest opacity-60">Italy</p>
+                        </div>
+                        <div class="glass-box">
+                            <p class="font-bold text-lg mb-1">Andreas Frölich</p>
+                            <p class="text-xs uppercase tracking-widest opacity-60">Germany</p>
+                        </div>
+                        <div class="glass-box">
+                            <p class="font-bold text-lg mb-1">Leonel Morales</p>
+                            <p class="text-xs uppercase tracking-widest opacity-60">Spain</p>
+                        </div>
+                        <div class="glass-box border-copper/50">
+                            <p class="font-bold text-lg mb-1">Philippe Raskin</p>
+                            <p class="text-xs uppercase tracking-widest opacity-60">Belgium</p>
+                        </div>
+                        <div class="glass-box">
+                            <p class="font-bold text-lg mb-1">Cristiana Dragos</p>
+                            <p class="text-xs uppercase tracking-widest opacity-60">Romania / Belgium</p>
+                        </div>
+                        <div class="glass-box">
+                            <p class="font-bold text-lg mb-1">Paulius Andersson</p>
+                            <p class="text-xs uppercase tracking-widest opacity-60">Lithuania</p>
                         </div>
                     </div>
                 </div>
@@ -816,8 +956,7 @@
             </div>
         </section>
 
-        <!-- Placeholders for other pages -->
-        <section id="jury" class="page-section py-32 px-8"></section>
+        <!-- Placeholder Sections -->
         <section id="laureates" class="page-section py-32 px-8"></section>
         <section id="media" class="page-section py-32 px-8"></section>
         <section id="masterclasses" class="page-section py-32 px-8"></section>
