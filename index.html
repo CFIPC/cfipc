@@ -221,22 +221,37 @@
         /* Jury Specific Styling */
         .jury-card {
             background: white;
-            padding: 2rem;
-            border: 1px solid rgba(212, 163, 115, 0.1);
+            border: 1px solid rgba(212, 163, 115, 0.15);
             text-align: center;
             transition: all 0.3s ease;
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            overflow: hidden;
+            border-radius: 2px;
         }
         .jury-card:hover {
             border-color: var(--copper);
-            box-shadow: 0 10px 30px rgba(27, 42, 39, 0.03);
+            box-shadow: 0 15px 40px rgba(27, 42, 39, 0.05);
+            transform: translateY(-4px);
         }
-        .jury-name { font-size: 1.25rem; font-weight: 600; color: var(--forest); margin-bottom: 0.25rem; }
-        .jury-country { font-size: 0.8rem; text-transform: uppercase; color: var(--copper); letter-spacing: 0.1em; font-weight: 600; }
-        .jury-role { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--sage); margin-top: 0.5rem; }
+        .jury-info {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .jury-name { font-size: 1.15rem; font-weight: 600; color: var(--forest); margin-bottom: 0.25rem; }
+        .jury-country { font-size: 0.75rem; text-transform: uppercase; color: var(--copper); letter-spacing: 0.1em; font-weight: 700; }
+        .jury-role { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: var(--sage); margin-top: 0.5rem; }
+        .jury-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(212, 163, 115, 0.1);
+            background-color: var(--dusty-white);
+        }
     </style>
 </head>
 <body>
@@ -382,72 +397,95 @@
                 </div>
 
                 <!-- Finals Jury: President -->
-                <div class="mb-20">
-                    <div class="flex items-center gap-6 mb-12">
+                <div class="mb-24">
+                    <div class="flex items-center gap-6 mb-16">
                         <h3 class="serif text-4xl italic text-forest">Finals Jury</h3>
                         <div class="h-[1px] flex-grow bg-forest/5"></div>
                     </div>
                     
-                    <div class="flex justify-center mb-12">
-                        <div class="jury-card w-full md:w-[400px] border-copper bg-white">
-                            <div class="jury-role text-copper font-bold uppercase tracking-widest text-[10px] mb-3 not-italic">President</div>
-                            <h4 class="jury-name text-3xl">Olga Kern</h4>
-                            <span class="jury-country text-base">Russia / USA</span>
-                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                    <div class="flex justify-center mb-16">
+                        <div class="jury-card w-full md:w-[420px] border-copper">
+                            <img src="olga.png" class="jury-image" alt="Olga Kern" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <div class="jury-role text-copper font-bold uppercase tracking-widest text-[11px] mb-2 not-italic">President</div>
+                                <h4 class="jury-name text-3xl">Olga Kern</h4>
+                                <span class="jury-country text-base">Russia / USA</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Main Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="jury-card">
-                            <h4 class="jury-name">Svetlana Eganian</h4>
-                            <span class="jury-country">France / Armenia</span>
-                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                            <img src="svetlana.png" class="jury-image" alt="Svetlana Eganian" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Svetlana Eganian</h4>
+                                <span class="jury-country">France / Armenia</span>
+                            </div>
                         </div>
                         <div class="jury-card">
-                            <h4 class="jury-name">Gisele Nacif</h4>
-                            <span class="jury-country">USA</span>
-                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                            <img src="gisele.png" class="jury-image" alt="Gisele Nacif" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Gisele Nacif</h4>
+                                <span class="jury-country">USA</span>
+                            </div>
                         </div>
                         <div class="jury-card">
-                            <h4 class="jury-name">Vincenzo Balzani</h4>
-                            <span class="jury-country">Italy</span>
-                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                            <img src="vincenzo.png" class="jury-image" alt="Vincenzo Balzani" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Vincenzo Balzani</h4>
+                                <span class="jury-country">Italy</span>
+                            </div>
                         </div>
                         <div class="jury-card">
-                            <h4 class="jury-name">Andreas Frölich</h4>
-                            <span class="jury-country">Germany</span>
-                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                            <img src="andreas.png" class="jury-image" alt="Andreas Frölich" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Andreas Frölich</h4>
+                                <span class="jury-country">Germany</span>
+                            </div>
                         </div>
                         <div class="jury-card">
-                            <h4 class="jury-name">Leonel Morales</h4>
-                            <span class="jury-country">Spain</span>
-                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                            <img src="leonel.png" class="jury-image" alt="Leonel Morales" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Leonel Morales</h4>
+                                <span class="jury-country">Spain</span>
+                            </div>
                         </div>
                         <div class="jury-card">
-                            <h4 class="jury-name">Fabio Witkowski</h4>
-                            <span class="jury-country">USA</span>
-                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                            <img src="fabio.png" class="jury-image" alt="Fabio Witkowski" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Fabio Witkowski</h4>
+                                <span class="jury-country">USA</span>
+                            </div>
                         </div>
                         <div class="jury-card">
-                            <h4 class="jury-name">Guido Jardon</h4>
-                            <span class="jury-country">Belgium</span>
-                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                            <img src="guido.png" class="jury-image" alt="Guido Jardon" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Guido Jardon</h4>
+                                <span class="jury-country">Belgium</span>
+                            </div>
                         </div>
                         <div class="jury-card border-copper/40 bg-copper/5">
-                            <h4 class="jury-name">Philippe Raskin</h4>
-                            <span class="jury-country">Belgium</span>
-                            <div class="jury-role">Artistic Director</div>
-                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                            <img src="philippe.png" class="jury-image" alt="Philippe Raskin" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Philippe Raskin</h4>
+                                <span class="jury-country">Belgium</span>
+                                <div class="jury-role">Artistic Director</div>
+                            </div>
                         </div>
                         <div class="jury-card">
-                            <h4 class="jury-name">Alexandre Moutouzkine</h4>
-                            <span class="jury-country">Russia / USA</span>
-                            <button class="mt-4 text-[9px] uppercase tracking-widest text-copper/60 hover:text-copper transition font-bold">View Fullsize</button>
+                            <img src="alexandre.png" class="jury-image" alt="Alexandre Moutouzkine" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Alexandre Moutouzkine</h4>
+                                <span class="jury-country">Russia / USA</span>
+                            </div>
                         </div>
                         <div class="jury-card">
-                            <h4 class="jury-name">Steven De Mesmaeker</h4>
-                            <span class="jury-country">Belgium</span>
+                            <img src="steven.png" class="jury-image" alt="Steven De Mesmaeker" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Steven De Mesmaeker</h4>
+                                <span class="jury-country">Belgium</span>
+                            </div>
                         </div>
                     </div>
                 </div>
