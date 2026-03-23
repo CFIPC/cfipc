@@ -173,7 +173,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            min-height: 400px;
+            min-height: 420px;
         }
         .rules-card:hover {
             border-color: var(--copper);
@@ -183,9 +183,23 @@
         .highlight-box {
             background-color: white;
             border: 1px solid var(--copper);
-            padding: 1.5rem;
+            padding: 2rem;
             text-align: center;
             border-radius: 2px;
+            box-shadow: 0 4px 12px rgba(212, 163, 115, 0.1);
+        }
+
+        .glass-box {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 163, 115, 0.2);
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .glass-box:hover {
+            border-color: rgba(212, 163, 115, 0.5);
+            background: rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
@@ -328,7 +342,7 @@
                 <div class="text-center mb-24">
                     <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Official Regulations</h4>
                     <h2 class="text-5xl md:text-7xl serif italic text-forest">Rules & Regulations 2026</h2>
-                    <p class="text-copper font-bold uppercase tracking-[0.2em] text-[12px] mt-6">Deadline: November 1st 2026</p>
+                    <p class="text-copper font-bold uppercase tracking-[0.2em] text-[14px] mt-6">Deadline: November 1st 2026</p>
                 </div>
 
                 <!-- APPLICATION & CATEGORIES -->
@@ -341,11 +355,11 @@
                             <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category A</h4>
                             <p class="text-5xl serif mb-4 italic text-forest">10 & Under</p>
                             <div class="space-y-3 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-sm uppercase">Application Fee: €80</p>
-                                <p class="text-copper font-bold text-base">1st Prize Value: €550</p>
-                                <div class="mt-4 pt-4 border-t border-forest/5 text-[11px] uppercase tracking-widest text-stone-500">
-                                    <p>Semi-Final: 6 mins</p>
-                                    <p>Final Round: 10 mins</p>
+                                <p class="text-forest font-bold text-sm uppercase">Fee: €80</p>
+                                <p class="text-copper font-bold text-lg">1st Prize Value: €550</p>
+                                <div class="mt-6 pt-6 border-t border-forest/5 text-[12px] uppercase tracking-widest text-stone-500 font-semibold space-y-1">
+                                    <p class="flex justify-between"><span>Semi-Final:</span> <span class="text-forest">6 mins</span></p>
+                                    <p class="flex justify-between"><span>Finals:</span> <span class="text-forest">10 mins</span></p>
                                 </div>
                             </div>
                         </div>
@@ -354,11 +368,11 @@
                             <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category B</h4>
                             <p class="text-5xl serif mb-4 italic text-forest">11 — 13</p>
                             <div class="space-y-3 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-sm uppercase">Application Fee: €90</p>
-                                <p class="text-copper font-bold text-base">1st Prize Value: €650</p>
-                                <div class="mt-4 pt-4 border-t border-forest/5 text-[11px] uppercase tracking-widest text-stone-500">
-                                    <p>Semi-Final: 8 mins</p>
-                                    <p>Final Round: 12 mins</p>
+                                <p class="text-forest font-bold text-sm uppercase">Fee: €90</p>
+                                <p class="text-copper font-bold text-lg">1st Prize Value: €650</p>
+                                <div class="mt-6 pt-6 border-t border-forest/5 text-[12px] uppercase tracking-widest text-stone-500 font-semibold space-y-1">
+                                    <p class="flex justify-between"><span>Semi-Final:</span> <span class="text-forest">8 mins</span></p>
+                                    <p class="flex justify-between"><span>Finals:</span> <span class="text-forest">12 mins</span></p>
                                 </div>
                             </div>
                         </div>
@@ -367,11 +381,11 @@
                             <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category C</h4>
                             <p class="text-5xl serif mb-4 italic text-forest">14 — 16</p>
                             <div class="space-y-3 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-sm uppercase">Application Fee: €100</p>
-                                <p class="text-copper font-bold text-base">1st Prize Value: €750</p>
-                                <div class="mt-4 pt-4 border-t border-forest/5 text-[11px] uppercase tracking-widest text-stone-500">
-                                    <p>Semi-Final: 10 mins</p>
-                                    <p>Final Round: 15 mins</p>
+                                <p class="text-forest font-bold text-sm uppercase">Fee: €100</p>
+                                <p class="text-copper font-bold text-lg">1st Prize Value: €750</p>
+                                <div class="mt-6 pt-6 border-t border-forest/5 text-[12px] uppercase tracking-widest text-stone-500 font-semibold space-y-1">
+                                    <p class="flex justify-between"><span>Semi-Final:</span> <span class="text-forest">10 mins</span></p>
+                                    <p class="flex justify-between"><span>Finals:</span> <span class="text-forest">15 mins</span></p>
                                 </div>
                             </div>
                         </div>
@@ -380,11 +394,11 @@
                             <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category D</h4>
                             <p class="text-5xl serif mb-4 italic text-forest">17 — 21</p>
                             <div class="space-y-3 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-sm uppercase">Application Fee: €110</p>
-                                <p class="text-copper font-bold text-base">1st Prize Value: €1450</p>
-                                <div class="mt-4 pt-4 border-t border-forest/5 text-[11px] uppercase tracking-widest text-stone-500">
-                                    <p>Semi-Final: 15 mins</p>
-                                    <p>Final Round: 30 mins</p>
+                                <p class="text-forest font-bold text-sm uppercase">Fee: €110</p>
+                                <p class="text-copper font-bold text-lg">1st Prize Value: €1450</p>
+                                <div class="mt-6 pt-6 border-t border-forest/5 text-[12px] uppercase tracking-widest text-stone-500 font-semibold space-y-1">
+                                    <p class="flex justify-between"><span>Semi-Final:</span> <span class="text-forest">15 mins</span></p>
+                                    <p class="flex justify-between"><span>Finals:</span> <span class="text-forest">30 mins</span></p>
                                 </div>
                             </div>
                         </div>
@@ -392,7 +406,7 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="bg-white p-10 border-l-4 border-copper shadow-sm">
-                            <h5 class="serif text-2xl italic mb-6">Bank Details</h5>
+                            <h5 class="serif text-2xl italic mb-6">Bank Transfer Details</h5>
                             <div class="space-y-3 text-sm text-stone-600 font-light">
                                 <p><span class="font-bold text-forest uppercase text-[10px]">Account Name:</span> CFIPC</p>
                                 <p><span class="font-bold text-forest uppercase text-[10px]">Bank:</span> BNP Paribas Fortis</p>
@@ -414,91 +428,111 @@
                     </div>
                 </div>
 
+                <!-- PROGRAM REQUIREMENTS -->
                 <div class="mb-32">
                     <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Program Requirements</h3>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-stone-600 font-light leading-relaxed">
                         <div class="space-y-8">
-                            <div class="bg-white p-10 border border-forest/5">
+                            <div class="bg-white p-10 border border-forest/5 shadow-sm">
                                 <p class="font-bold text-forest uppercase text-[11px] mb-4 tracking-widest">1. Repertoire Choice</p>
                                 <p class="text-lg">Program is <strong>free of choice</strong> for Category A and B.</p>
                                 <p class="text-lg mt-4">Category C and D must include at least <strong>one movement from a “Viennese Classic”</strong> composer (Haydn, Mozart, or Beethoven) in their Finals program. The rest is free choice.</p>
                             </div>
                             <p>2. It is not obligatory but recommended to include at least one piece written by a Belgian composer in the semi-final or the final round. A list of Belgian composers can be found <a href="https://en.wikipedia.org/wiki/List_of_Belgian_classical_composers" target="_blank" class="text-copper underline font-bold">here</a>.</p>
                             <p>3. <span class="text-forest font-bold">Memory interpretation</span> is required for both rounds of the competition except for certain contemporary pieces after a personal request and approval by the competition.</p>
-                            <p>4. It is <span class="text-forest font-bold">NOT possible to change</span> the semi-finals program after submission. For all selected finalists, it is possible to change your finals program until 15th November 2026.</p>
                         </div>
                         <div class="space-y-8">
+                            <p>4. It is <span class="text-forest font-bold">NOT possible to change</span> the semi-finals program after submission. For all selected finalists, it is possible to change your finals program until 15th November 2026.</p>
                             <p>5. Candidates may include in their Finals program previously recorded works from the 1st round.</p>
-                            <p>6. A copy of your program (Urtext or original editions as preferred by the jury) must be scanned and sent by all finalists to office@cfipc.com for the jury before 15th of November 2026. All finalists must submit the scores of their entire programme by the official deadline (November 15th). Programme changes are not permitted after this date. Any candidate who fails to submit the required scores by the deadline risks disqualification.</p>
-                            <div class="bg-copper/5 p-8 border border-copper/10 rounded-sm">
-                                <h5 class="text-copper font-bold uppercase text-[10px] mb-4 tracking-[0.2em]">Summary: Repertoire Rules</h5>
-                                <ul class="space-y-3 text-sm">
-                                    <li>• <span class="font-bold">Cat A & B:</span> Free Program</li>
-                                    <li>• <span class="font-bold">Cat C & D:</span> 1 Viennese Classic Mvt (Finals) + Free Choice</li>
-                                    <li>• <span class="font-bold">Recommendation:</span> Belgian Composers</li>
-                                    <li>• <span class="font-bold">Required:</span> Performance from memory</li>
-                                </ul>
-                            </div>
+                            <p>6. A copy of your program (Urtext or original editions as preferred by the jury) must be scanned and sent by all finalists to office@cfipc.com for the jury before 15th of November 2026. All finalists must submit the scores of their entire programme by the official deadline (November 15th). Any candidate who fails to submit required scores by the deadline risks disqualification.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="mb-32 bg-forest p-12 md:p-20 rounded-sm shadow-2xl">
-                    <h3 class="serif text-4xl italic mb-12 text-copper">Semi-Finals (Online)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm leading-relaxed font-light text-copper/90">
-                        <ul class="space-y-6">
-                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Technical 1</span> All video submissions should not be edited (audio). All edited videos will be automatically disqualified.</li>
-                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Technical 2</span> All recordings submitted by candidates must be made in 2026 and recorded in one take without cuts, also between pieces, like in a live competition.</li>
-                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Technical 3</span> All video submissions must be uploaded directly to an online service (YouTube, Vimeo, Dailymotion, Dropbox). No WeTransfer or DVDs.</li>
-                        </ul>
-                        <ul class="space-y-6">
-                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Verification</span> It is the responsibility of the candidates to check if their link is online and viewable after submission until finalists are announced.</li>
-                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Quality</span> Smartphone/Upright piano recordings are accepted and will not be penalised. Candidates must ensure impartial judging via quality.</li>
-                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Selection</span> A maximum of 5 finalists will be selected (subject to jury discretion).</li>
-                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Results</span> Results announced on 10th of November 2026 via email and social media.</li>
-                        </ul>
+                <!-- SEMI-FINALS (ONLINE) - ENHANCED VISIBILITY -->
+                <div class="mb-32 bg-forest p-12 md:p-20 rounded-sm shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-copper/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+                    <h3 class="serif text-4xl italic mb-12 text-copper relative z-10">Semi-Finals (Online)</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                        <div class="glass-box">
+                            <h5 class="text-copper font-bold uppercase tracking-widest text-[10px] mb-4">Video Standards</h5>
+                            <ul class="space-y-4 text-sm text-copper">
+                                <li class="flex gap-3"><span>•</span> All video submissions should not be edited (audio). All edited videos will be automatically disqualified.</li>
+                                <li class="flex gap-3"><span>•</span> All recordings must be made in 2026 and recorded in one take without cuts, also between pieces, like in a live competition.</li>
+                                <li class="flex gap-3"><span>•</span> Upload directly to an online service (YouTube, Vimeo, Dailymotion, Dropbox). No WeTransfer or DVDs.</li>
+                            </ul>
+                        </div>
+                        <div class="glass-box">
+                            <h5 class="text-copper font-bold uppercase tracking-widest text-[10px] mb-4">Selection & Logistics</h5>
+                            <ul class="space-y-4 text-sm text-copper">
+                                <li class="flex gap-3"><span>•</span> Responsibility of candidate to check if link is viewable until announcement of finalists.</li>
+                                <li class="flex gap-3"><span>•</span> Smartphone/Upright piano recordings are accepted and will not be penalised.</li>
+                                <li class="flex gap-3"><span>•</span> A maximum of 5 finalists selected (subject to jury discretion). Results announced Nov 10th 2026 via email and social media.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="max-w-6xl mx-auto">
+                <!-- GENERAL REGULATIONS - ENHANCED CLARITY -->
+                <div class="max-w-7xl mx-auto">
                     <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">General Regulations</h3>
                     
-                    <!-- Quick Highlight Boxes -->
+                    <!-- Highlighted Boxes for Dates and Selection -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-                        <div class="highlight-box">
-                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-copper mb-2">Live Finals Competition</h5>
-                            <p class="serif italic text-2xl text-forest">December 18th — 20th, 2026</p>
-                            <p class="text-[10px] mt-1 uppercase text-stone-400">Opening Concert on Dec 18th</p>
+                        <div class="highlight-box border-copper/50">
+                            <h5 class="text-[11px] font-bold uppercase tracking-[0.2em] text-copper mb-3">Live Finals Competition</h5>
+                            <p class="serif italic text-3xl text-forest">December 18 — 20, 2026</p>
+                            <p class="text-[11px] mt-2 uppercase text-stone-400 font-semibold tracking-widest">GC De Lijsterbes, Belgium</p>
                         </div>
-                        <div class="highlight-box">
-                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-copper mb-2">Results & Finalists</h5>
-                            <p class="serif italic text-2xl text-forest">November 10th, 2026</p>
-                            <p class="text-[10px] mt-1 uppercase text-stone-400">Max 5 Finalists per Category</p>
+                        <div class="highlight-box border-copper/50">
+                            <h5 class="text-[11px] font-bold uppercase tracking-[0.2em] text-copper mb-3">Results & Selection</h5>
+                            <p class="serif italic text-3xl text-forest">November 10, 2026</p>
+                            <p class="text-[11px] mt-2 uppercase text-stone-400 font-semibold tracking-widest">Max 5 Finalists per Category</p>
                         </div>
-                        <div class="highlight-box">
-                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-copper mb-2">Deadline for Changes</h5>
-                            <p class="serif italic text-2xl text-forest">November 15th, 2026</p>
-                            <p class="text-[10px] mt-1 uppercase text-stone-400">Scores & Finals Program</p>
+                        <div class="highlight-box border-copper/50">
+                            <h5 class="text-[11px] font-bold uppercase tracking-[0.2em] text-copper mb-3">Program Final Deadline</h5>
+                            <p class="serif italic text-3xl text-forest">November 15, 2026</p>
+                            <p class="text-[11px] mt-2 uppercase text-stone-400 font-semibold tracking-widest">Score Submission & Changes</p>
                         </div>
                     </div>
 
-                    <div class="space-y-8 text-sm text-stone-600 font-light leading-relaxed">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-                            <p>1. The 14th César Franck International Piano Competition is open to pianists of all nationalities aged 21 or less at the time of the competition Finals 18th, 19th & 20th of December 2026. The finals will take place live at De Lijsterbes, Kraainem, Belgium.</p>
-                            <p>2. Applicants must upload: CV, high-res photo (max 2MB), candidate/parent passport scan, proof of payment, program with timings, and video link no later than 1st November 2026.</p>
-                            <p>3. Your candidacy will only be confirmed after we have received the application fee.</p>
-                            <p>4. A maximum of 5 participants from each category will be selected to perform in the finals.</p>
-                            <p>5. The decision of the jury is final and will not be subjected to reviews or appeals.</p>
-                            <p>6. The entry in the competition implies the acceptance of the present rules without any reservation. Registration acts as an agreement for all candidates and their parents.</p>
-                            <p>7. Organizers reserve the right to record all performances. Candidates renounce all rights, fees and claims regarding such recordings and broadcasts.</p>
-                            <p>8. All contestants under the age of 18 must be accompanied by an adult carrying full responsibility at all times.</p>
-                            <p>9. All travel expenses are to be carried out by the participant. Invitation letters provided upon request.</p>
-                            <p>10. Contestants are responsible for their own accommodation costs. Special hotel deals will be offered to accepted candidates.</p>
-                            <p>11. The competition will not be held liable for accidents beyond standard visitor insurance of the venue. Advised to check personal insurance of contestants.</p>
-                            <p>12. The name of the candidate’s teacher/professor will not be printed in the program for the jury. Jury members will not vote for their own students.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Rule Cards -->
+                        <div class="bg-white/50 p-6 border border-forest/5 rounded-sm text-sm text-stone-600 leading-relaxed font-light">
+                            <p class="font-bold text-forest mb-2">1. Eligibility</p>
+                            Open to all nationalities aged 21 or less at the time of the competition Finals (Dec 18-20, 2026).
                         </div>
-                        <div class="bg-forest/5 p-8 italic rounded-sm border-l-2 border-copper">
-                            <p>Full Regulations 2026: Application fees are non-refundable. Rules may be subject to change without notice. Failure to submit required scores by Nov 15th risks disqualification.</p>
+                        <div class="bg-white/50 p-6 border border-forest/5 rounded-sm text-sm text-stone-600 leading-relaxed font-light">
+                            <p class="font-bold text-forest mb-2">2. Submission Requirements</p>
+                            Required files: CV, High-res photo, Passport scan, Proof of payment, Program with timings, and Video link.
+                        </div>
+                        <div class="bg-white/50 p-6 border border-forest/5 rounded-sm text-sm text-stone-600 leading-relaxed font-light">
+                            <p class="font-bold text-forest mb-2">3. Registration Acceptance</p>
+                            Registration acts as a full agreement between the candidate/parents and the competition rules.
+                        </div>
+                        <div class="bg-white/50 p-6 border border-forest/5 rounded-sm text-sm text-stone-600 leading-relaxed font-light">
+                            <p class="font-bold text-forest mb-2">4. Broadcasting Rights</p>
+                            Organizers reserve rights to record/broadcast performances. Candidates renounce all rights and fees.
+                        </div>
+                        <div class="bg-white/50 p-6 border border-forest/5 rounded-sm text-sm text-stone-600 leading-relaxed font-light">
+                            <p class="font-bold text-forest mb-2">5. Minor Supervision</p>
+                            Contestants under 18 must be accompanied by a responsible adult at all times.
+                        </div>
+                        <div class="bg-white/50 p-6 border border-forest/5 rounded-sm text-sm text-stone-600 leading-relaxed font-light">
+                            <p class="font-bold text-forest mb-2">6. Jury Integrity</p>
+                            Jury decisions are final. Teacher names are not printed, and jury members do not vote for their own students.
+                        </div>
+                        <div class="bg-white/50 p-6 border border-forest/5 rounded-sm text-sm text-stone-600 leading-relaxed font-light">
+                            <p class="font-bold text-forest mb-2">7. Travel & Accommodation</p>
+                            Expenses are the responsibility of the participant. Invitation letters provided upon request.
+                        </div>
+                        <div class="bg-white/50 p-6 border border-forest/5 rounded-sm text-sm text-stone-600 leading-relaxed font-light">
+                            <p class="font-bold text-forest mb-2">8. Fees & Refunds</p>
+                            Application fees are non-refundable. Candidates are responsible for all bank/PayPal fees.
+                        </div>
+                        <div class="bg-white/50 p-6 border border-forest/5 rounded-sm text-sm text-stone-600 leading-relaxed font-light italic">
+                            Rules may be subject to change without notice. Failure to follow technical standards risks disqualification.
                         </div>
                     </div>
                 </div>
