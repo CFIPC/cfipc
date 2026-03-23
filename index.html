@@ -96,32 +96,6 @@
             color: var(--copper); 
         }
 
-        .social-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            border: 1.5px solid #1B2A27;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            color: #1B2A27;
-        }
-        .social-box:hover {
-            background-color: var(--forest);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .footer-social-box {
-            border-color: var(--copper);
-            color: var(--copper);
-        }
-        .footer-social-box:hover {
-            background-color: var(--copper);
-            color: var(--forest);
-        }
-
         #mobile-nav-overlay {
             position: fixed;
             inset: 0;
@@ -188,6 +162,30 @@
         .prize-card:hover {
             box-shadow: 0 20px 40px rgba(27, 42, 39, 0.05);
             border-color: var(--copper);
+        }
+
+        .rules-card {
+            background-color: white;
+            padding: 2.5rem;
+            border: 1px solid rgba(27, 42, 39, 0.05);
+            border-radius: 2px;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 400px;
+        }
+        .rules-card:hover {
+            border-color: var(--copper);
+            box-shadow: 0 15px 35px rgba(27, 42, 39, 0.03);
+        }
+
+        .highlight-box {
+            background-color: white;
+            border: 1px solid var(--copper);
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 2px;
         }
     </style>
 </head>
@@ -265,7 +263,6 @@
 
                 <button class="brand-logo cursor-pointer group px-2" onclick="showPage('home')">
                     <img src="Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
-                    <!-- Added missing fallback-logo element to fix JS error -->
                     <div id="fallback-logo" class="hidden text-center">
                         <span class="serif italic text-2xl text-copper">CFIPC</span>
                     </div>
@@ -323,182 +320,186 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="py-32 px-8 bg-[#F2F0E9]">
-                <div class="max-w-[1000px] mx-auto">
-                    <div class="text-center mb-16">
-                        <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Onze Missie</h4>
-                        <h2 class="text-4xl md:text-5xl serif italic text-forest">Artistieke Excellentie & Educatie</h2>
-                    </div>
-                    <div class="space-y-10 text-stone-500 text-lg md:text-xl font-light leading-relaxed text-center">
-                        <p>De CFIPC-missie, opgericht in 2013 door de Belgische pianist Philippe Raskin, is om nieuwe generaties jonge pianisten aan te moedigen hun eigen mogelijkheden te overstijgen door een internationaal platform te bieden.</p>
-                        <p>Met 70 deelnemers uit meer dan 25 verschillende landen en een internationaal geprezen jury in 2024, heeft de César Franck zich al gevestigd als een toonaangevende wedstrijd voor jonge muzikanten wereldwijd.</p>
-                        <p>De integratie van de wedstrijd, concerten en het educatieprogramma als een jaarlijks evenement symboliseert onze toewijding en passie voor de bevordering van cultuur en onderwijs.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="py-32 px-8 bg-[#1B2A27]">
-                <div class="max-w-[1400px] mx-auto">
-                    <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
-                        <div class="text-copper flex-grow max-w-2xl text-left">
-                            <h2 class="text-5xl md:text-6xl serif italic mb-10 text-parchment leading-tight">Wedstrijd & <br><span class="text-copper">Concertlocatie</span></h2>
-                            <div class="space-y-8">
-                                <div>
-                                    <h5 class="text-[10px] uppercase font-bold text-copper mb-2 tracking-[0.2em]">Locatie</h5>
-                                    <p class="text-2xl md:text-3xl serif italic">GC De Lijsterbes</p>
-                                    <p class="font-light mt-2 leading-relaxed text-lg">Lijsterbessenbomenlaan 6,<br>1950 Kraainem BELGIË</p>
-                                </div>
-                                <div class="pt-4">
-                                    <a href="https://maps.google.com/maps?q=Lijsterbessenbomenlaan%206,%201950%20Kraainem,%20Belgium" target="_blank" class="btn-copper inline-block px-8 py-4 text-[9px] uppercase font-bold tracking-widest rounded-sm hover:opacity-90 transition shadow-lg">Routebeschrijving</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-[640px] aspect-[16/9] bg-stone-800 shadow-2xl overflow-hidden rounded-sm relative grayscale hover:grayscale-0 transition-all duration-700 border border-copper/20 flex-shrink-0">
-                            <iframe width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5732126284687!2d4.473286977209176!3d50.85761665774052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3db377f0f0815%3A0x6d8b2847c29377f0!2sDe%20Lijsterbes!5e0!3m2!1sen!2sbe!4v1710584447385!5m2!1sen!2sbe"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- PAGE: RULES -->
         <section id="rules" class="page-section py-32 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
-                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Officiële Reglementen</h4>
-                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Regels & Reglementen 2026</h2>
-                    <p class="text-copper font-bold uppercase tracking-[0.2em] text-[12px] mt-6">Deadline: 1 november 2026</p>
+                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Official Regulations</h4>
+                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Rules & Regulations 2026</h2>
+                    <p class="text-copper font-bold uppercase tracking-[0.2em] text-[12px] mt-6">Deadline: November 1st 2026</p>
                 </div>
 
+                <!-- APPLICATION & CATEGORIES -->
                 <div class="mb-32">
-                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Aanmelding</h3>
-                    <p class="mb-12 text-stone-600">1. Er zijn vier leeftijdscategorieën voor de wedstrijd:</p>
+                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Age Categories & Fees</h3>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                        <div class="bg-white p-12 border border-forest/5 shadow-sm rounded-sm text-center min-h-[300px] flex flex-col justify-center">
-                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-6">Categorie A</h4>
-                            <p class="text-4xl serif mb-6 italic text-forest">10 & jonger</p>
-                            <div class="space-y-4 pt-8 border-t border-forest/5">
-                                <p class="text-stone-500 font-bold text-sm uppercase">Inschrijfgeld: €80</p>
-                                <p class="text-copper font-bold text-lg">1e Prijs Waarde: €550</p>
+                        <!-- Category A -->
+                        <div class="rules-card text-center">
+                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category A</h4>
+                            <p class="text-5xl serif mb-4 italic text-forest">10 & Under</p>
+                            <div class="space-y-3 pt-6 border-t border-forest/10">
+                                <p class="text-forest font-bold text-sm uppercase">Application Fee: €80</p>
+                                <p class="text-copper font-bold text-base">1st Prize Value: €550</p>
+                                <div class="mt-4 pt-4 border-t border-forest/5 text-[11px] uppercase tracking-widest text-stone-500">
+                                    <p>Semi-Final: 6 mins</p>
+                                    <p>Final Round: 10 mins</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="bg-white p-12 border border-forest/5 shadow-sm rounded-sm text-center min-h-[300px] flex flex-col justify-center">
-                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-6">Categorie B</h4>
-                            <p class="text-4xl serif mb-6 italic text-forest">11 — 13 jaar</p>
-                            <div class="space-y-4 pt-8 border-t border-forest/5">
-                                <p class="text-stone-500 font-bold text-sm uppercase">Inschrijfgeld: €90</p>
-                                <p class="text-copper font-bold text-lg">1e Prijs Waarde: €650</p>
+                        <!-- Category B -->
+                        <div class="rules-card text-center">
+                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category B</h4>
+                            <p class="text-5xl serif mb-4 italic text-forest">11 — 13</p>
+                            <div class="space-y-3 pt-6 border-t border-forest/10">
+                                <p class="text-forest font-bold text-sm uppercase">Application Fee: €90</p>
+                                <p class="text-copper font-bold text-base">1st Prize Value: €650</p>
+                                <div class="mt-4 pt-4 border-t border-forest/5 text-[11px] uppercase tracking-widest text-stone-500">
+                                    <p>Semi-Final: 8 mins</p>
+                                    <p>Final Round: 12 mins</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="bg-white p-12 border border-forest/5 shadow-sm rounded-sm text-center min-h-[300px] flex flex-col justify-center">
-                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-6">Categorie C</h4>
-                            <p class="text-4xl serif mb-6 italic text-forest">14 — 16 jaar</p>
-                            <div class="space-y-4 pt-8 border-t border-forest/5">
-                                <p class="text-stone-500 font-bold text-sm uppercase">Inschrijfgeld: €100</p>
-                                <p class="text-copper font-bold text-lg">1e Prijs Waarde: €750</p>
+                        <!-- Category C -->
+                        <div class="rules-card text-center">
+                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category C</h4>
+                            <p class="text-5xl serif mb-4 italic text-forest">14 — 16</p>
+                            <div class="space-y-3 pt-6 border-t border-forest/10">
+                                <p class="text-forest font-bold text-sm uppercase">Application Fee: €100</p>
+                                <p class="text-copper font-bold text-base">1st Prize Value: €750</p>
+                                <div class="mt-4 pt-4 border-t border-forest/5 text-[11px] uppercase tracking-widest text-stone-500">
+                                    <p>Semi-Final: 10 mins</p>
+                                    <p>Final Round: 15 mins</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="bg-white p-12 border border-forest/5 shadow-sm rounded-sm text-center min-h-[300px] flex flex-col justify-center">
-                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-6">Categorie D</h4>
-                            <p class="text-4xl serif mb-6 italic text-forest">17 — 21 jaar</p>
-                            <div class="space-y-4 pt-8 border-t border-forest/5">
-                                <p class="text-stone-500 font-bold text-sm uppercase">Inschrijfgeld: €110</p>
-                                <p class="text-copper font-bold text-lg">1e Prijs Waarde: €1450</p>
+                        <!-- Category D -->
+                        <div class="rules-card text-center">
+                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category D</h4>
+                            <p class="text-5xl serif mb-4 italic text-forest">17 — 21</p>
+                            <div class="space-y-3 pt-6 border-t border-forest/10">
+                                <p class="text-forest font-bold text-sm uppercase">Application Fee: €110</p>
+                                <p class="text-copper font-bold text-base">1st Prize Value: €1450</p>
+                                <div class="mt-4 pt-4 border-t border-forest/5 text-[11px] uppercase tracking-widest text-stone-500">
+                                    <p>Semi-Final: 15 mins</p>
+                                    <p>Final Round: 30 mins</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="bg-white p-10 border-l-4 border-copper shadow-sm">
-                            <h5 class="serif text-2xl italic mb-6">Bankgegevens</h5>
+                            <h5 class="serif text-2xl italic mb-6">Bank Details</h5>
                             <div class="space-y-3 text-sm text-stone-600 font-light">
-                                <p><span class="font-bold text-forest uppercase text-[10px]">Naam Rekening:</span> CFIPC</p>
+                                <p><span class="font-bold text-forest uppercase text-[10px]">Account Name:</span> CFIPC</p>
                                 <p><span class="font-bold text-forest uppercase text-[10px]">Bank:</span> BNP Paribas Fortis</p>
                                 <p><span class="font-bold text-forest uppercase text-[10px]">IBAN:</span> BE28 0016 9098 3620</p>
                                 <p><span class="font-bold text-forest uppercase text-[10px]">BIC:</span> GEBABEBB</p>
-                                <div class="pt-4 text-forest font-bold text-xs uppercase tracking-widest">Adres:</div>
-                                <p>Lijsterbessenbomenlaan 6,<br>Kraainem 1950, BELGIË</p>
-                                <p class="pt-4 italic text-copper text-xs font-bold uppercase tracking-widest">Mededeling: CFIPC 2026 + Volledige Naam + Categorie</p>
+                                <div class="pt-4 text-forest font-bold text-xs uppercase tracking-widest">Address:</div>
+                                <p>Lijsterbessenbomenlaan 6,<br>Kraainem 1950, BELGIUM</p>
+                                <p class="pt-4 italic text-copper text-xs font-bold uppercase tracking-widest">Reference: CFIPC 2026 + Full Name + Category</p>
                             </div>
                         </div>
                         <div class="bg-white p-10 border-l-4 border-forest shadow-sm">
-                            <h5 class="serif text-2xl italic mb-6">PayPal Optie</h5>
-                            <p class="text-sm text-stone-600 mb-6 font-light">Betaal via PayPal aan <span class="font-bold">office@cfipc.com</span>.</p>
+                            <h5 class="serif text-2xl italic mb-6">PayPal Option</h5>
+                            <p class="text-sm text-stone-600 mb-6 font-light">Pay via PayPal to <span class="font-bold">office@cfipc.com</span>.</p>
                             <div class="bg-parchment p-8 rounded-sm">
-                                <p class="text-xs text-forest font-bold uppercase tracking-widest">Toeslag</p>
-                                <p class="text-sm italic mt-2 text-stone-600 leading-relaxed">Let op: er geldt een toeslag van €5 voor PayPal-betalingen bovenop het inschrijfgeld.</p>
+                                <p class="text-xs text-forest font-bold uppercase tracking-widest">Surcharge</p>
+                                <p class="text-sm italic mt-2 text-stone-600 leading-relaxed">Please note that there is a €5 surcharge for the transfer fee on top of the application fee should you wish to pay using PayPal.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-32">
-                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Programma-eisen</h3>
+                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Program Requirements</h3>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-stone-600 font-light leading-relaxed">
                         <div class="space-y-8">
-                            <div class="bg-white p-8 border border-forest/5">
-                                <p class="font-bold text-forest uppercase text-[11px] mb-4 tracking-widest">1. Repertoirekeuze</p>
-                                <p>Het programma is vrij te kiezen voor categorie A en B. Categorie C en D moeten een werk uit het Weense Classicisme toevoegen; de rest is vrij.</p>
-                                <p class="mt-4 italic text-xs">Categorieën C & D moeten ten minste één deel van een "Weense Klassieke" componist (Haydn, Mozart of Beethoven) opnemen in hun finale-programma.</p>
+                            <div class="bg-white p-10 border border-forest/5">
+                                <p class="font-bold text-forest uppercase text-[11px] mb-4 tracking-widest">1. Repertoire Choice</p>
+                                <p class="text-lg">Program is <strong>free of choice</strong> for Category A and B.</p>
+                                <p class="text-lg mt-4">Category C and D must include at least <strong>one movement from a “Viennese Classic”</strong> composer (Haydn, Mozart, or Beethoven) in their Finals program. The rest is free choice.</p>
                             </div>
-                            <p>2. Het is niet verplicht maar aanbevolen om ten minste één werk van een Belgische componist op te nemen in de halve finale of de finale.</p>
-                            <p>3. <span class="text-forest font-bold">Uitvoering uit het hoofd</span> is verplicht voor beide rondes van de wedstrijd.</p>
-                            <p>4. Het is <span class="text-forest font-bold">NIET mogelijk</span> om het halve finale-programma na indiening te wijzigen.</p>
+                            <p>2. It is not obligatory but recommended to include at least one piece written by a Belgian composer in the semi-final or the final round. A list of Belgian composers can be found <a href="https://en.wikipedia.org/wiki/List_of_Belgian_classical_composers" target="_blank" class="text-copper underline font-bold">here</a>.</p>
+                            <p>3. <span class="text-forest font-bold">Memory interpretation</span> is required for both rounds of the competition except for certain contemporary pieces after a personal request and approval by the competition.</p>
+                            <p>4. It is <span class="text-forest font-bold">NOT possible to change</span> the semi-finals program after submission. For all selected finalists, it is possible to change your finals program until 15th November 2026.</p>
                         </div>
                         <div class="space-y-8">
-                            <p>5. Kandidaten mogen in hun finale-programma eerder opgenomen werken uit de eerste ronde herhalen.</p>
-                            <p>6. Finalisten moeten hun partituren voor 15 november 2026 gescand opsturen naar office@cfipc.com.</p>
-                            
-                            <div class="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                <div class="bg-white p-6 border border-forest/5">
-                                    <p class="text-forest font-bold uppercase tracking-widest text-[10px] mb-4">Halve Finale Tijdslimiet</p>
-                                    <ul class="text-[11px] space-y-2 uppercase tracking-tighter">
-                                        <li class="flex justify-between"><span>Categorie A:</span> <span class="text-copper font-bold">6 min</span></li>
-                                        <li class="flex justify-between"><span>Categorie B:</span> <span class="text-copper font-bold">8 min</span></li>
-                                        <li class="flex justify-between"><span>Categorie C:</span> <span class="text-copper font-bold">10 min</span></li>
-                                        <li class="flex justify-between"><span>Categorie D:</span> <span class="text-copper font-bold">15 min</span></li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white p-6 border border-forest/5">
-                                    <p class="text-forest font-bold uppercase tracking-widest text-[10px] mb-4">Finale Tijdslimiet</p>
-                                    <ul class="text-[11px] space-y-2 uppercase tracking-tighter">
-                                        <li class="flex justify-between"><span>Categorie A:</span> <span class="text-copper font-bold">10 min</span></li>
-                                        <li class="flex justify-between"><span>Categorie B:</span> <span class="text-copper font-bold">12 min</span></li>
-                                        <li class="flex justify-between"><span>Categorie C:</span> <span class="text-copper font-bold">15 min</span></li>
-                                        <li class="flex justify-between"><span>Categorie D:</span> <span class="text-copper font-bold">30 min</span></li>
-                                    </ul>
-                                </div>
+                            <p>5. Candidates may include in their Finals program previously recorded works from the 1st round.</p>
+                            <p>6. A copy of your program (Urtext or original editions as preferred by the jury) must be scanned and sent by all finalists to office@cfipc.com for the jury before 15th of November 2026. All finalists must submit the scores of their entire programme by the official deadline (November 15th). Programme changes are not permitted after this date. Any candidate who fails to submit the required scores by the deadline risks disqualification.</p>
+                            <div class="bg-copper/5 p-8 border border-copper/10 rounded-sm">
+                                <h5 class="text-copper font-bold uppercase text-[10px] mb-4 tracking-[0.2em]">Summary: Repertoire Rules</h5>
+                                <ul class="space-y-3 text-sm">
+                                    <li>• <span class="font-bold">Cat A & B:</span> Free Program</li>
+                                    <li>• <span class="font-bold">Cat C & D:</span> 1 Viennese Classic Mvt (Finals) + Free Choice</li>
+                                    <li>• <span class="font-bold">Recommendation:</span> Belgian Composers</li>
+                                    <li>• <span class="font-bold">Required:</span> Performance from memory</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="mb-32 bg-forest p-12 md:p-20 rounded-sm text-parchment shadow-2xl">
-                    <h3 class="serif text-4xl italic mb-12 text-copper">Halve Finales (Online)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm opacity-90 leading-relaxed font-light">
+                <div class="mb-32 bg-forest p-12 md:p-20 rounded-sm shadow-2xl">
+                    <h3 class="serif text-4xl italic mb-12 text-copper">Semi-Finals (Online)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm leading-relaxed font-light text-copper/90">
                         <ul class="space-y-6">
-                            <li>1. Video-inzendingen mogen NIET bewerkt zijn (audio).</li>
-                            <li>2. Alle opnames moeten in 2026 zijn gemaakt in één take zonder montages.</li>
-                            <li>3. Uploaden naar YouTube, Vimeo of Dropbox.</li>
+                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Technical 1</span> All video submissions should not be edited (audio). All edited videos will be automatically disqualified.</li>
+                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Technical 2</span> All recordings submitted by candidates must be made in 2026 and recorded in one take without cuts, also between pieces, like in a live competition.</li>
+                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Technical 3</span> All video submissions must be uploaded directly to an online service (YouTube, Vimeo, Dailymotion, Dropbox). No WeTransfer or DVDs.</li>
                         </ul>
                         <ul class="space-y-6">
-                            <li>4. Halve finale resultaten worden op 10 november 2026 bekendgemaakt.</li>
-                            <li>5. Maximaal 5 finalisten per categorie.</li>
+                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Verification</span> It is the responsibility of the candidates to check if their link is online and viewable after submission until finalists are announced.</li>
+                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Quality</span> Smartphone/Upright piano recordings are accepted and will not be penalised. Candidates must ensure impartial judging via quality.</li>
+                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Selection</span> A maximum of 5 finalists will be selected (subject to jury discretion).</li>
+                            <li><span class="font-bold text-copper uppercase tracking-widest text-[10px] block mb-2">Results</span> Results announced on 10th of November 2026 via email and social media.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="max-w-4xl mx-auto">
-                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Algemene Reglementen</h3>
-                    <div class="space-y-6 text-sm text-stone-600 font-light leading-relaxed">
-                        <p>1. De wedstrijd staat open voor pianisten van alle nationaliteiten, 21 jaar of jonger op het moment van de finales (18-20 december 2026).</p>
-                        <p>2. Kandidaten moeten een CV, hoge resolutie foto en kopie van het paspoort indienen.</p>
-                        <p>3. Inschrijving is pas definitief na ontvangst van het inschrijfgeld.</p>
-                        <p>4. De beslissing van de jury is bindend en onherroepelijk.</p>
-                        <p>5. De organisatie behoudt zich het recht voor om opnames te maken voor archief- en promotiedoeleinden.</p>
-                        <p>6. Minderjarigen moeten te allen tijde worden begeleid door een volwassene.</p>
+                <div class="max-w-6xl mx-auto">
+                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">General Regulations</h3>
+                    
+                    <!-- Quick Highlight Boxes -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                        <div class="highlight-box">
+                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-copper mb-2">Live Finals Competition</h5>
+                            <p class="serif italic text-2xl text-forest">December 18th — 20th, 2026</p>
+                            <p class="text-[10px] mt-1 uppercase text-stone-400">Opening Concert on Dec 18th</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-copper mb-2">Results & Finalists</h5>
+                            <p class="serif italic text-2xl text-forest">November 10th, 2026</p>
+                            <p class="text-[10px] mt-1 uppercase text-stone-400">Max 5 Finalists per Category</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-copper mb-2">Deadline for Changes</h5>
+                            <p class="serif italic text-2xl text-forest">November 15th, 2026</p>
+                            <p class="text-[10px] mt-1 uppercase text-stone-400">Scores & Finals Program</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8 text-sm text-stone-600 font-light leading-relaxed">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                            <p>1. The 14th César Franck International Piano Competition is open to pianists of all nationalities aged 21 or less at the time of the competition Finals 18th, 19th & 20th of December 2026. The finals will take place live at De Lijsterbes, Kraainem, Belgium.</p>
+                            <p>2. Applicants must upload: CV, high-res photo (max 2MB), candidate/parent passport scan, proof of payment, program with timings, and video link no later than 1st November 2026.</p>
+                            <p>3. Your candidacy will only be confirmed after we have received the application fee.</p>
+                            <p>4. A maximum of 5 participants from each category will be selected to perform in the finals.</p>
+                            <p>5. The decision of the jury is final and will not be subjected to reviews or appeals.</p>
+                            <p>6. The entry in the competition implies the acceptance of the present rules without any reservation. Registration acts as an agreement for all candidates and their parents.</p>
+                            <p>7. Organizers reserve the right to record all performances. Candidates renounce all rights, fees and claims regarding such recordings and broadcasts.</p>
+                            <p>8. All contestants under the age of 18 must be accompanied by an adult carrying full responsibility at all times.</p>
+                            <p>9. All travel expenses are to be carried out by the participant. Invitation letters provided upon request.</p>
+                            <p>10. Contestants are responsible for their own accommodation costs. Special hotel deals will be offered to accepted candidates.</p>
+                            <p>11. The competition will not be held liable for accidents beyond standard visitor insurance of the venue. Advised to check personal insurance of contestants.</p>
+                            <p>12. The name of the candidate’s teacher/professor will not be printed in the program for the jury. Jury members will not vote for their own students.</p>
+                        </div>
+                        <div class="bg-forest/5 p-8 italic rounded-sm border-l-2 border-copper">
+                            <p>Full Regulations 2026: Application fees are non-refundable. Rules may be subject to change without notice. Failure to submit required scores by Nov 15th risks disqualification.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -506,42 +507,42 @@
 
         <!-- PAGE: PRIZES -->
         <section id="prizes" class="page-section py-32 px-4 md:px-8">
-            <div class="max-w-[1200px] mx-auto">
+            <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
-                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Prijzen & Laureaten</h4>
-                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Wedstrijdprijzen</h2>
+                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Awards & Laureates</h4>
+                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Competition Prizes</h2>
                 </div>
 
                 <div class="grid grid-cols-1 gap-12 mb-32">
                     <!-- CAT A -->
                     <div class="prize-card">
                         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 pb-6 border-b border-forest/5">
-                            <h3 class="serif text-4xl italic text-forest mb-2 md:mb-0">Categorie A</h3>
-                            <div class="text-copper font-bold text-2xl tracking-widest uppercase">Totale Waarde: 550€</div>
+                            <h3 class="serif text-4xl italic text-forest mb-2 md:mb-0">Category A</h3>
+                            <div class="text-copper font-bold text-2xl tracking-widest uppercase">Total Value: 550€</div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">1e Prijs</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">1st Prize</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €100 contant</li>
-                                    <li>• Concert met orkest (april 2027)</li>
-                                    <li>• €250 vergoeding voor het concerto</li>
-                                    <li>• €200 Studiebeurs</li>
+                                    <li>• €100 cash</li>
+                                    <li>• Concert with orchestra (April 2027)</li>
+                                    <li>• €250 fee for the concerto performance</li>
+                                    <li>• €200 Scholarship (CF Young Talents Festival)</li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">2e Prijs (Waarde: 250€)</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">2nd Prize (Value: 250€)</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €50 contant</li>
-                                    <li>• €100 Studiebeurs (CF Festival)</li>
-                                    <li>• €100 Studiebeurs (IMF Paris)</li>
+                                    <li>• €50 cash</li>
+                                    <li>• €100 Scholarship (CF Young Talents Festival)</li>
+                                    <li>• €100 Scholarship (IMF Paris Masterclass)</li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">3e Prijs (Waarde: 100€)</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">3rd Prize (Value: 100€)</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €100 Studiebeurs (IMF Paris)</li>
-                                    <li>• Uitnodiging CF Young Talents Festival</li>
+                                    <li>• €100 Scholarship (IMF Paris Masterclass)</li>
+                                    <li>• Invitation to CF Young Talents Festival</li>
                                 </ul>
                             </div>
                         </div>
@@ -550,31 +551,32 @@
                     <!-- CAT B -->
                     <div class="prize-card">
                         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 pb-6 border-b border-forest/5">
-                            <h3 class="serif text-4xl italic text-forest mb-2 md:mb-0">Categorie B</h3>
-                            <div class="text-copper font-bold text-2xl tracking-widest uppercase">Totale Waarde: 650€</div>
+                            <h3 class="serif text-4xl italic text-forest mb-2 md:mb-0">Category B</h3>
+                            <div class="text-copper font-bold text-2xl tracking-widest uppercase">Total Value: 650€</div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">1e Prijs</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">1st Prize</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €200 contant</li>
-                                    <li>• Concert met orkest (april 2027)</li>
-                                    <li>• €250 vergoeding</li>
-                                    <li>• €200 Studiebeurs</li>
+                                    <li>• €200 cash</li>
+                                    <li>• Concert with orchestra (April 2027)</li>
+                                    <li>• €250 fee for the concerto performance</li>
+                                    <li>• €200 Scholarship (CF Young Talents Festival)</li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">2e Prijs (Waarde: 280€)</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">2nd Prize (Value: 280€)</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €80 contant</li>
-                                    <li>• €100 Studiebeurs</li>
-                                    <li>• €100 Studiebeurs</li>
+                                    <li>• €80 cash</li>
+                                    <li>• €100 Scholarship (CF Young Talents Festival)</li>
+                                    <li>• €100 Scholarship (IMF Paris Masterclass)</li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">3e Prijs (Waarde: 100€)</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">3rd Prize (Value: 100€)</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €200 Studiebeurs</li>
+                                    <li>• €200 Scholarship (CF Young Talents Project 1)</li>
+                                    <li>• Invitation to CF Young Talents Festival</li>
                                 </ul>
                             </div>
                         </div>
@@ -583,31 +585,32 @@
                     <!-- CAT C -->
                     <div class="prize-card">
                         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 pb-6 border-b border-forest/5">
-                            <h3 class="serif text-4xl italic text-forest mb-2 md:mb-0">Categorie C</h3>
-                            <div class="text-copper font-bold text-2xl tracking-widest uppercase">Totale Waarde: 750€</div>
+                            <h3 class="serif text-4xl italic text-forest mb-2 md:mb-0">Category C</h3>
+                            <div class="text-copper font-bold text-2xl tracking-widest uppercase">Total Value: 750€</div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">1e Prijs</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">1st Prize</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €300 contant</li>
-                                    <li>• Concert met orkest</li>
-                                    <li>• €250 vergoeding</li>
-                                    <li>• €200 Studiebeurs</li>
+                                    <li>• €300 cash</li>
+                                    <li>• Concert with orchestra (April 2027)</li>
+                                    <li>• €250 fee for the concerto performance</li>
+                                    <li>• €200 Scholarship (CF Young Talents Project 1)</li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">2e Prijs (Waarde: 320€)</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">2nd Prize (Value: 320€)</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €120 contant</li>
-                                    <li>• €100 Studiebeurs</li>
-                                    <li>• €100 Studiebeurs</li>
+                                    <li>• €120 cash</li>
+                                    <li>• €100 Scholarship (CF Young Talents Festival)</li>
+                                    <li>• €100 Scholarship (IMF Paris Masterclass)</li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">3e Prijs (Waarde: 100€)</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">3rd Prize (Value: 100€)</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €100 Studiebeurs</li>
+                                    <li>• €100 Scholarship (IMF Paris Masterclass)</li>
+                                    <li>• Invitation to CF Young Talents Festival</li>
                                 </ul>
                             </div>
                         </div>
@@ -615,57 +618,78 @@
 
                     <!-- CAT D -->
                     <div class="prize-card">
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 pb-6 border-b border-forest/5">
-                            <h3 class="serif text-4xl italic text-forest mb-2 md:mb-0">Categorie D</h3>
-                            <div class="text-copper font-bold text-2xl tracking-widest uppercase">Totale Waarde: 1450€</div>
+                        <div class="prize-container flex flex-col md:flex-row justify-between items-start md:items-center mb-10 pb-6 border-b border-forest/5">
+                            <h3 class="serif text-4xl italic text-forest mb-2 md:mb-0">Category D</h3>
+                            <div class="text-copper font-bold text-2xl tracking-widest uppercase">Total Value: 1450€</div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">1e Prijs</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">1st Prize</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €1000 contant</li>
-                                    <li>• Concert met orkest</li>
-                                    <li>• €250 vergoeding</li>
-                                    <li>• €200 Studiebeurs</li>
-                                    <li>• Toegang IMF Paris Ronde 2</li>
+                                    <li>• €1000 cash</li>
+                                    <li>• Concert with orchestra (April 2027)</li>
+                                    <li>• €250 fee for the concerto performance</li>
+                                    <li>• €200 Scholarship (CF Young Talents Project 1)</li>
+                                    <li>• Direct access to IMF Paris Round 2</li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">2e Prijs (Waarde: 600€)</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">2nd Prize (Value: 600€)</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €400 contant</li>
-                                    <li>• €100 Studiebeurs</li>
-                                    <li>• €100 Studiebeurs</li>
+                                    <li>• €400 cash</li>
+                                    <li>• €100 Scholarship (CF Young Talents Festival)</li>
+                                    <li>• €100 Scholarship (IMF Paris Masterclass)</li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">3e Prijs (Waarde: 200€)</h5>
+                                <h5 class="text-forest font-bold uppercase text-[11px] mb-6 tracking-widest">3rd Prize (Value: 200€)</h5>
                                 <ul class="text-sm space-y-4 text-stone-600">
-                                    <li>• €100 Studiebeurs</li>
-                                    <li>• €100 Studiebeurs</li>
+                                    <li>• €100 Scholarship (CF Young Talents Festival)</li>
+                                    <li>• €100 Scholarship (IMF Paris Masterclass)</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-forest p-12 md:p-20 text-parchment rounded-sm">
-                    <h3 class="serif text-4xl italic mb-12 text-copper">Speciale Prijzen</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 text-sm font-light leading-relaxed">
+                <div class="bg-forest p-12 md:p-20 text-parchment rounded-sm shadow-2xl">
+                    <h3 class="serif text-4xl italic mb-12 text-copper">Special Prizes</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 text-sm font-light leading-relaxed">
                         <div class="border-l border-copper/30 pl-8">
-                            <h5 class="text-copper font-bold uppercase text-[10px] mb-2">Orkestkans</h5>
-                            <p>1e prijswinnaars spelen met het César Franck Chamber Orchestra onder leiding van Maestro Vahan Mardirossian in april 2027.</p>
+                            <h5 class="text-copper font-bold uppercase text-[10px] mb-2 tracking-widest">Orchestra Opportunity</h5>
+                            <p>1st Prizewinners will play with the César Franck Chamber Orchestra conducted by Maestro Vahan Mardirossian (Queen Elisabeth Competition) in April 2027 in Brussels center.</p>
                         </div>
                         <div class="border-l border-copper/30 pl-8">
-                            <h5 class="text-copper font-bold uppercase text-[10px] mb-2">Piano Talents Milano</h5>
-                            <p>Concert aangeboden door Vincenzo Balzani & Catia Iglesias.</p>
+                            <h5 class="text-copper font-bold uppercase text-[10px] mb-2 tracking-widest">Piano Talents Milano Prize</h5>
+                            <p>Concert within the 2027 Season of Associazione PianoFriends Milano, offered by Vincenzo Balzani & Catia Iglesias.</p>
+                        </div>
+                        <div class="border-l border-copper/30 pl-8">
+                            <h5 class="text-copper font-bold uppercase text-[10px] mb-2 tracking-widest">MozArte Aachen Prize</h5>
+                            <p>Concert part of the 2026 Season of MozArte Festival Aachen, offered by Andreas Frölich.</p>
+                        </div>
+                        <div class="border-l border-copper/30 pl-8">
+                            <h5 class="text-copper font-bold uppercase text-[10px] mb-2 tracking-widest">Hotchkiss Piano Prize</h5>
+                            <p>Carnegie Hall concert participation offered by Gisele & Fabio Witkowski, plus partial Hotchkiss tuition.</p>
+                        </div>
+                        <div class="border-l border-copper/30 pl-8">
+                            <h5 class="text-copper font-bold uppercase text-[10px] mb-2 tracking-widest">Prix IMEP</h5>
+                            <p>Concert invitations for International Piano Festival IMEP 2026, offered by Guido Jardon.</p>
+                        </div>
+                        <div class="border-l border-copper/30 pl-8">
+                            <h5 class="text-copper font-bold uppercase text-[10px] mb-2 tracking-widest">IMF Paris Prize</h5>
+                            <p>Concert participation within IMF Paris Festival 2026, offered by Svetlana Eganian & Philippe Raskin.</p>
+                        </div>
+                        <div class="border-l border-copper/30 pl-8">
+                            <h5 class="text-copper font-bold uppercase text-[10px] mb-2 tracking-widest">Music Without Limits Lithuania</h5>
+                            <p>Free participation in competition/masterclasses in Druskininkai, offered by Aleksandra Zvirblyte and Paulius Andersson.</p>
                         </div>
                     </div>
+                    <div class="mt-16 text-center italic text-copper/60 text-sm">Other special prizes to be announced soon</div>
                 </div>
             </div>
         </section>
 
-        <!-- Placeholder Pages -->
+        <!-- Placeholders for other pages -->
         <section id="contact" class="page-section py-32 px-8"></section>
         <section id="jury" class="page-section py-32 px-8"></section>
         <section id="laureates" class="page-section py-32 px-8"></section>
@@ -677,7 +701,7 @@
     <!-- FOOTER -->
     <footer class="bg-forest text-copper pt-32 pb-16 px-8 mt-20">
         <div class="max-w-[1400px] mx-auto text-center">
-            <p>&copy; The Music Agency 2026</p>
+            <p class="text-[9px] uppercase tracking-[0.3em] font-light">&copy; The Music Agency 2026</p>
         </div>
     </footer>
 
@@ -720,654 +744,6 @@
         window.addEventListener('click', () => {
             document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
         });
-
-        window.addEventListener('load', () => {
-            const hash = window.location.hash.replace('#', '');
-            if(hash) showPage(hash);
-        });
-    </script>
-</body>
-</html>        .nav-link {
-            letter-spacing: 0.12em;
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--forest);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            padding: 1.5rem 0;
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-        }
-        .nav-link:hover { color: var(--copper); }
-
-        .dropdown-container { position: relative; }
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--parchment);
-            border: 1px solid rgba(27, 42, 39, 0.1);
-            min-width: 200px;
-            display: none;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-            z-index: 100;
-            padding: 0.75rem 0;
-        }
-        .dropdown-container:hover .dropdown-menu { 
-            display: block; 
-            animation: fadeIn 0.3s ease; 
-        }
-        
-        @keyframes fadeIn { 
-            from { opacity: 0; transform: translate(-50%, 5px); } 
-            to { opacity: 1; transform: translate(-50%, 0); } 
-        }
-
-        .dropdown-item {
-            display: block;
-            padding: 0.8rem 1.5rem;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--forest);
-            transition: all 0.2s;
-            text-align: center;
-        }
-        .dropdown-item:hover { 
-            background: var(--forest); 
-            color: var(--copper); 
-        }
-
-        .social-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            border: 1.5px solid #1B2A27;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            color: #1B2A27;
-        }
-        .social-box:hover {
-            background-color: var(--forest);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .footer-social-box {
-            border-color: var(--copper);
-            color: var(--copper);
-        }
-        .footer-social-box:hover {
-            background-color: var(--copper);
-            color: var(--forest);
-        }
-
-        #mobile-nav-overlay {
-            position: fixed;
-            inset: 0;
-            background: var(--forest);
-            z-index: 200;
-            display: none;
-            flex-direction: column;
-            padding: 4rem 2rem;
-            overflow-y: auto;
-            color: var(--parchment);
-        }
-        #mobile-nav-overlay.open { display: flex; animation: overlayIn 0.4s ease forwards; }
-        
-        @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
-
-        .mobile-group { margin-bottom: 2.5rem; }
-        .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
-        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; }
-
-        .brand-logo {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .logo-image {
-            height: 100px;
-            width: auto;
-            object-fit: contain;
-            transition: height 0.3s ease;
-        }
-        
-        @media (min-width: 768px) {
-            .logo-image { height: 150px; }
-        }
-
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: var(--parchment); }
-        ::-webkit-scrollbar-thumb { background: var(--sage); border-radius: 10px; }
-
-        .bg-forest { background-color: var(--forest); }
-        .text-copper { color: var(--copper); }
-        .btn-copper { background-color: var(--copper); color: white; transition: all 0.3s ease; }
-        .btn-copper:hover { background-color: var(--forest); }
-        
-        .footer-input {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--copper);
-            padding: 0.75rem 1rem;
-            width: 100%;
-            font-size: 0.85rem;
-            color: var(--copper);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        .footer-input::placeholder {
-            color: var(--copper);
-            opacity: 0.5;
-        }
-        .footer-input:focus {
-            outline: none;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Mobile Navigation Overlay -->
-    <div id="mobile-nav-overlay">
-        <div class="flex justify-between items-center mb-12">
-            <span class="serif italic text-2xl text-parchment">Menu</span>
-            <button onclick="toggleMobileMenu()" class="text-copper text-4xl leading-none">&times;</button>
-        </div>
-
-        <div class="mobile-group">
-            <span class="mobile-label">Competition</span>
-            <button onclick="showPage('rules'); toggleMobileMenu()" class="mobile-link">Rules</button>
-            <button onclick="showPage('contact'); toggleMobileMenu()" class="mobile-link">Application</button>
-            <button onclick="showPage('jury'); toggleMobileMenu()" class="mobile-link">Jury</button>
-            <button onclick="showPage('laureates'); toggleMobileMenu()" class="mobile-link">Laureates</button>
-        </div>
-
-        <div class="mobile-group">
-            <span class="mobile-label">Masterclasses</span>
-            <button onclick="showPage('masterclasses'); toggleMobileMenu()" class="mobile-link">Winter Festival</button>
-            <button onclick="showPage('masterclasses'); toggleMobileMenu()" class="mobile-link">Spring Festival</button>
-            <button onclick="showPage('masterclasses'); toggleMobileMenu()" class="mobile-link">Summer Festival</button>
-        </div>
-
-        <div class="mobile-group">
-            <span class="mobile-label">About</span>
-            <button onclick="showPage('contact'); toggleMobileMenu()" class="mobile-link">Contact Us</button>
-            <button onclick="showPage('about'); toggleMobileMenu()" class="mobile-link">Legacy</button>
-        </div>
-
-        <div class="mobile-group">
-            <span class="mobile-label">Gallery</span>
-            <button onclick="showPage('media'); toggleMobileMenu()" class="mobile-link">Media</button>
-            <button onclick="showPage('gallery'); toggleMobileMenu()" class="mobile-link">Pictures</button>
-        </div>
-
-        <button onclick="showPage('home'); toggleMobileMenu()" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</button>
-    </div>
-
-    <!-- Main Navigation Header -->
-    <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
-        <div class="max-w-[1600px] mx-auto px-4 md:px-8">
-            <div class="flex justify-between items-center h-32 md:h-48">
-                
-                <!-- Left Section -->
-                <div class="flex-1 flex justify-start items-center">
-                    <button class="md:hidden flex flex-col items-center justify-center space-y-1 p-2 hover:bg-forest/5 transition" onclick="toggleMobileMenu()">
-                        <div class="w-6 h-[1.5px] bg-forest"></div>
-                        <div class="w-6 h-[1.5px] bg-forest"></div>
-                    </button>
-
-                    <div class="hidden md:flex items-center space-x-6 lg:space-x-12">
-                        <div class="dropdown-container">
-                            <button class="nav-link">
-                                Competition 
-                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a href="#" onclick="showPage('rules')" class="dropdown-item">Rules</a>
-                                <a href="#" onclick="showPage('contact')" class="dropdown-item">Application</a>
-                                <a href="#" onclick="showPage('jury')" class="dropdown-item">Jury</a>
-                                <a href="#" onclick="showPage('laureates')" class="dropdown-item">Laureates</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-container">
-                            <button class="nav-link">
-                                Masterclasses 
-                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a href="#" onclick="showPage('masterclasses')" class="dropdown-item">Winter Festival</a>
-                                <a href="#" onclick="showPage('masterclasses')" class="dropdown-item">Spring Festival</a>
-                                <a href="#" onclick="showPage('masterclasses')" class="dropdown-item">Summer Festival</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Central Identity -->
-                <div class="brand-logo cursor-pointer group px-2" onclick="showPage('home')">
-                    <img src="Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
-                    <div id="fallback-logo" class="hidden text-center">
-                        <span class="serif italic text-2xl text-copper">CFIPC</span>
-                    </div>
-                </div>
-
-                <!-- Right Section -->
-                <div class="flex-1 flex justify-end items-center">
-                    <div class="hidden md:flex items-center space-x-6 lg:space-x-12">
-                        <div class="dropdown-container">
-                            <button class="nav-link">
-                                About 
-                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a href="#" onclick="showPage('contact')" class="dropdown-item">Contact Us</a>
-                                <a href="#" onclick="showPage('about')" class="dropdown-item">Legacy</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-container">
-                            <button class="nav-link">
-                                Gallery 
-                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a href="#" onclick="showPage('media')" class="dropdown-item">Media</a>
-                                <a href="#" onclick="showPage('gallery')" class="dropdown-item">Pictures</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:hidden w-10"></div>
-                </div>
-
-            </div>
-        </div>
-    </nav>
-
-    <main class="pt-32 md:pt-48">
-
-        <!-- PAGE: HOME -->
-        <section id="home" class="page-section active">
-            <div class="relative min-h-[85vh] flex items-center bg-forest overflow-hidden">
-                <div class="absolute inset-0 opacity-80">
-                    <img src="home.png" class="w-full h-full object-cover" alt="Competition Home" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">
-                </div>
-                <div class="max-w-[1400px] mx-auto px-8 relative z-10 w-full">
-                    <div class="max-w-4xl">
-                        <h1 class="text-copper italic font-bold text-3xl md:text-5xl lg:text-6xl serif leading-none mb-3">
-                            César Franck International Piano Competition
-                        </h1>
-                        <p class="text-copper text-[10px] md:text-xs uppercase tracking-[0.4em] mb-12">
-                            14th Edition | 18-20 December 2026
-                        </p>
-                        
-                        <div class="flex flex-col md:flex-row items-center gap-10">
-                            <button onclick="showPage('contact')" class="btn-copper px-10 py-5 text-[10px] uppercase font-bold tracking-[0.3em] rounded-sm hover:opacity-90 transition w-full md:w-auto">Apply Now</button>
-                            <div class="flex flex-col">
-                                <p class="text-copper text-sm font-light leading-relaxed max-sm text-center md:text-left">
-                                    Honoring the legacy of César Franck. Providing an international stage for the next generation of musical talent in Brussels.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="py-32 px-8 bg-[#F2F0E9]">
-                <div class="max-w-[1000px] mx-auto">
-                    <div class="text-center mb-16">
-                        <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Our Mission</h4>
-                        <h2 class="text-4xl md:text-5xl serif italic text-forest">Artistic Excellence & Education</h2>
-                    </div>
-                    <div class="space-y-10 text-stone-500 text-lg md:text-xl font-light leading-relaxed text-center">
-                        <p>Established in 2013 by Belgian pianist Philippe Raskin, the CFIPC mission is to encourage new generations of young pianists to transcend their own capabilities by providing an international platform.</p>
-                        <p>With 70 participants originating from more than 25 different countries and an internationally acclaimed jury in 2024, the César Franck has already established itself as a leading competition for young musicians worldwide.</p>
-                        <p>The incorporation of the competition, concerts and education program as a yearly event symbolizes our commitment and passion to the advancement of culture and education.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="py-32 px-8 bg-[#1B2A27]">
-                <div class="max-w-[1400px] mx-auto">
-                    <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
-                        <div class="text-copper flex-grow max-w-2xl text-left">
-                            <h2 class="text-5xl md:text-6xl serif italic mb-10 text-parchment leading-tight">Competition & <br><span class="text-copper">Concert Venue</span></h2>
-                            <div class="space-y-8">
-                                <div>
-                                    <h5 class="text-[10px] uppercase font-bold text-copper mb-2 tracking-[0.2em]">Location</h5>
-                                    <p class="text-2xl md:text-3xl serif italic">GC De Lijsterbes</p>
-                                    <p class="font-light mt-2 leading-relaxed text-lg">Lijsterbessenbomenlaan 6,<br>1950 Kraainem BELGIUM</p>
-                                </div>
-                                <div class="pt-4">
-                                    <a href="https://maps.google.com/maps?q=Lijsterbessenbomenlaan%206,%201950%20Kraainem,%20Belgium" target="_blank" class="btn-copper inline-block px-8 py-4 text-[9px] uppercase font-bold tracking-widest rounded-sm hover:opacity-90 transition shadow-lg">Get Directions</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-[640px] aspect-[16/9] bg-stone-800 shadow-2xl overflow-hidden rounded-sm relative grayscale hover:grayscale-0 transition-all duration-700 border border-copper/20 flex-shrink-0">
-                            <iframe width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5732126284687!2d4.473286977209176!3d50.85761665774052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3db377f0f0815%3A0x6d8b2847c29377f0!2sDe%20Lijsterbes!5e0!3m2!1sen!2sbe!4v1710584447385!5m2!1sen!2sbe"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="py-24 px-8 border-t border-forest/5 bg-white">
-                <div class="max-w-[1400px] mx-auto text-center">
-                    <h4 class="text-stone-400 uppercase tracking-[0.4em] text-[8px] font-bold mb-12">Our Partners</h4>
-                    <div class="flex justify-center items-center">
-                        <img src="partners.png" alt="CFIPC Partners" class="max-w-full h-auto opacity-70 hover:opacity-100 transition duration-700" onerror="this.src='https://via.placeholder.com/1200x200?text=Partners+Image+Logo+Strip'">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PAGE: RULES (COMPREHENSIVE UPDATE) -->
-        <section id="rules" class="page-section py-32 px-4 md:px-8">
-            <div class="max-w-[1200px] mx-auto">
-                <!-- Header -->
-                <div class="text-center mb-24">
-                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Official Regulations</h4>
-                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Rules & Regulations 2026</h2>
-                    <p class="text-copper font-bold uppercase tracking-[0.2em] text-[12px] mt-6">Deadline: November 1st 2026</p>
-                </div>
-
-                <!-- 1. APPLICATION & CATEGORIES -->
-                <div class="mb-32">
-                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Application</h3>
-                    
-                    <div class="mb-12 text-stone-600">
-                        <p class="mb-8">1. There are four age categories for the competition:</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                            <!-- Category A -->
-                            <div class="bg-white p-8 border border-forest/5 shadow-sm rounded-sm text-center">
-                                <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest mb-4">Category A</h4>
-                                <p class="text-xl serif mb-2 italic">Ages 10 & Under</p>
-                                <div class="pt-4 border-t border-forest/5 text-xs text-stone-500">
-                                    <p>Fee: €80</p>
-                                </div>
-                            </div>
-                            <!-- Category B -->
-                            <div class="bg-white p-8 border border-forest/5 shadow-sm rounded-sm text-center">
-                                <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest mb-4">Category B</h4>
-                                <p class="text-xl serif mb-2 italic">Ages 11 — 13</p>
-                                <div class="pt-4 border-t border-forest/5 text-xs text-stone-500">
-                                    <p>Fee: €90</p>
-                                </div>
-                            </div>
-                            <!-- Category C -->
-                            <div class="bg-white p-8 border border-forest/5 shadow-sm rounded-sm text-center">
-                                <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest mb-4">Category C</h4>
-                                <p class="text-xl serif mb-2 italic">Ages 14 — 16</p>
-                                <div class="pt-4 border-t border-forest/5 text-xs text-stone-500">
-                                    <p>Fee: €100</p>
-                                </div>
-                            </div>
-                            <!-- Category D -->
-                            <div class="bg-white p-8 border border-forest/5 shadow-sm rounded-sm text-center">
-                                <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest mb-4">Category D</h4>
-                                <p class="text-xl serif mb-2 italic">Ages 17 — 21</p>
-                                <div class="pt-4 border-t border-forest/5 text-xs text-stone-500">
-                                    <p>Fee: €110</p>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mb-12">2. The non-refundable application fees are as follow (excluding bank transfer fees) as stated above for Categories A, B, C, and D.</p>
-                    </div>
-
-                    <!-- Payment Information -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-white p-10 border-l-4 border-copper shadow-sm">
-                            <h5 class="serif text-2xl italic mb-6">Bank Transfer Details</h5>
-                            <div class="space-y-3 text-sm text-stone-600 font-light">
-                                <p><span class="font-bold text-forest">Account Name:</span> CFIPC</p>
-                                <p><span class="font-bold text-forest">Bank:</span> BNP Paribas Fortis</p>
-                                <p><span class="font-bold text-forest">IBAN:</span> BE28 0016 9098 3620</p>
-                                <p><span class="font-bold text-forest">BIC:</span> GEBABEBB</p>
-                                <div class="pt-4 text-forest font-bold text-xs uppercase tracking-widest">Address:</div>
-                                <p>Lijsterbessenbomenlaan 6,<br>Kraainem 1950, BELGIUM</p>
-                                <p class="pt-4 italic text-stone-400 text-xs">Reference: CFIPC 2026 + Full Name of Candidate + Category</p>
-                            </div>
-                        </div>
-                        <div class="bg-white p-10 border-l-4 border-forest shadow-sm">
-                            <h5 class="serif text-2xl italic mb-6">PayPal Option</h5>
-                            <p class="text-sm text-stone-600 mb-6 font-light">Pay via PayPal to <span class="font-bold">office@cfipc.com</span>.</p>
-                            <div class="bg-parchment p-6 rounded-sm">
-                                <p class="text-xs text-forest font-bold uppercase tracking-widest">Surcharge Note</p>
-                                <p class="text-sm italic mt-2 text-stone-600">Please note that there is a €5 surcharge for the transfer fee on top of the application fee should you wish to pay using PayPal.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. PROGRAM -->
-                <div class="mb-32">
-                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Program</h3>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-stone-600 font-light leading-relaxed">
-                        <div class="space-y-6">
-                            <p>1. For both rounds of the competition, a free program can be chosen for Category A & B applicants however applicants from Categories C & D must include at least <span class="text-forest font-bold">one movement from a “Viennese Classic”</span> composer (Haydn, Mozart, or Beethoven) in their Finals program.</p>
-                            <p>2. It is not obligatory but recommended to include at least one piece written by a Belgian composer in the semi-final or the final round. A list of Belgian composers can be found <a href="https://en.wikipedia.org/wiki/List_of_Belgian_classical_composers" target="_blank" class="text-copper underline">here</a>.</p>
-                            <p>3. <span class="text-forest font-bold">Memory interpretation</span> is required for both rounds of the competition except for certain contemporary pieces after a personal request and approval by the competition.</p>
-                            <p>4. It is <span class="text-forest font-bold">NOT possible to change</span> the semi-finals program after submission. For all selected finalists, it is possible to change your finals program until 15th November 2026.</p>
-                        </div>
-                        <div class="space-y-6">
-                            <p>5. Candidates may include in their Finals program previously recorded works from the 1st round.</p>
-                            <p>6. A copy of your program (Urtext or original editions as preferred by the jury) must be scanned and sent by all finalists to office@cfipc.com for the jury before 15th of November 2026. All finalists must submit the scores of their entire programme by the official deadline (November 15th). Programme changes are not permitted after this date. Any candidate who fails to submit the required scores by the deadline risks disqualification.</p>
-                            
-                            <div class="pt-6 grid grid-cols-2 gap-8">
-                                <div>
-                                    <p class="text-forest font-bold uppercase tracking-widest text-[10px] mb-2">Semi-Finals Limits</p>
-                                    <ul class="text-[11px] space-y-1">
-                                        <li>Cat A: Max 6 min</li>
-                                        <li>Cat B: Max 8 min</li>
-                                        <li>Cat C: Max 10 min</li>
-                                        <li>Cat D: Max 15 min</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <p class="text-forest font-bold uppercase tracking-widest text-[10px] mb-2">Finals Limits</p>
-                                    <ul class="text-[11px] space-y-1">
-                                        <li>Cat A: Max 10 min</li>
-                                        <li>Cat B: Max 12 min</li>
-                                        <li>Cat C: Max 15 min</li>
-                                        <li>Cat D: Max 30 min</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. SEMI-FINALS (ONLINE) -->
-                <div class="mb-32 bg-forest p-12 md:p-20 rounded-sm text-parchment shadow-2xl">
-                    <h3 class="serif text-4xl italic mb-12 text-copper">Semi-Finals (Online)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm opacity-90 leading-relaxed font-light">
-                        <ul class="space-y-6">
-                            <li class="flex gap-4"><span class="text-copper font-bold">1.</span> All video submissions should not be edited (audio). All edited videos will be automatically disqualified.</li>
-                            <li class="flex gap-4"><span class="text-copper font-bold">2.</span> All recordings submitted by candidates must be made in 2026 and recorded in one take without cuts, also between pieces, like in a live competition (i.e. a single link).</li>
-                            <li class="flex gap-4"><span class="text-copper font-bold">3.</span> All video submissions must be uploaded directly to an online service where the video can be streamed online without downloading (YouTube, Vimeo, Dropbox, etc). No WeTransfer or DVDs.</li>
-                        </ul>
-                        <ul class="space-y-6">
-                            <li class="flex gap-4"><span class="text-copper font-bold">4.</span> Candidates must check if their link is online and viewable after submission until announcement of finalists.</li>
-                            <li class="flex gap-4"><span class="text-copper font-bold">5.</span> Candidates must ensure video quality for impartial judging. Upright pianos and smartphones are accepted and will not be penalised.</li>
-                            <li class="flex gap-4"><span class="text-copper font-bold">6.</span> A maximum of 5 finalists will be selected (subject to jury discretion).</li>
-                            <li class="flex gap-4"><span class="text-copper font-bold">7.</span> Results announced on 10th of November 2026 via email and social media.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- 4. PRIZES -->
-                <div class="mb-32">
-                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4 text-center">Prizes</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-                        <div class="p-8 border border-copper/20 text-center bg-white shadow-sm">
-                            <h4 class="text-copper font-bold text-[10px] uppercase mb-4 tracking-widest">Category A</h4>
-                            <p class="text-sm">1st: €100 / 2nd: €50</p>
-                            <p class="text-[10px] mt-2 italic text-stone-400">3rd: 1h masterclass at IMF Paris</p>
-                        </div>
-                        <div class="p-8 border border-copper/20 text-center bg-white shadow-sm">
-                            <h4 class="text-copper font-bold text-[10px] uppercase mb-4 tracking-widest">Category B</h4>
-                            <p class="text-sm">1st: €200 / 2nd: €80</p>
-                            <p class="text-[10px] mt-2 italic text-stone-400">3rd: 1h masterclass at IMF Paris</p>
-                        </div>
-                        <div class="p-8 border border-copper/20 text-center bg-white shadow-sm">
-                            <h4 class="text-copper font-bold text-[10px] uppercase mb-4 tracking-widest">Category C</h4>
-                            <p class="text-sm">1st: €300 / 2nd: €120</p>
-                            <p class="text-[10px] mt-2 italic text-stone-400">3rd: 1h masterclass at IMF Paris</p>
-                        </div>
-                        <div class="p-8 border border-copper/20 text-center bg-white shadow-sm">
-                            <h4 class="text-copper font-bold text-[10px] uppercase mb-4 tracking-widest">Category D</h4>
-                            <p class="text-sm">1st: €1000 / 2nd: €400</p>
-                            <p class="text-[10px] mt-2 italic text-stone-400">3rd: 1h masterclass at IMF Paris</p>
-                        </div>
-                    </div>
-                    <div class="bg-copper/10 p-12 text-center rounded-sm border border-copper/30">
-                        <p class="serif text-2xl italic leading-relaxed text-forest mb-6">
-                            "On top of those prizes, our Directing Committee and our Partner 'BNP Paribas Fortis' will give the opportunity to the First Prizewinners of each category <span class="font-bold">to play with orchestra in April 2027</span>."
-                        </p>
-                        <p class="text-stone-600 font-light text-sm max-w-3xl mx-auto">
-                            The Artistic Director of the International Piano Talents Competition in Milano, Vincenzo Balzani, will offer together with their President Catia Iglesias one concert opportunity to a pianist among the winners of the competition.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 5. GENERAL RULES -->
-                <div class="max-w-4xl mx-auto">
-                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">General Rules</h3>
-                    <div class="space-y-6 text-sm text-stone-600 font-light leading-relaxed">
-                        <p>1. The 14th César Franck International Piano Competition is open to pianists of all nationalities aged 21 or less at the time of the competition Finals 18th, 19th & 20th of December 2026 (opening concert on December 18th). The finals will take place live at De Lijsterbes (Kraainem, Belgium).</p>
-                        <p>2. Applicants must complete the online application form and upload: CV, high-res digital photo, passport scan (candidate & parent if under 18), proof of payment, complete program for both rounds with timings, and the video submission link.</p>
-                        <p>3. Your candidacy will only be confirmed after we have received the application fee.</p>
-                        <p>4. A maximum of 5 participants from each category will be selected to perform in the finals (jury discretion).</p>
-                        <p>5. The decision of the jury is final and will not be subjected to reviews or appeals.</p>
-                        <p>6. Results of semi-finals announced on 10th November 2026.</p>
-                        <p>7. The application fee is not refundable; candidates responsible for bank/PayPal fees.</p>
-                        <p>8. Entry in the competition implies acceptance of present rules without reservation.</p>
-                        <p>9. Registration acts as an agreement for all candidates and parents.</p>
-                        <p>10. Organizers reserve the right to record all performances for broadcast and archival use. Candidates renounce all rights and claims regarding recordings.</p>
-                        <p>11. Contestants under 18 must be accompanied by an adult carrying full responsibility at all times.</p>
-                        <p>12. All travel expenses (tickets, visas) are carried by the participant. Invitation letters provided upon request.</p>
-                        <p>13. Contestants responsible for accommodation costs (special hotel deal will be offered).</p>
-                        <p>14. Competition not liable for accidents/incidents beyond standard venue insurance.</p>
-                        <p>15. Advised to check personal insurance for accidents outside the competition venue.</p>
-                        <p>16. Teacher/professor names will not be printed in the jury program.</p>
-                        <p>17. Jury members will not vote for their own students.</p>
-                        <p>18. Rules may be subject to change without notice.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PAGE SECTIONS (Other pages) -->
-        <section id="about" class="page-section py-32 px-8">
-            <div class="max-w-[1200px] mx-auto text-center">
-                <h2 class="text-5xl serif italic mb-24">The Legacy</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center text-left">
-                    <div>
-                        <p class="text-stone-500 text-lg font-light leading-relaxed mb-8">
-                            Founded in 2013 by Belgian pianist <strong>Philippe Raskin</strong>, the CFIPC was born from a desire to encourage young pianists to transcend their own capabilities.
-                        </p>
-                        <p class="text-stone-500 text-lg font-light leading-relaxed mb-8">
-                            Located in the heart of Europe, the competition has welcomed participants from over 30 countries, establishing itself as a premier destination for piano education and excellence.
-                        </p>
-                    </div>
-                    <div class="bg-forest p-12 rounded-sm text-parchment italic shadow-xl">
-                        <p class="serif text-2xl mb-8 leading-relaxed">"Music is the expression of the movement of the soul. We listen to that movement in every artist who performs with us."</p>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-copper">— President's Note</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="masterclasses" class="page-section py-32 px-8"></section>
-        <section id="jury" class="page-section py-32 px-8"></section>
-        <section id="laureates" class="page-section py-32 px-8"></section>
-        <section id="media" class="page-section py-32 px-8"></section>
-        <section id="gallery" class="page-section py-32 px-8"></section>
-        <section id="contact" class="page-section py-32 px-8"></section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-forest text-copper pt-32 pb-16 px-8 mt-20">
-        <div class="max-w-[1400px] mx-auto">
-            <div class="flex flex-col lg:flex-row justify-start items-start gap-16 lg:gap-32 mb-24">
-                
-                <!-- Contact Form Section -->
-                <div class="w-full lg:max-w-xl">
-                    <h4 class="text-copper text-[10px] uppercase tracking-widest font-bold mb-8">Get in Touch</h4>
-                    <form action="#" method="POST" class="space-y-4">
-                        <input type="text" name="name" placeholder="Full Name" required class="footer-input">
-                        <input type="email" name="email" placeholder="Email Address" required class="footer-input">
-                        <textarea name="message" placeholder="Your Message" rows="3" required class="footer-input resize-none"></textarea>
-                        <button type="submit" class="w-full py-3 bg-copper text-forest text-[10px] uppercase font-bold tracking-widest rounded hover:opacity-90 transition">Send Message</button>
-                    </form>
-                </div>
-                
-                <!-- Follow Us Section -->
-                <div class="w-full lg:w-auto">
-                    <h4 class="text-copper text-[10px] uppercase tracking-widest font-bold mb-8">Follow Us</h4>
-                    <div class="flex space-x-3 mb-8">
-                        <a href="https://facebook.com" class="social-box footer-social-box" target="_blank">
-                            <i data-lucide="facebook" class="w-5 h-5"></i>
-                        </a>
-                        <a href="https://instagram.com" class="social-box footer-social-box" target="_blank">
-                            <i data-lucide="instagram" class="w-5 h-5"></i>
-                        </a>
-                        <a href="mailto:office@cfipc.com" class="social-box footer-social-box">
-                            <i data-lucide="mail" class="w-5 h-5"></i>
-                        </a>
-                    </div>
-                    <div class="text-sm font-light">
-                        <p class="mb-2">office@cfipc.com</p>
-                        <p>Brussels, Belgium</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Legal Bottom -->
-            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[0.3em] font-light text-center md:text-left space-y-4 md:space-y-0">
-                <p>&copy; The Music Agency 2026</p>
-                <div class="flex space-x-8">
-                    <a href="#" class="hover:underline transition">Privacy Policy</a>
-                    <a href="#" class="hover:underline transition">Terms & Conditions</a>
-                    <a href="#" class="hover:underline transition">Cookie Policy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-
-        function showPage(pageId) {
-            const sections = document.querySelectorAll('.page-section');
-            sections.forEach(s => s.classList.remove('active'));
-            
-            const target = document.getElementById(pageId);
-            if(target) {
-                target.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
-
-        function toggleMobileMenu() {
-            const overlay = document.getElementById('mobile-nav-overlay');
-            if (overlay.classList.contains('open')) {
-                overlay.classList.remove('open');
-                setTimeout(() => { overlay.style.display = 'none'; }, 400);
-                document.body.style.overflow = 'auto';
-            } else {
-                overlay.style.display = 'flex';
-                setTimeout(() => { overlay.classList.add('open'); }, 10);
-                document.body.style.overflow = 'hidden';
-            }
-        }
 
         window.addEventListener('load', () => {
             const hash = window.location.hash.replace('#', '');
