@@ -302,7 +302,7 @@
 
         <!-- PAGE: HOME -->
         <section id="home" class="page-section active">
-            <!-- Hero (Updated subtitle color to copper) -->
+            <!-- Hero -->
             <div class="relative min-h-[85vh] flex items-center bg-forest overflow-hidden">
                 <div class="absolute inset-0 opacity-80">
                     <img src="home.png" class="w-full h-full object-cover" alt="Competition Home" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">
@@ -397,7 +397,165 @@
             </div>
         </section>
 
-        <!-- PAGE SECTIONS -->
+        <!-- PAGE: RULES (Updated with 2026 Official Rules) -->
+        <section id="rules" class="page-section py-32 px-4 md:px-8">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="text-center mb-24">
+                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Official Regulations</h4>
+                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Rules 2026</h2>
+                    <p class="text-stone-400 uppercase tracking-[0.2em] text-[10px] mt-6">Application Deadline: November 1st, 2026</p>
+                </div>
+
+                <!-- Categories Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+                    <!-- Category A -->
+                    <div class="bg-white p-10 border border-forest/5 shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm">
+                        <div class="flex justify-between items-start mb-8">
+                            <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest">Category A</h4>
+                            <span class="text-stone-300 text-[10px] font-bold">10 & UNDER</span>
+                        </div>
+                        <div class="space-y-4 text-center">
+                            <p class="text-[10px] uppercase tracking-widest text-stone-400">Semi-Final (Online)</p>
+                            <p class="text-2xl serif">Max 6 Mins</p>
+                            <div class="h-[1px] bg-forest/5 w-1/2 mx-auto"></div>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-400">Final (Live)</p>
+                            <p class="text-2xl serif">Max 10 Mins</p>
+                            <p class="text-copper font-bold text-lg mt-6">€80 Fee</p>
+                        </div>
+                    </div>
+                    <!-- Category B -->
+                    <div class="bg-white p-10 border border-forest/5 shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm">
+                        <div class="flex justify-between items-start mb-8">
+                            <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest">Category B</h4>
+                            <span class="text-stone-300 text-[10px] font-bold">11 — 13 YEARS</span>
+                        </div>
+                        <div class="space-y-4 text-center">
+                            <p class="text-[10px] uppercase tracking-widest text-stone-400">Semi-Final (Online)</p>
+                            <p class="text-2xl serif">Max 8 Mins</p>
+                            <div class="h-[1px] bg-forest/5 w-1/2 mx-auto"></div>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-400">Final (Live)</p>
+                            <p class="text-2xl serif">Max 12 Mins</p>
+                            <p class="text-copper font-bold text-lg mt-6">€90 Fee</p>
+                        </div>
+                    </div>
+                    <!-- Category C -->
+                    <div class="bg-white p-10 border border-forest/5 shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm">
+                        <div class="flex justify-between items-start mb-8">
+                            <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest">Category C</h4>
+                            <span class="text-stone-300 text-[10px] font-bold">14 — 16 YEARS</span>
+                        </div>
+                        <div class="space-y-4 text-center">
+                            <p class="text-[10px] uppercase tracking-widest text-stone-400">Semi-Final (Online)</p>
+                            <p class="text-2xl serif">Max 10 Mins</p>
+                            <div class="h-[1px] bg-forest/5 w-1/2 mx-auto"></div>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-400">Final (Live)</p>
+                            <p class="text-2xl serif">Max 15 Mins</p>
+                            <p class="text-copper font-bold text-lg mt-6">€100 Fee</p>
+                        </div>
+                    </div>
+                    <!-- Category D -->
+                    <div class="bg-white p-10 border border-forest/5 shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm">
+                        <div class="flex justify-between items-start mb-8">
+                            <h4 class="text-copper text-[10px] uppercase font-bold tracking-widest">Category D</h4>
+                            <span class="text-stone-300 text-[10px] font-bold">17 — 21 YEARS</span>
+                        </div>
+                        <div class="space-y-4 text-center">
+                            <p class="text-[10px] uppercase tracking-widest text-stone-400">Semi-Final (Online)</p>
+                            <p class="text-2xl serif">Max 15 Mins</p>
+                            <div class="h-[1px] bg-forest/5 w-1/2 mx-auto"></div>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-400">Final (Live)</p>
+                            <p class="text-2xl serif">Max 30 Mins</p>
+                            <p class="text-copper font-bold text-lg mt-6">€110 Fee</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Program Requirements -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+                    <div class="space-y-12">
+                        <div>
+                            <h3 class="serif text-3xl italic mb-6">Program & Repertoire</h3>
+                            <div class="space-y-6 text-stone-500 font-light leading-relaxed">
+                                <p><span class="text-forest font-bold">Viennese Classics:</span> Categories C & D must include at least one movement by Haydn, Mozart, or Beethoven in their Finals program.</p>
+                                <p><span class="text-forest font-bold">Free Choice:</span> Categories A & B may choose a completely free program for both rounds.</p>
+                                <p><span class="text-forest font-bold">Belgian Heritage:</span> It is highly recommended to include at least one piece by a Belgian composer.</p>
+                                <p><span class="text-forest font-bold">Performance:</span> Memory interpretation is required for all pieces except specific contemporary works (upon request).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-12">
+                        <div>
+                            <h3 class="serif text-3xl italic mb-6">Online Semi-Finals</h3>
+                            <div class="space-y-6 text-stone-500 font-light leading-relaxed">
+                                <p><span class="text-forest font-bold">Integrity:</span> Video submissions must be recorded in one take without any audio editing or cuts.</p>
+                                <p><span class="text-forest font-bold">Recent Material:</span> All recordings must be made in 2026 specifically for this competition.</p>
+                                <p><span class="text-forest font-bold">Submission:</span> Links must be streamable (YouTube, Vimeo, etc.). WeTransfer or physical DVDs are not accepted.</p>
+                                <p><span class="text-forest font-bold">Selection:</span> A maximum of 5 finalists per category will be invited to the live round in Brussels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prizes & Opportunities -->
+                <div class="bg-forest p-12 md:p-20 rounded-sm text-parchment mb-24 relative overflow-hidden shadow-2xl">
+                    <div class="relative z-10">
+                        <h3 class="serif text-4xl italic mb-10 text-copper">Prizes & Global Opportunities</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-parchment/10 pb-12 mb-12">
+                            <div>
+                                <h5 class="text-copper uppercase tracking-widest text-[10px] font-bold mb-4">Cash Prizes</h5>
+                                <ul class="space-y-2 opacity-80 text-sm">
+                                    <li>Category D: 1st Prize €1000 / 2nd Prize €400</li>
+                                    <li>Category C: 1st Prize €300 / 2nd Prize €120</li>
+                                    <li>Category B: 1st Prize €200 / 2nd Prize €80</li>
+                                    <li>Category A: 1st Prize €100 / 2nd Prize €50</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="text-copper uppercase tracking-widest text-[10px] font-bold mb-4">Artistic Growth</h5>
+                                <ul class="space-y-2 opacity-80 text-sm">
+                                    <li>3rd Prizes: 1h Masterclass at IMF Paris</li>
+                                    <li>Concert opportunity in Milano (International Piano Talents)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-copper/10 p-8 border border-copper/30 rounded-sm">
+                            <p class="serif text-2xl italic leading-relaxed text-copper">
+                                "The Directing Committee, in partnership with BNP Paribas Fortis, offers 1st Prize winners the exceptional opportunity to perform with an orchestra in April 2027."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General Regulations (Accordion style or clean list) -->
+                <div class="max-w-3xl mx-auto">
+                    <h3 class="serif text-3xl italic mb-10 text-center">General Regulations</h3>
+                    <div class="space-y-4 text-xs uppercase tracking-widest text-stone-400 font-bold">
+                        <div class="flex gap-6 pb-4 border-b border-forest/5">
+                            <span class="text-copper">01</span>
+                            <p class="leading-relaxed">Open to all nationalities aged 21 or under at the time of the live Finals.</p>
+                        </div>
+                        <div class="flex gap-6 pb-4 border-b border-forest/5">
+                            <span class="text-copper">02</span>
+                            <p class="leading-relaxed">Application must include CV, high-res photo, passport scan, and proof of payment.</p>
+                        </div>
+                        <div class="flex gap-6 pb-4 border-b border-forest/5">
+                            <span class="text-copper">03</span>
+                            <p class="leading-relaxed">The decision of the Jury is final and not subject to review or appeal.</p>
+                        </div>
+                        <div class="flex gap-6 pb-4 border-b border-forest/5">
+                            <span class="text-copper">04</span>
+                            <p class="leading-relaxed">Organizers reserve the right to record all live performances for broadcast purposes.</p>
+                        </div>
+                        <div class="flex gap-6 pb-4 border-b border-forest/5">
+                            <span class="text-copper">05</span>
+                            <p class="leading-relaxed">Travel and accommodation costs are the responsibility of the participants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE SECTIONS (Other pages) -->
         <section id="about" class="page-section py-32 px-8">
             <div class="max-w-[1200px] mx-auto text-center">
                 <h2 class="text-5xl serif italic mb-24">The Legacy</h2>
@@ -418,7 +576,6 @@
             </div>
         </section>
 
-        <section id="rules" class="page-section py-32 px-8"></section>
         <section id="masterclasses" class="page-section py-32 px-8"></section>
         <section id="jury" class="page-section py-32 px-8"></section>
         <section id="laureates" class="page-section py-32 px-8"></section>
