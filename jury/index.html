@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artistic Panel - Jury | César Franck International Piano Competition</title>
+    <title>Jury | César Franck International Piano Competition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600;1,700&family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
@@ -24,14 +24,7 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
-        
-        .page-section { display: block; animation: sectionFade 0.6s ease-out; }
-
-        @keyframes sectionFade {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
 
         .nav-link {
             letter-spacing: 0.12em;
@@ -45,8 +38,7 @@
             display: flex;
             align-items: center;
             white-space: nowrap;
-            background: none;
-            border: none;
+            text-decoration: none;
         }
         .nav-link:hover { color: var(--copper); }
 
@@ -85,10 +77,8 @@
             color: var(--forest);
             transition: all 0.2s;
             text-align: center;
+            text-decoration: none;
             width: 100%;
-            background: none;
-            border: none;
-            cursor: pointer;
         }
         .dropdown-item:hover { 
             background: var(--forest); 
@@ -112,7 +102,7 @@
 
         .mobile-group { margin-bottom: 2.5rem; }
         .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
-        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; background: none; border: none; color: inherit; }
+        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; text-decoration: none; color: inherit; }
 
         .brand-logo {
             text-align: center;
@@ -120,8 +110,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: none;
-            border: none;
+            text-decoration: none;
         }
         
         .logo-image {
@@ -135,9 +124,13 @@
             .logo-image { height: 150px; }
         }
 
+        .bg-forest { background-color: var(--forest); }
+        .text-copper { color: var(--copper); }
+
+        /* Jury Specific Styling */
         .jury-card {
             background: white;
-            border: 1px solid rgba(212, 163, 115, 0.15);
+            border: 1px solid rgba(212, 163, 115, 0.1);
             text-align: center;
             transition: all 0.3s ease;
             height: 100%;
@@ -145,29 +138,28 @@
             flex-direction: column;
             overflow: hidden;
             border-radius: 2px;
-            cursor: pointer;
             text-decoration: none;
         }
         .jury-card:hover {
             border-color: var(--copper);
-            box-shadow: 0 15px 40px rgba(27, 42, 39, 0.1);
-            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(27, 42, 39, 0.08);
         }
         .jury-info {
-            padding: 1.5rem;
+            padding: 1.8rem 1rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             flex-grow: 1;
         }
-        .jury-name { font-size: 1.15rem; font-weight: 600; color: var(--forest); margin-bottom: 0.25rem; }
-        .jury-country { font-size: 0.75rem; text-transform: uppercase; color: var(--copper); letter-spacing: 0.1em; font-weight: 700; }
-        .jury-role { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: var(--sage); margin-top: 0.5rem; }
+        .jury-name { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--forest); margin-bottom: 0.2rem; }
+        .jury-country { font-family: 'Outfit', sans-serif; font-size: 0.7rem; text-transform: uppercase; color: var(--copper); letter-spacing: 0.15em; font-weight: 700; }
+        
+        .jury-role-label { font-family: 'Cormorant Garamond', serif; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; color: #999; margin-bottom: 0.5rem; }
+
         .jury-image {
             width: 100%;
             aspect-ratio: 1 / 1;
             object-fit: cover;
-            border-bottom: 1px solid rgba(212, 163, 115, 0.1);
             background-color: var(--dusty-white);
         }
 
@@ -179,6 +171,16 @@
             height: 100%;
             transition: all 0.3s ease;
             border-radius: 2px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .glass-box:hover {
+            border-color: var(--copper);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -193,27 +195,27 @@
 
         <div class="mobile-group">
             <span class="mobile-label">Competition</span>
-            <button onclick="window.location.href='../rules/'" class="mobile-link">Rules</button>
-            <button onclick="window.location.href='../prizes/'" class="mobile-link">Prizes</button>
-            <button onclick="window.location.href='../application/'" class="mobile-link">Application</button>
-            <button onclick="window.location.href='../jury/'" class="mobile-link">Jury</button>
-            <button onclick="window.location.href='../laureates/'" class="mobile-link">Laureates</button>
+            <a href="rules.html" class="mobile-link">Rules</a>
+            <a href="prizes.html" class="mobile-link">Prizes</a>
+            <a href="application.html" class="mobile-link">Application</a>
+            <a href="jury.html" class="mobile-link">Jury</a>
+            <a href="laureates.html" class="mobile-link">Laureates</a>
         </div>
 
         <div class="mobile-group">
             <span class="mobile-label">Masterclasses</span>
-            <button onclick="window.location.href='../masterclasses/winter/'" class="mobile-link">Winter Festival</button>
-            <button onclick="window.location.href='../masterclasses/spring/'" class="mobile-link">Spring Festival</button>
-            <button onclick="window.location.href='../masterclasses/summer/'" class="mobile-link">Summer Festival</button>
+            <a href="masterclasses.html" class="mobile-link">Winter Festival</a>
+            <a href="masterclasses.html" class="mobile-link">Spring Festival</a>
+            <a href="masterclasses.html" class="mobile-link">Summer Festival</a>
         </div>
 
         <div class="mobile-group">
             <span class="mobile-label">About</span>
-            <button onclick="window.location.href='../contact/'" class="mobile-link">Contact Us</button>
-            <button onclick="window.location.href='../about/'" class="mobile-link">Legacy</button>
+            <a href="contact.html" class="mobile-link">Contact Us</a>
+            <a href="about.html" class="mobile-link">Legacy</a>
         </div>
 
-        <button onclick="window.location.href='../'" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</button>
+        <a href="index.html" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold text-decoration-none">Return to Home</a>
     </div>
 
     <!-- Main Navigation Header -->
@@ -228,59 +230,59 @@
 
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
                                 Competition 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
+                            </a>
                             <div class="dropdown-menu">
-                                <button onclick="window.location.href='../rules/'" class="dropdown-item">Rules</button>
-                                <button onclick="window.location.href='../prizes/'" class="dropdown-item">Prizes</button>
-                                <button onclick="window.location.href='../application/'" class="dropdown-item">Application</button>
-                                <button onclick="window.location.href='../jury/'" class="dropdown-item">Jury</button>
-                                <button onclick="window.location.href='../laureates/'" class="dropdown-item">Laureates</button>
+                                <a href="rules.html" class="dropdown-item">Rules</a>
+                                <a href="prizes.html" class="dropdown-item">Prizes</a>
+                                <a href="application.html" class="dropdown-item">Application</a>
+                                <a href="jury.html" class="dropdown-item">Jury</a>
+                                <a href="laureates.html" class="dropdown-item">Laureates</a>
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
                                 Masterclasses 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
+                            </a>
                             <div class="dropdown-menu">
-                                <button onclick="window.location.href='../masterclasses/winter/'" class="dropdown-item">Winter Festival</button>
-                                <button onclick="window.location.href='../masterclasses/spring/'" class="dropdown-item">Spring Festival</button>
-                                <button onclick="window.location.href='../masterclasses/summer/'" class="dropdown-item">Summer Festival</button>
+                                <a href="masterclasses.html" class="dropdown-item">Winter Festival</a>
+                                <a href="masterclasses.html" class="dropdown-item">Spring Festival</a>
+                                <a href="masterclasses.html" class="dropdown-item">Summer Festival</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="brand-logo cursor-pointer group px-2" onclick="window.location.href='../'">
-                    <img src="../Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
+                <a href="index.html" class="brand-logo cursor-pointer group px-2">
+                    <img src="Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
                     <div id="fallback-logo" class="hidden text-center">
                         <span class="serif italic text-2xl text-copper">CFIPC</span>
                     </div>
-                </button>
+                </a>
 
                 <div class="flex-1 flex justify-end items-center">
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
                                 About 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
+                            </a>
                             <div class="dropdown-menu">
-                                <button onclick="window.location.href='../contact/'" class="dropdown-item">Contact Us / Application</button>
-                                <button onclick="window.location.href='../about/'" class="dropdown-item">Legacy</button>
+                                <a href="contact.html" class="dropdown-item">Contact Us / Application</a>
+                                <a href="about.html" class="dropdown-item">Legacy</a>
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
                                 Gallery 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
+                            </a>
                             <div class="dropdown-menu">
-                                <button onclick="window.location.href='../media/'" class="dropdown-item">Media</button>
-                                <button onclick="window.location.href='../gallery/'" class="dropdown-item">Pictures</button>
+                                <a href="media.html" class="dropdown-item">Media</a>
+                                <a href="gallery.html" class="dropdown-item">Pictures</a>
                             </div>
                         </div>
                     </div>
@@ -291,7 +293,7 @@
 
     <main class="pt-32 md:pt-48">
         <!-- PAGE: JURY 2025 -->
-        <section id="jury" class="page-section py-32 px-4 md:px-8">
+        <section id="jury" class="py-32 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
                     <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">The Artistic Panel</h4>
@@ -299,20 +301,21 @@
                     <p class="text-stone-400 uppercase tracking-widest text-[11px] mt-6">JURY 2026 TO BE ANNOUNCED SOON !</p>
                 </div>
 
-                <!-- Finals Jury: President -->
+                <!-- Finals Jury Section -->
                 <div class="mb-24">
                     <div class="flex items-center gap-6 mb-16">
                         <h3 class="serif text-4xl italic text-forest">Finals Jury</h3>
                         <div class="h-[1px] flex-grow bg-forest/5"></div>
                     </div>
                     
+                    <!-- President Card restored with olga.png -->
                     <div class="flex justify-center mb-16">
-                        <a href="https://olgakern.com" target="_blank" class="jury-card w-full md:w-[420px] border-copper">
-                            <img src="../olga.png" class="jury-image" alt="Olga Kern" onerror="this.parentElement.classList.add('bg-stone-50')">
+                        <a href="https://olgakern.com" target="_blank" class="jury-card w-full md:w-[420px] border-copper/30">
+                            <img src="olga.png" class="jury-image" alt="Olga Kern">
                             <div class="jury-info">
-                                <div class="jury-role text-copper font-bold uppercase tracking-widest text-[11px] mb-2 not-italic">President</div>
-                                <h4 class="jury-name text-3xl">Olga Kern</h4>
-                                <span class="jury-country text-base">Russia / USA</span>
+                                <p class="jury-role-label">President</p>
+                                <h4 class="jury-name !text-2xl">Olga Kern</h4>
+                                <span class="jury-country">Russia / USA</span>
                             </div>
                         </a>
                     </div>
@@ -320,80 +323,66 @@
                     <!-- Main Grid -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="jury-card">
-                            <img src="../svetlana.png" class="jury-image" alt="Svetlana Eganian" onerror="this.parentElement.classList.add('bg-stone-50')">
+                            <img src="svetlana.png" class="jury-image" alt="Svetlana Eganian">
                             <div class="jury-info">
                                 <h4 class="jury-name">Svetlana Eganian</h4>
                                 <span class="jury-country">France / Armenia</span>
                             </div>
                         </div>
-                        <a href="http://witkowskipianoduo.com/Witkowski_Piano_Duo/Gisele.html" target="_blank" class="jury-card">
-                            <img src="../gisele.png" class="jury-image" alt="Gisele Nacif" onerror="this.parentElement.classList.add('bg-stone-50')">
+                        <div class="jury-card">
+                            <img src="gisele.png" class="jury-image" alt="Gisele Nacif">
                             <div class="jury-info">
                                 <h4 class="jury-name">Gisele Nacif</h4>
                                 <span class="jury-country">USA</span>
                             </div>
-                        </a>
-                        <a href="https://it.wikipedia.org/wiki/Vincenzo_Balzani_(pianista)" target="_blank" class="jury-card">
-                            <img src="../vincenzo.png" class="jury-image" alt="Vincenzo Balzani" onerror="this.parentElement.classList.add('bg-stone-50')">
+                        </div>
+                        <div class="jury-card">
+                            <img src="vincenzo.png" class="jury-image" alt="Vincenzo Balzani">
                             <div class="jury-info">
                                 <h4 class="jury-name">Vincenzo Balzani</h4>
                                 <span class="jury-country">Italy</span>
                             </div>
-                        </a>
-                        <a href="https://en.wikipedia.org/wiki/Andreas_Frölich" target="_blank" class="jury-card">
-                            <img src="../andreas.png" class="jury-image" alt="Andreas Frölich" onerror="this.parentElement.classList.add('bg-stone-50')">
+                        </div>
+                        <div class="jury-card">
+                            <img src="andreas.png" class="jury-image" alt="Andreas Frölich">
                             <div class="jury-info">
                                 <h4 class="jury-name">Andreas Frölich</h4>
                                 <span class="jury-country">Germany</span>
                             </div>
-                        </a>
-                        <a href="https://leonelmorales.com/en/home-en/" target="_blank" class="jury-card">
-                            <img src="../leonel.png" class="jury-image" alt="Leonel Morales" onerror="this.parentElement.classList.add('bg-stone-50')">
+                        </div>
+                        <div class="jury-card">
+                            <img src="leonel.png" class="jury-image" alt="Leonel Morales">
                             <div class="jury-info">
                                 <h4 class="jury-name">Leonel Morales</h4>
                                 <span class="jury-country">Spain</span>
                             </div>
-                        </a>
-                        <a href="http://witkowskipianoduo.com/Witkowski_Piano_Duo/Fabio.html" target="_blank" class="jury-card">
-                            <img src="../fabio.png" class="jury-image" alt="Fabio Witkowski" onerror="this.parentElement.classList.add('bg-stone-50')">
+                        </div>
+                        <div class="jury-card">
+                            <img src="fabio.png" class="jury-image" alt="Fabio Witkowski">
                             <div class="jury-info">
                                 <h4 class="jury-name">Fabio Witkowski</h4>
                                 <span class="jury-country">USA</span>
                             </div>
-                        </a>
-                        <a href="https://www.imep.be/news/guido-jardon-grandir-en-puisant-dans-les-racines-du-passe/" target="_blank" class="jury-card">
-                            <img src="../guido.png" class="jury-image" alt="Guido Jardon" onerror="this.parentElement.classList.add('bg-stone-50')">
+                        </div>
+                        <div class="jury-card">
+                            <img src="guido.png" class="jury-image" alt="Guido Jardon">
                             <div class="jury-info">
                                 <h4 class="jury-name">Guido Jardon</h4>
                                 <span class="jury-country">Belgium</span>
                             </div>
-                        </a>
-                        <a href="https://www.philipperaskin.com" target="_blank" class="jury-card border-copper/40 bg-copper/5">
-                            <img src="../philippe.png" class="jury-image" alt="Philippe Raskin" onerror="this.parentElement.classList.add('bg-stone-50')">
+                        </div>
+                        <div class="jury-card border-copper/30">
+                            <img src="philippe.png" class="jury-image" alt="Philippe Raskin">
                             <div class="jury-info">
                                 <h4 class="jury-name">Philippe Raskin</h4>
                                 <span class="jury-country">Belgium</span>
-                                <div class="jury-role">Artistic Director</div>
-                            </div>
-                        </a>
-                        <a href="https://moutouzkine.com" target="_blank" class="jury-card">
-                            <img src="../alexandre.png" class="jury-image" alt="Alexandre Moutouzkine" onerror="this.parentElement.classList.add('bg-stone-50')">
-                            <div class="jury-info">
-                                <h4 class="jury-name">Alexandre Moutouzkine</h4>
-                                <span class="jury-country">Russia / USA</span>
-                            </div>
-                        </a>
-                        <div class="jury-card">
-                            <img src="../steven.png" class="jury-image" alt="Steven De Mesmaeker" onerror="this.parentElement.classList.add('bg-stone-50')">
-                            <div class="jury-info">
-                                <h4 class="jury-name">Steven De Mesmaeker</h4>
-                                <span class="jury-country">Belgium</span>
+                                <p class="serif italic text-sage text-sm mt-2">Artistic Director</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Semi-Finals Jury -->
+                <!-- Semi-Finals Jury Section (Updated Styles) -->
                 <div class="bg-forest p-12 md:p-24 rounded-sm shadow-2xl text-copper relative overflow-hidden">
                     <div class="flex items-center gap-6 mb-12">
                         <h3 class="serif text-4xl italic text-copper">Semi-Finals Jury</h3>
@@ -401,33 +390,34 @@
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- All text in copper + highlight on hover -->
                         <div class="glass-box">
-                            <p class="font-bold text-lg mb-1">Svetlana Eganian</p>
-                            <p class="text-xs uppercase tracking-widest opacity-60">France / Armenia</p>
+                            <h4 class="jury-name !text-copper !mb-1">Svetlana Eganian</h4>
+                            <span class="jury-country !text-copper !opacity-100">France / Armenia</span>
                         </div>
                         <div class="glass-box">
-                            <p class="font-bold text-lg mb-1">Vincenzo Balzani</p>
-                            <p class="text-xs uppercase tracking-widest opacity-60">Italy</p>
+                            <h4 class="jury-name !text-copper !mb-1">Vincenzo Balzani</h4>
+                            <span class="jury-country !text-copper !opacity-100">Italy</span>
                         </div>
                         <div class="glass-box">
-                            <p class="font-bold text-lg mb-1">Andreas Frölich</p>
-                            <p class="text-xs uppercase tracking-widest opacity-60">Germany</p>
+                            <h4 class="jury-name !text-copper !mb-1">Andreas Frölich</h4>
+                            <span class="jury-country !text-copper !opacity-100">Germany</span>
                         </div>
                         <div class="glass-box">
-                            <p class="font-bold text-lg mb-1">Leonel Morales</p>
-                            <p class="text-xs uppercase tracking-widest opacity-60">Spain</p>
-                        </div>
-                        <div class="glass-box border-copper/50">
-                            <p class="font-bold text-lg mb-1">Philippe Raskin</p>
-                            <p class="text-xs uppercase tracking-widest opacity-60">Belgium</p>
+                            <h4 class="jury-name !text-copper !mb-1">Leonel Morales</h4>
+                            <span class="jury-country !text-copper !opacity-100">Spain</span>
                         </div>
                         <div class="glass-box">
-                            <p class="font-bold text-lg mb-1">Cristiana Dragos</p>
-                            <p class="text-xs uppercase tracking-widest opacity-60">Romania / Belgium</p>
+                            <h4 class="jury-name !text-copper !mb-1">Philippe Raskin</h4>
+                            <span class="jury-country !text-copper !opacity-100">Belgium</span>
                         </div>
                         <div class="glass-box">
-                            <p class="font-bold text-lg mb-1">Paulius Andersson</p>
-                            <p class="text-xs uppercase tracking-widest opacity-60">Lithuania</p>
+                            <h4 class="jury-name !text-copper !mb-1">Cristiana Dragos</h4>
+                            <span class="jury-country !text-copper !opacity-100">Romania / Belgium</span>
+                        </div>
+                        <div class="glass-box">
+                            <h4 class="jury-name !text-copper !mb-1">Paulius Andersson</h4>
+                            <span class="jury-country !text-copper !opacity-100">Lithuania</span>
                         </div>
                     </div>
                 </div>
