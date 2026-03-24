@@ -377,11 +377,12 @@
     </nav>
 
     <main class="pt-32 md:pt-48">
-       <!-- PAGE: HOME -->
+        <!-- PAGE: HOME -->
         <section id="home" class="page-section active">
             <!-- Hero -->
             <div class="relative min-h-[85vh] flex items-center bg-forest overflow-hidden">
-                <div class="absolute inset-0 opacity-40">
+                <!-- Set opacity to 0.65 for better balance of background visibility and text legibility -->
+                <div class="absolute inset-0 opacity-65">
                     <img src="home.png" class="w-full h-full object-cover" alt="Competition Home" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">
                 </div>
                 <div class="max-w-[1400px] mx-auto px-8 relative z-10 w-full">
@@ -446,15 +447,8 @@
 
                         <!-- Map Block -->
                         <div class="w-full lg:w-[640px] aspect-[16/9] bg-stone-800 shadow-2xl overflow-hidden rounded-sm relative grayscale hover:grayscale-0 transition-all duration-700 border border-copper/20 flex-shrink-0">
-                            <iframe 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5732126284687!2d4.473286977209176!3d50.85761665774052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3db377f0f0815%3A0x6d8b2847c29377f0!2sDe%20Lijsterbes!5e0!3m2!1sen!2sbe!4v1710584447385!5m2!1sen!2sbe">
-                            </iframe>
+                            <!-- Precise Google Maps Embed with Pin for GC de Lijsterbes -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.315551973137!2d4.462126752425898!3d50.86235767622139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3dc605379603f%3A0x3e2d4b260549ea02!2sGC%20de%20Lijsterbes!5e0!3m2!1sen!2sbe!4v1774342012257!5m2!1sen!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
