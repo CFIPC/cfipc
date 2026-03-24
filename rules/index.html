@@ -32,7 +32,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Navigation Styles */
+        /* EXACT HEADER STYLES */
         .nav-link {
             letter-spacing: 0.12em; font-size: 0.9rem; font-weight: 700;
             text-transform: uppercase; color: var(--forest); transition: all 0.3s ease;
@@ -65,7 +65,7 @@
         }
         .dropdown-item:hover { background: var(--forest); color: var(--copper); }
 
-        /* Prize Specific Styles */
+        /* PRIZE PAGE SPECIFIC CLASSES */
         .prize-column-box {
             background-color: white;
             padding: 2.5rem;
@@ -83,17 +83,20 @@
             display: flex;
             align-items: flex-start;
             gap: 1.5rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(212, 163, 115, 0.1);
+            padding: 1.5rem;
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
-        .special-prize-card:last-child { border-bottom: none; }
+        .special-prize-card:hover {
+            background: rgba(212, 163, 115, 0.05);
+        }
 
-        /* Logo & Header */
+        /* LOGO & BRANDING */
         .brand-logo { display: flex; flex-direction: column; align-items: center; background: none; border: none; }
         .logo-image { height: 100px; width: auto; transition: height 0.3s ease; }
         @media (min-width: 768px) { .logo-image { height: 150px; } }
 
-        /* Mobile Nav */
+        /* MOBILE NAV */
         #mobile-nav-overlay {
             position: fixed; inset: 0; background: var(--forest); z-index: 2000;
             display: none; flex-direction: column; padding: 4rem 2rem; overflow-y: auto; color: var(--parchment);
@@ -143,7 +146,7 @@
                     </button>
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">Competition <i data-lucide="chevron-down" class="w-3 h-3 ml-1 opacity-40"></i></button>
+                            <button class="nav-link" onclick="handleNavClick(event, this)">Competition <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
                             <div class="dropdown-menu">
                                 <button onclick="window.location.href='../#rules'" class="dropdown-item">Rules</button>
                                 <button onclick="window.location.href='../#prizes'" class="dropdown-item">Prizes</button>
@@ -153,7 +156,7 @@
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">Masterclasses <i data-lucide="chevron-down" class="w-3 h-3 ml-1 opacity-40"></i></button>
+                            <button class="nav-link" onclick="handleNavClick(event, this)">Masterclasses <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
                             <div class="dropdown-menu">
                                 <button onclick="window.location.href='../#masterclasses'" class="dropdown-item">Winter Festival</button>
                                 <button onclick="window.location.href='../#masterclasses'" class="dropdown-item">Spring Festival</button>
@@ -170,14 +173,14 @@
                 <div class="flex-1 flex justify-end items-center">
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">About <i data-lucide="chevron-down" class="w-3 h-3 ml-1 opacity-40"></i></button>
+                            <button class="nav-link" onclick="handleNavClick(event, this)">About <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
                             <div class="dropdown-menu">
                                 <button onclick="window.location.href='../#contact'" class="dropdown-item">Contact Us</button>
                                 <button onclick="window.location.href='../#about'" class="dropdown-item">Legacy</button>
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">Gallery <i data-lucide="chevron-down" class="w-3 h-3 ml-1 opacity-40"></i></button>
+                            <button class="nav-link" onclick="handleNavClick(event, this)">Gallery <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></button>
                             <div class="dropdown-menu">
                                 <button onclick="window.location.href='../#media'" class="dropdown-item">Media</button>
                                 <button onclick="window.location.href='../#gallery'" class="dropdown-item">Pictures</button>
@@ -425,10 +428,10 @@
             const overlay = document.getElementById('mobile-nav-overlay');
             if (overlay.classList.contains('open')) {
                 overlay.classList.remove('open');
-                setTimeout(() => overlay.style.display = 'none', 400);
+                setTimeout(() => { overlay.style.display = 'none'; }, 400);
             } else {
                 overlay.style.display = 'flex';
-                setTimeout(() => overlay.classList.add('open'), 10);
+                setTimeout(() => { overlay.classList.add('open'); }, 10);
             }
         }
         window.onclick = () => document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
