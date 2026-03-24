@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prizes & Awards | César Franck International Piano Competition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600;1,700&family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest: #1B2A27;
+            --copper: #D4A373;
+            --sage: #7D8B7A;
+            --parchment: #F2F0E9;
+            --dusty-white: #EAE8E1;
+        }
+
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background-color: var(--parchment);
+            color: var(--forest);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+        
+        .page-section { display: block; animation: sectionFade 0.6s ease-out; }
+
+        @keyframes sectionFade {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-link {
+            letter-spacing: 0.12em;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--forest);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            background: none;
+            border: none;
+        }
+        .nav-link:hover { color: var(--copper); }
+
+        .dropdown-container { position: relative; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--parchment);
+            border: 1px solid rgba(27, 42, 39, 0.1);
+            min-width: 220px;
+            display: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            z-index: 1000;
+            padding: 0.75rem 0;
+        }
+
+        @media (min-width: 1024px) {
+            .dropdown-container:hover .dropdown-menu { display: block; animation: fadeIn 0.3s ease; }
+        }
+        
+        .dropdown-menu.is-visible { display: block !important; }
+
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translate(-50%, 10px); } 
+            to { opacity: 1; transform: translate(-50%, 0); } 
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--forest);
+            transition: all 0.2s;
+            text-align: center;
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-item:hover { background: var(--forest); color: var(--copper); }
+
+        #mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: var(--forest);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            padding: 4rem 2rem;
+            overflow-y: auto;
+            color: var(--parchment);
+        }
+        #mobile-nav-overlay.open { display: flex; animation: overlayIn 0.4s ease forwards; }
+        
+        @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .mobile-group { margin-bottom: 2.5rem; }
+        .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
+        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; background: none; border: none; color: inherit; }
+
+        .brand-logo {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+        }
+        
+        .logo-image { height: 100px; width: auto; object-fit: contain; transition: height 0.3s ease; }
+        @media (min-width: 768px) { .logo-image { height: 150px; } }
+
+        .rules-card {
+            background-color: white;
+            padding: 2.5rem;
+            border: 1px solid rgba(27, 42, 39, 0.05);
+            border-radius: 2px;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 420px;
+        }
+        .rules-card:hover { border-color: var(--copper); box-shadow: 0 15px 35px rgba(27, 42, 39, 0.03); }
+
+        .glass-box {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 163, 115, 0.2);
+            padding: 2.5rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mobile-nav-overlay">
+        <div class="flex justify-between items-center mb-12">
+            <span class="serif italic text-2xl text-parchment">Menu</span>
+            <button onclick="toggleMobileMenu()" class="text-copper text-4xl leading-none">×</button>
+        </div>
+        <div class="mobile-group">
+            <span class="mobile-label">Competition</span>
+            <button onclick="window.location.href='../#rules'" class="mobile-link">Rules</button>
+            <button onclick="window.location.href='../#prizes'" class="mobile-link">Prizes</button>
+            <button onclick="window.location.href='../#contact'" class="mobile-link">Application</button>
+            <button onclick="window.location.href='../#jury'" class="mobile-link">Jury</button>
+            <button onclick="window.location.href='../#laureates'" class="mobile-link">Laureates</button>
+        </div>
+        <div class="mobile-group">
+            <span class="mobile-label">Masterclasses</span>
+            <button onclick="window.location.href='../#masterclasses'" class="mobile-link">Winter Festival</button>
+            <button onclick="window.location.href='../#masterclasses'" class="mobile-link">Spring Festival</button>
+            <button onclick="window.location.href='../#masterclasses'" class="mobile-link">Summer Festival</button>
+        </div>
+        <div class="mobile-group">
+            <span class="mobile-label">About</span>
+            <button onclick="window.location.href='../#contact'" class="mobile-link">Contact Us</button>
+            <button onclick="window.location.href='../#about'" class="mobile-link">Legacy</button>
+        </div>
+        <button onclick="window.location.href='../'" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</button>
+    </div>
+
+    <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
+        <div class="max-w-[1600px] mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-center h-32 md:h-48">
+                <div class="flex-1 flex justify-start items-center">
+                    <button class="md:hidden flex flex-col items-center justify-center space-y-1 p-2" onclick="toggleMobileMenu()">
+                        <div class="w-6 h-[1.5px] bg-forest"></div>
+                        <div class="w-6 h-[1.5px] bg-forest"></div>
+                    </button>
+                    <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
+                        <div class="dropdown-container">
+                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                                Competition 
+                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <button onclick="window.location.href='../#rules'" class="dropdown-item">Rules</button>
+                                <button onclick="window.location.href='../#prizes'" class="dropdown-item">Prizes</button>
+                                <button onclick="window.location.href='../#contact'" class="dropdown-item">Application</button>
+                                <button onclick="window.location.href='../#jury'" class="dropdown-item">Jury</button>
+                                <button onclick="window.location.href='../#laureates'" class="dropdown-item">Laureates</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-container">
+                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                                Masterclasses 
+                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <button onclick="window.location.href='../#masterclasses'" class="dropdown-item">Winter Festival</button>
+                                <button onclick="window.location.href='../#masterclasses'" class="dropdown-item">Spring Festival</button>
+                                <button onclick="window.location.href='../#masterclasses'" class="dropdown-item">Summer Festival</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="brand-logo cursor-pointer group px-2" onclick="window.location.href='../'">
+                    <img src="../Logo26.png" alt="CFIPC Logo" class="logo-image">
+                </button>
+
+                <div class="flex-1 flex justify-end items-center">
+                    <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
+                        <div class="dropdown-container">
+                            <button class="nav-link" onclick="handleNavClick(event, this)">About 
+                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <button onclick="window.location.href='../#contact'" class="dropdown-item">Contact Us</button>
+                                <button onclick="window.location.href='../#about'" class="dropdown-item">Legacy</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-container">
+                            <button class="nav-link" onclick="handleNavClick(event, this)">Gallery 
+                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <button onclick="window.location.href='../#media'" class="dropdown-item">Media</button>
+                                <button onclick="window.location.href='../#gallery'" class="dropdown-item">Pictures</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 md:pt-48">
+        <section id="prizes" class="page-section py-32 px-4 md:px-8">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="text-center mb-24">
+                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Awards & Recognition</h4>
+                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Prizes 2026</h2>
+                    <p class="text-copper font-bold uppercase tracking-[0.2em] text-[14px] mt-6">Total Prize Value Exceeding €15,000</p>
+                </div>
+
+                <div class="mb-32">
+                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Main Category Awards</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="rules-card text-center">
+                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category A</h4>
+                            <p class="text-3xl serif mb-4 italic text-forest">10 & Under</p>
+                            <div class="space-y-4 pt-6 border-t border-forest/10">
+                                <p class="text-forest font-bold text-lg">1st Prize: €550</p>
+                                <p class="text-stone-500 text-sm uppercase tracking-widest">2nd Prize: €300</p>
+                                <p class="text-stone-500 text-sm uppercase tracking-widest">3rd Prize: €150</p>
+                            </div>
+                        </div>
+                        <div class="rules-card text-center">
+                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category B</h4>
+                            <p class="text-3xl serif mb-4 italic text-forest">11 — 13</p>
+                            <div class="space-y-4 pt-6 border-t border-forest/10">
+                                <p class="text-forest font-bold text-lg">1st Prize: €650</p>
+                                <p class="text-stone-500 text-sm uppercase tracking-widest">2nd Prize: €400</p>
+                                <p class="text-stone-500 text-sm uppercase tracking-widest">3rd Prize: €200</p>
+                            </div>
+                        </div>
+                        <div class="rules-card text-center">
+                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category C</h4>
+                            <p class="text-3xl serif mb-4 italic text-forest">14 — 16</p>
+                            <div class="space-y-4 pt-6 border-t border-forest/10">
+                                <p class="text-forest font-bold text-lg">1st Prize: €750</p>
+                                <p class="text-stone-500 text-sm uppercase tracking-widest">2nd Prize: €500</p>
+                                <p class="text-stone-500 text-sm uppercase tracking-widest">3rd Prize: €250</p>
+                            </div>
+                        </div>
+                        <div class="rules-card text-center">
+                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category D</h4>
+                            <p class="text-3xl serif mb-4 italic text-forest">17 — 21</p>
+                            <div class="space-y-4 pt-6 border-t border-forest/10">
+                                <p class="text-forest font-bold text-lg">1st Prize: €1450</p>
+                                <p class="text-stone-500 text-sm uppercase tracking-widest">2nd Prize: €800</p>
+                                <p class="text-stone-500 text-sm uppercase tracking-widest">3rd Prize: €400</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-32 bg-forest p-12 md:p-20 rounded-sm shadow-2xl relative overflow-hidden">
+                    <h3 class="serif text-4xl italic mb-12 text-copper relative z-10">Special Awards & Opportunities</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                        <div class="glass-box">
+                            <h5 class="text-copper font-bold uppercase tracking-widest text-[10px] mb-4">Performance Prizes</h5>
+                            <ul class="space-y-4 text-sm text-copper">
+                                <li class="flex gap-3"><span>•</span> <b>César Franck Prize:</b> Best performance of a work by César Franck.</li>
+                                <li class="flex gap-3"><span>•</span> <b>Concert Engagement:</b> Performance opportunities in Belgium and France for top laureates.</li>
+                                <li class="flex gap-3"><span>•</span> <b>Audience Award:</b> Voted during the Grand Finale.</li>
+                            </ul>
+                        </div>
+                        <div class="glass-box">
+                            <h5 class="text-copper font-bold uppercase tracking-widest text-[10px] mb-4">Development Prizes</h5>
+                            <ul class="space-y-4 text-sm text-copper">
+                                <li class="flex gap-3"><span>•</span> <b>Masterclass Scholarships:</b> Full tuition for the CFIPC Summer Festival.</li>
+                                <li class="flex gap-3"><span>•</span> <b>Professional Recording:</b> High-quality video/audio session for the Grand Prize winner.</li>
+                                <li class="flex gap-3"><span>•</span> <b>Junior Jury Award:</b> Selected by the student jury panel.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-forest text-copper pt-32 pb-16 px-8 mt-20">
+        <div class="max-w-[1400px] mx-auto text-center">
+            <p class="text-[9px] uppercase tracking-[0.3em] font-light">© The Music Agency 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        function handleNavClick(event, btn) {
+            const menu = btn.nextElementSibling;
+            const wasVisible = menu.classList.contains('is-visible');
+            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
+            if (!wasVisible) menu.classList.add('is-visible');
+            event.stopPropagation();
+        }
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobile-nav-overlay');
+            if (overlay.classList.contains('open')) {
+                overlay.classList.remove('open');
+                setTimeout(() => { overlay.style.display = 'none'; }, 400);
+                document.body.style.overflow = 'auto';
+            } else {
+                overlay.style.display = 'flex';
+                setTimeout(() => { overlay.classList.add('open'); }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        window.addEventListener('click', () => {
+            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
+        });
+    </script>
+</body>
+</html>
