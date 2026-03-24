@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prizes & Awards | César Franck International Piano Competition</title>
+    <title>Competition Prizes | César Franck International Piano Competition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600;1,700&family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
@@ -90,7 +90,10 @@
             border: none;
             cursor: pointer;
         }
-        .dropdown-item:hover { background: var(--forest); color: var(--copper); }
+        .dropdown-item:hover { 
+            background: var(--forest); 
+            color: var(--copper); 
+        }
 
         #mobile-nav-overlay {
             position: fixed;
@@ -121,40 +124,62 @@
             border: none;
         }
         
-        .logo-image { height: 100px; width: auto; object-fit: contain; transition: height 0.3s ease; }
-        @media (min-width: 768px) { .logo-image { height: 150px; } }
-
-        .rules-card {
-            background-color: white;
-            padding: 2.5rem;
-            border: 1px solid rgba(27, 42, 39, 0.05);
-            border-radius: 2px;
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 420px;
+        .logo-image {
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+            transition: height 0.3s ease;
         }
-        .rules-card:hover { border-color: var(--copper); box-shadow: 0 15px 35px rgba(27, 42, 39, 0.03); }
+        
+        @media (min-width: 768px) {
+            .logo-image { height: 150px; }
+        }
 
-        .glass-box {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(8px);
+        .bg-forest { background-color: var(--forest); }
+        .text-copper { color: var(--copper); }
+        .btn-copper { background-color: var(--copper); color: white; transition: all 0.3s ease; }
+        .btn-copper:hover { background-color: var(--forest); }
+
+        .prize-column-box {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(212, 163, 115, 0.2);
             padding: 2.5rem;
             height: 100%;
             transition: all 0.3s ease;
-            border-radius: 2px;
+            border-radius: 4px;
+        }
+        .prize-column-box:hover {
+            background: rgba(255, 255, 255, 0.6);
+            border-color: var(--copper);
+            transform: translateY(-5px);
+        }
+
+        .special-prize-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 163, 115, 0.2);
+            padding: 2rem;
+            width: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .special-prize-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--copper);
         }
     </style>
 </head>
 <body>
 
+    <!-- Mobile Navigation Overlay -->
     <div id="mobile-nav-overlay">
         <div class="flex justify-between items-center mb-12">
             <span class="serif italic text-2xl text-parchment">Menu</span>
             <button onclick="toggleMobileMenu()" class="text-copper text-4xl leading-none">×</button>
         </div>
+
         <div class="mobile-group">
             <span class="mobile-label">Competition</span>
             <button onclick="window.location.href='../#rules'" class="mobile-link">Rules</button>
@@ -163,20 +188,24 @@
             <button onclick="window.location.href='../#jury'" class="mobile-link">Jury</button>
             <button onclick="window.location.href='../#laureates'" class="mobile-link">Laureates</button>
         </div>
+
         <div class="mobile-group">
             <span class="mobile-label">Masterclasses</span>
             <button onclick="window.location.href='../#masterclasses'" class="mobile-link">Winter Festival</button>
             <button onclick="window.location.href='../#masterclasses'" class="mobile-link">Spring Festival</button>
             <button onclick="window.location.href='../#masterclasses'" class="mobile-link">Summer Festival</button>
         </div>
+
         <div class="mobile-group">
             <span class="mobile-label">About</span>
             <button onclick="window.location.href='../#contact'" class="mobile-link">Contact Us</button>
             <button onclick="window.location.href='../#about'" class="mobile-link">Legacy</button>
         </div>
+
         <button onclick="window.location.href='../'" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</button>
     </div>
 
+    <!-- Main Navigation Header (EXACT MIRROR) -->
     <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
         <div class="max-w-[1600px] mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center h-32 md:h-48">
@@ -185,6 +214,7 @@
                         <div class="w-6 h-[1.5px] bg-forest"></div>
                         <div class="w-6 h-[1.5px] bg-forest"></div>
                     </button>
+
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
                             <button class="nav-link" onclick="handleNavClick(event, this)">
@@ -220,16 +250,18 @@
                 <div class="flex-1 flex justify-end items-center">
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">About 
+                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                                About 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </button>
                             <div class="dropdown-menu">
-                                <button onclick="window.location.href='../#contact'" class="dropdown-item">Contact Us</button>
+                                <button onclick="window.location.href='../#contact'" class="dropdown-item">Contact Us / Application</button>
                                 <button onclick="window.location.href='../#about'" class="dropdown-item">Legacy</button>
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">Gallery 
+                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                                Gallery 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </button>
                             <div class="dropdown-menu">
@@ -244,81 +276,229 @@
     </nav>
 
     <main class="pt-32 md:pt-48">
+        <!-- PAGE: PRIZES (EXACTLY AS IN MAIN CODE) -->
         <section id="prizes" class="page-section py-32 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
-                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Awards & Recognition</h4>
-                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Prizes 2026</h2>
-                    <p class="text-copper font-bold uppercase tracking-[0.2em] text-[14px] mt-6">Total Prize Value Exceeding €15,000</p>
+                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Awards & Laureates</h4>
+                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Competition Prizes</h2>
+                    <p class="text-stone-400 uppercase tracking-widest text-[11px] mt-6">Recognizing Artistic Excellence across Categories</p>
                 </div>
 
+                <!-- CATEGORY A PRIZES -->
                 <div class="mb-32">
-                    <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Main Category Awards</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="rules-card text-center">
-                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category A</h4>
-                            <p class="text-3xl serif mb-4 italic text-forest">10 & Under</p>
-                            <div class="space-y-4 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-lg">1st Prize: €550</p>
-                                <p class="text-stone-500 text-sm uppercase tracking-widest">2nd Prize: €300</p>
-                                <p class="text-stone-500 text-sm uppercase tracking-widest">3rd Prize: €150</p>
-                            </div>
+                    <div class="flex items-center gap-6 mb-12">
+                        <h3 class="serif text-5xl italic text-forest">Category A</h3>
+                        <div class="h-[1px] flex-grow bg-forest/5"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">1st Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 550€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €100 cash prize</li>
+                                <li>• Concert with orchestra in April 2027</li>
+                                <li>• €250 fee for concerto performance</li>
+                                <li>• €200 Scholarship (CF Young Talents Festival)</li>
+                            </ul>
                         </div>
-                        <div class="rules-card text-center">
-                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category B</h4>
-                            <p class="text-3xl serif mb-4 italic text-forest">11 — 13</p>
-                            <div class="space-y-4 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-lg">1st Prize: €650</p>
-                                <p class="text-stone-500 text-sm uppercase tracking-widest">2nd Prize: €400</p>
-                                <p class="text-stone-500 text-sm uppercase tracking-widest">3rd Prize: €200</p>
-                            </div>
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">2nd Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 250€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €50 cash prize</li>
+                                <li>• €100 Scholarship (CF Young Talents Festival)</li>
+                                <li>• €100 Scholarship (IMF Paris Masterclass)</li>
+                            </ul>
                         </div>
-                        <div class="rules-card text-center">
-                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category C</h4>
-                            <p class="text-3xl serif mb-4 italic text-forest">14 — 16</p>
-                            <div class="space-y-4 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-lg">1st Prize: €750</p>
-                                <p class="text-stone-500 text-sm uppercase tracking-widest">2nd Prize: €500</p>
-                                <p class="text-stone-500 text-sm uppercase tracking-widest">3rd Prize: €250</p>
-                            </div>
-                        </div>
-                        <div class="rules-card text-center">
-                            <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category D</h4>
-                            <p class="text-3xl serif mb-4 italic text-forest">17 — 21</p>
-                            <div class="space-y-4 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-lg">1st Prize: €1450</p>
-                                <p class="text-stone-500 text-sm uppercase tracking-widest">2nd Prize: €800</p>
-                                <p class="text-stone-500 text-sm uppercase tracking-widest">3rd Prize: €400</p>
-                            </div>
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">3rd Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 100€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €100 Scholarship (IMF Paris Masterclass)</li>
+                                <li>• Invitation to CF Young Talents Festival 2027</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="mb-32 bg-forest p-12 md:p-20 rounded-sm shadow-2xl relative overflow-hidden">
-                    <h3 class="serif text-4xl italic mb-12 text-copper relative z-10">Special Awards & Opportunities</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-                        <div class="glass-box">
-                            <h5 class="text-copper font-bold uppercase tracking-widest text-[10px] mb-4">Performance Prizes</h5>
-                            <ul class="space-y-4 text-sm text-copper">
-                                <li class="flex gap-3"><span>•</span> <b>César Franck Prize:</b> Best performance of a work by César Franck.</li>
-                                <li class="flex gap-3"><span>•</span> <b>Concert Engagement:</b> Performance opportunities in Belgium and France for top laureates.</li>
-                                <li class="flex gap-3"><span>•</span> <b>Audience Award:</b> Voted during the Grand Finale.</li>
+                <!-- CATEGORY B PRIZES -->
+                <div class="mb-32">
+                    <div class="flex items-center gap-6 mb-12">
+                        <h3 class="serif text-5xl italic text-forest">Category B</h3>
+                        <div class="h-[1px] flex-grow bg-forest/5"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">1st Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 650€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €200 cash prize</li>
+                                <li>• Concert with orchestra in April 2027</li>
+                                <li>• €250 fee for concerto performance</li>
+                                <li>• €200 Scholarship (CF Young Talents Festival)</li>
                             </ul>
                         </div>
-                        <div class="glass-box">
-                            <h5 class="text-copper font-bold uppercase tracking-widest text-[10px] mb-4">Development Prizes</h5>
-                            <ul class="space-y-4 text-sm text-copper">
-                                <li class="flex gap-3"><span>•</span> <b>Masterclass Scholarships:</b> Full tuition for the CFIPC Summer Festival.</li>
-                                <li class="flex gap-3"><span>•</span> <b>Professional Recording:</b> High-quality video/audio session for the Grand Prize winner.</li>
-                                <li class="flex gap-3"><span>•</span> <b>Junior Jury Award:</b> Selected by the student jury panel.</li>
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">2nd Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 280€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €80 cash prize</li>
+                                <li>• €100 Scholarship (CF Young Talents Festival)</li>
+                                <li>• €100 Scholarship (IMF Paris Masterclass)</li>
+                            </ul>
+                        </div>
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">3rd Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 100€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €200 Scholarship (CF Young Talents Festival)</li>
+                                <li>• Invitation to CF Young Talents Festival 2027</li>
                             </ul>
                         </div>
                     </div>
+                </div>
+
+                <!-- CATEGORY C PRIZES -->
+                <div class="mb-32">
+                    <div class="flex items-center gap-6 mb-12">
+                        <h3 class="serif text-5xl italic text-forest">Category C</h3>
+                        <div class="h-[1px] flex-grow bg-forest/5"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">1st Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 750€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €300 cash prize</li>
+                                <li>• Concert with orchestra in April 2027</li>
+                                <li>• €250 fee for concerto performance</li>
+                                <li>• €200 Scholarship (CF Young Talents Festival)</li>
+                            </ul>
+                        </div>
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">2nd Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 320€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €120 cash prize</li>
+                                <li>• €100 Scholarship (CF Young Talents Festival)</li>
+                                <li>• €100 Scholarship (IMF Paris Masterclass)</li>
+                            </ul>
+                        </div>
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">3rd Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 100€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €100 Scholarship (IMF Paris Masterclass)</li>
+                                <li>• Invitation to CF Young Talents Festival 2027</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY D PRIZES -->
+                <div class="mb-32">
+                    <div class="flex items-center gap-6 mb-12">
+                        <h3 class="serif text-5xl italic text-forest">Category D</h3>
+                        <div class="h-[1px] flex-grow bg-forest/5"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">1st Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 1450€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €1000 cash prize</li>
+                                <li>• Concert with orchestra in April 2027</li>
+                                <li>• €250 fee for concerto performance</li>
+                                <li>• €200 Scholarship (CF Young Talents Festival)</li>
+                                <li>• Direct access to IMF Paris Round 2</li>
+                            </ul>
+                        </div>
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">2nd Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 600€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €400 cash prize</li>
+                                <li>• €100 Scholarship (CF Young Talents Festival)</li>
+                                <li>• €100 Scholarship (IMF Paris Masterclass)</li>
+                            </ul>
+                        </div>
+                        <div class="prize-column-box">
+                            <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">3rd Prize</h5>
+                            <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 200€</p>
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
+                                <li>• €100 Scholarship (CF Young Talents Festival)</li>
+                                <li>• €100 Scholarship (IMF Paris Masterclass)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPECIAL PRIZES - DARK FOREST THEME AS REQUESTED -->
+                <div class="bg-forest p-12 md:p-24 text-copper rounded-sm shadow-2xl relative overflow-hidden">
+                    <div class="text-center mb-16">
+                        <h3 class="serif text-5xl italic text-copper">Special Prizes</h3>
+                        <p class="text-copper uppercase tracking-[0.2em] text-[10px] mt-4 font-bold">Prestigious Invitations & Performance Awards</p>
+                    </div>
+                    
+                    <div class="max-w-4xl mx-auto space-y-6">
+                        <div class="special-prize-card">
+                            <div class="w-12 h-12 rounded-full border border-copper flex items-center justify-center flex-shrink-0 text-copper italic serif text-2xl font-bold bg-copper/10">1</div>
+                            <div>
+                                <h5 class="text-copper font-bold uppercase tracking-widest text-[12px] mb-1">César Franck Chamber Orchestra Prize</h5>
+                                <p class="text-copper font-light text-sm">1st Prizewinners will perform with the orchestra conducted by Maestro Vahan Mardirossian in Brussels, April 2027.</p>
+                            </div>
+                        </div>
+                        <div class="special-prize-card">
+                            <div class="w-12 h-12 rounded-full border border-copper flex items-center justify-center flex-shrink-0 text-copper italic serif text-2xl font-bold bg-copper/10">2</div>
+                            <div>
+                                <h5 class="text-copper font-bold uppercase tracking-widest text-[12px] mb-1">Piano Talents Milano Prize</h5>
+                                <p class="text-copper font-light text-sm">Concert performance within the 2027 Concert Season of the Associazione PianoFriends Milano.</p>
+                            </div>
+                        </div>
+                        <div class="special-prize-card">
+                            <div class="w-12 h-12 rounded-full border border-copper flex items-center justify-center flex-shrink-0 text-copper italic serif text-2xl font-bold bg-copper/10">3</div>
+                            <div>
+                                <h5 class="text-copper font-bold uppercase tracking-widest text-[12px] mb-1">MozArte Aachen Prize</h5>
+                                <p class="text-copper font-light text-sm">Concert opportunity as part of the 2026 Concert Season of the MozArte Festival Aachen.</p>
+                            </div>
+                        </div>
+                        <div class="special-prize-card">
+                            <div class="w-12 h-12 rounded-full border border-copper flex items-center justify-center flex-shrink-0 text-copper italic serif text-2xl font-bold bg-copper/10">4</div>
+                            <div>
+                                <h5 class="text-copper font-bold uppercase tracking-widest text-[12px] mb-1">Hotchkiss School Scholarship Prize</h5>
+                                <p class="text-copper font-light text-sm">Concert at Carnegie Hall and partial tuition for the Summer Piano Portals (Gisele & Fabio Witkowski).</p>
+                            </div>
+                        </div>
+                        <div class="special-prize-card">
+                            <div class="w-12 h-12 rounded-full border border-copper flex items-center justify-center flex-shrink-0 text-copper italic serif text-2xl font-bold bg-copper/10">5</div>
+                            <div>
+                                <h5 class="text-copper font-bold uppercase tracking-widest text-[12px] mb-1">Prix IMEP</h5>
+                                <p class="text-copper font-light text-sm">Concert invitations for the International Piano Festival IMEP 2026, offered by Guido Jardon.</p>
+                            </div>
+                        </div>
+                        <div class="special-prize-card">
+                            <div class="w-12 h-12 rounded-full border border-copper flex items-center justify-center flex-shrink-0 text-copper italic serif text-2xl font-bold bg-copper/10">6</div>
+                            <div>
+                                <h5 class="text-copper font-bold uppercase tracking-widest text-[12px] mb-1">IMF Paris Festival Prize</h5>
+                                <p class="text-copper font-light text-sm">Concert participation within the IMF Paris Festival 2026 Season.</p>
+                            </div>
+                        </div>
+                        <div class="special-prize-card">
+                            <div class="w-12 h-12 rounded-full border border-copper flex items-center justify-center flex-shrink-0 text-copper italic serif text-2xl font-bold bg-copper/10">7</div>
+                            <div>
+                                <h5 class="text-copper font-bold uppercase tracking-widest text-[12px] mb-1">Music Without Limits Award</h5>
+                                <p class="text-copper font-light text-sm">Free participation in masterclasses, competition, and concerts in Druskininkai, Lithuania.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-16 text-center italic text-copper/30 text-sm">Other special prizes to be announced soon</div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="bg-forest text-copper pt-32 pb-16 px-8 mt-20">
         <div class="max-w-[1400px] mx-auto text-center">
             <p class="text-[9px] uppercase tracking-[0.3em] font-light">© The Music Agency 2026</p>
@@ -346,9 +526,7 @@
                 document.body.style.overflow = 'hidden';
             }
         }
-        window.addEventListener('click', () => {
-            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
-        });
+        window.onclick = () => document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
     </script>
 </body>
 </html>
