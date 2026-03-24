@@ -175,17 +175,18 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-decoration: none;
         }
         .glass-box:hover {
             border-color: var(--copper);
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.12);
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transform: translateY(-2px);
+            transform: translateY(-4px);
         }
 
-        /* Specific style for jury names in dark background sections */
-        .bg-forest .jury-name {
-            color: var(--copper);
+        .glass-box .jury-name, 
+        .glass-box .jury-country {
+            color: var(--copper) !important;
         }
     </style>
 </head>
@@ -313,10 +314,10 @@
                         <div class="h-[1px] flex-grow bg-forest/5"></div>
                     </div>
                     
-                    <!-- President Card with image and link -->
+                    <!-- President Card restored with image and link -->
                     <div class="flex justify-center mb-16">
                         <a href="https://olgakern.com" target="_blank" class="jury-card w-full md:w-[420px] border-copper/30">
-                            <img src="Jury images/olga.png" class="jury-image" alt="Olga Kern">
+                            <img src="Laureates images/olga.png" class="jury-image" alt="Olga Kern">
                             <div class="jury-info">
                                 <p class="jury-role-label">President</p>
                                 <h4 class="jury-name !text-2xl">Olga Kern</h4>
@@ -325,65 +326,79 @@
                         </a>
                     </div>
 
-                    <!-- Main Grid -->
+                    <!-- Main Grid with Hyperlinks Restored -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="jury-card">
-                            <img src="Jury images/svetlana.png" class="jury-image" alt="Svetlana Eganian">
+                            <img src="Laureates images/svetlana.png" class="jury-image" alt="Svetlana Eganian">
                             <div class="jury-info">
                                 <h4 class="jury-name">Svetlana Eganian</h4>
                                 <span class="jury-country">France / Armenia</span>
                             </div>
                         </div>
                         <a href="http://witkowskipianoduo.com/Witkowski_Piano_Duo/Gisele.html" target="_blank" class="jury-card">
-                            <img src="Jury images/gisele.png" class="jury-image" alt="Gisele Nacif">
+                            <img src="Laureates images/gisele.png" class="jury-image" alt="Gisele Nacif">
                             <div class="jury-info">
                                 <h4 class="jury-name">Gisele Nacif</h4>
                                 <span class="jury-country">USA</span>
                             </div>
                         </a>
                         <a href="https://it.wikipedia.org/wiki/Vincenzo_Balzani_(pianista)" target="_blank" class="jury-card">
-                            <img src="Jury images/vincenzo.png" class="jury-image" alt="Vincenzo Balzani">
+                            <img src="Laureates images/vincenzo.png" class="jury-image" alt="Vincenzo Balzani">
                             <div class="jury-info">
                                 <h4 class="jury-name">Vincenzo Balzani</h4>
                                 <span class="jury-country">Italy</span>
                             </div>
                         </a>
                         <a href="https://en.wikipedia.org/wiki/Andreas_Frölich" target="_blank" class="jury-card">
-                            <img src="Jury images/andreas.png" class="jury-image" alt="Andreas Frölich">
+                            <img src="Laureates images/andreas.png" class="jury-image" alt="Andreas Frölich">
                             <div class="jury-info">
                                 <h4 class="jury-name">Andreas Frölich</h4>
                                 <span class="jury-country">Germany</span>
                             </div>
                         </a>
                         <a href="https://leonelmorales.com/en/home-en/" target="_blank" class="jury-card">
-                            <img src="Jury images/leonel.png" class="jury-image" alt="Leonel Morales">
+                            <img src="Laureates images/leonel.png" class="jury-image" alt="Leonel Morales">
                             <div class="jury-info">
                                 <h4 class="jury-name">Leonel Morales</h4>
                                 <span class="jury-country">Spain</span>
                             </div>
                         </a>
                         <a href="http://witkowskipianoduo.com/Witkowski_Piano_Duo/Fabio.html" target="_blank" class="jury-card">
-                            <img src="Jury images/fabio.png" class="jury-image" alt="Fabio Witkowski">
+                            <img src="Laureates images/fabio.png" class="jury-image" alt="Fabio Witkowski">
                             <div class="jury-info">
                                 <h4 class="jury-name">Fabio Witkowski</h4>
                                 <span class="jury-country">USA</span>
                             </div>
                         </a>
                         <a href="https://www.imep.be/news/guido-jardon-grandir-en-puisant-dans-les-racines-du-passe/" target="_blank" class="jury-card">
-                            <img src="Jury images/guido.png" class="jury-image" alt="Guido Jardon">
+                            <img src="Laureates images/guido.png" class="jury-image" alt="Guido Jardon">
                             <div class="jury-info">
                                 <h4 class="jury-name">Guido Jardon</h4>
                                 <span class="jury-country">Belgium</span>
                             </div>
                         </a>
                         <a href="https://www.philipperaskin.com" target="_blank" class="jury-card border-copper/30">
-                            <img src="Jury images/philippe.png" class="jury-image" alt="Philippe Raskin">
+                            <img src="Laureates images/philippe.png" class="jury-image" alt="Philippe Raskin">
                             <div class="jury-info">
                                 <h4 class="jury-name">Philippe Raskin</h4>
                                 <span class="jury-country">Belgium</span>
                                 <p class="serif italic text-sage text-sm mt-2">Artistic Director</p>
                             </div>
                         </a>
+                        <a href="https://moutouzkine.com" target="_blank" class="jury-card">
+                            <img src="Laureates images/alexandre.png" class="jury-image" alt="Alexandre Moutouzkine">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Alexandre Moutouzkine</h4>
+                                <span class="jury-country">Russia / USA</span>
+                            </div>
+                        </a>
+                        <div class="jury-card">
+                            <img src="Laureates images/steven.png" class="jury-image" alt="Steven De Mesmaeker">
+                            <div class="jury-info">
+                                <h4 class="jury-name">Steven De Mesmaeker</h4>
+                                <span class="jury-country">Belgium</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -395,33 +410,34 @@
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- All text in copper + highlight on hover -->
                         <div class="glass-box">
                             <h4 class="jury-name !mb-1">Svetlana Eganian</h4>
-                            <span class="jury-country !text-copper !opacity-100">France / Armenia</span>
+                            <span class="jury-country !opacity-100">France / Armenia</span>
                         </div>
                         <div class="glass-box">
                             <h4 class="jury-name !mb-1">Vincenzo Balzani</h4>
-                            <span class="jury-country !text-copper !opacity-100">Italy</span>
+                            <span class="jury-country !opacity-100">Italy</span>
                         </div>
                         <div class="glass-box">
                             <h4 class="jury-name !mb-1">Andreas Frölich</h4>
-                            <span class="jury-country !text-copper !opacity-100">Germany</span>
+                            <span class="jury-country !opacity-100">Germany</span>
                         </div>
                         <div class="glass-box">
                             <h4 class="jury-name !mb-1">Leonel Morales</h4>
-                            <span class="jury-country !text-copper !opacity-100">Spain</span>
+                            <span class="jury-country !opacity-100">Spain</span>
                         </div>
-                        <div class="glass-box">
+                        <div class="glass-box border-copper/50">
                             <h4 class="jury-name !mb-1">Philippe Raskin</h4>
-                            <span class="jury-country !text-copper !opacity-100">Belgium</span>
+                            <span class="jury-country !opacity-100">Belgium</span>
                         </div>
                         <div class="glass-box">
                             <h4 class="jury-name !mb-1">Cristiana Dragos</h4>
-                            <span class="jury-country !text-copper !opacity-100">Romania / Belgium</span>
+                            <span class="jury-country !opacity-100">Romania / Belgium</span>
                         </div>
                         <div class="glass-box">
                             <h4 class="jury-name !mb-1">Paulius Andersson</h4>
-                            <span class="jury-country !text-copper !opacity-100">Lithuania</span>
+                            <span class="jury-country !opacity-100">Lithuania</span>
                         </div>
                     </div>
                 </div>
