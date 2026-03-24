@@ -136,9 +136,10 @@
         /* Laureates Page Specific Styles */
         .laureate-year-block { border-bottom: 1px solid rgba(27, 42, 39, 0.1) ; padding-bottom: 6rem ; margin-bottom: 6rem ; }
         .laureate-year-block:last-child { border-bottom: none ; }
-        .winner-rank { font-weight: 700 ; text-transform: uppercase ; font-size: 0.7rem ; letter-spacing: 0.12em ; color: var(--copper) ; min-width: 140px ; display: inline-block ; }
+        .winner-rank { font-weight: 700 ; text-transform: uppercase ; font-size: 0.7rem ; letter-spacing: 0.12em ; color: var(--copper) ; min-width: 180px ; display: inline-block ; }
         .winner-name { color: var(--forest) ; font-weight: 400 ; font-size: 0.95rem ; }
         .winner-item { display: flex ; border-bottom: 1px solid rgba(27, 42, 39, 0.05) ; padding: 0.6rem 0 ; align-items: flex-start ; }
+        .winner-item.no-border { border-bottom: none ; }
         .laureate-image { width: 100% ; aspect-ratio: 4/3 ; object-fit: cover ; border-radius: 2px ; filter: grayscale(15%) ; transition: all 0.4s ease ; margin-bottom: 1rem ; border: 1px solid rgba(27, 42, 39, 0.05) ; }
         .laureate-image:hover { filter: grayscale(0) ; transform: scale(1.02) ; }
         .special-prize-item { margin-bottom: 1.5rem ; }
@@ -256,7 +257,6 @@
     </nav>
 
     <main class="pt-32 md:pt-48">
-        <!-- PAGE: LAUREATES ARCHIVE -->
         <section id="laureates" class="page-section py-32 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-40">
@@ -273,9 +273,9 @@
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
                                     <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Toni Gu (Germany)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Teodor Vujanic (Serbia)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Teodor Vujanic (Serbia)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Jonatan Sabbah (Norway)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Pablo Guiot (Belgium)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Pablo Guiot (Belgium)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Xinyan Zhou (Canada)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Honorary mention</span><p class="winner-name">An Dao (Austria)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Honorary mention</span><p class="winner-name">Yuheng Deng (China)</p></div>
@@ -284,10 +284,10 @@
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
                                     <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Keshav Krishnan (Holland)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Ermes Balili (Albania)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Carlotta Rigano (Italy)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Ermes Balili (Albania)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Carlotta Rigano (Italy)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Jiwan Kim (South Korea)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Viktor Dikanovic (Serbia/Sweden)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Viktor Dikanovic (Serbia/Sweden)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Ziyu Zhou (Canada)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Honorary mention</span><p class="winner-name">Yueyao Mendia He (Germany)</p></div>
                                 </div>
@@ -299,18 +299,18 @@
                                     <div class="winner-item"><span class="winner-rank">Honorary mention</span><p class="winner-name">Chenrui Zhang (China)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Honorary mention</span><p class="winner-name">Andrija Bošković (Croatia)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Honorary mention</span><p class="winner-name">Henry Hewitt (United States)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">Finalist Diploma</span><p class="winner-name">Avtandili Tchiokadze Tigishvili (Georgia/Spain)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">Finalist Diploma</span><p class="winner-name">Avtandili Tchiokadze Tigishvili (Georgia/Spain)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Finalist Diploma</span><p class="winner-name">Yiqing Huang (China)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
                                     <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Tatia Abashishvili (Georgia)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Firoze Madon (Great Britain)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Firoze Madon (Great Britain)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Clara Margarethe Mandler (Germany)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd prize</span><p class="winner-name">Aidan Keane (Ireland)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Honorary mention</span><p class="winner-name">João Barreto (Portugal)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Honorary mention</span><p class="winner-name">Anthony Ayma (France)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Lea Marie Terziyska (Germany/Bulgaria)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">Finalist</span><p class="winner-name">Lea Marie Terziyska (Germany/Bulgaria)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Alisa Lin (Thailand)</p></div>
                                 </div>
                             </div>
@@ -352,8 +352,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <img src="laureates_2025_1.png" class="laureate-image rounded shadow-xl" alt="2025 Winners">
-                                <img src="laureates_2025_2.png" class="laureate-image rounded shadow-xl" alt="2025 Finalists">
+                                <img src="../Laureates images/laureates_2025_1.png" class="laureate-image rounded shadow-xl" alt="2025 Winners">
+                                <img src="../Laureates images/laureates_2025_2.png" class="laureate-image rounded shadow-xl" alt="2025 Finalists">
                             </div>
                         </div>
                     </div>
@@ -367,45 +367,45 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Noah Huang (Belgium)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Noah Huang (Belgium)</p></div>
                                     <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Anna Martirosian (Russia)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Takahide Kuwahara (Japan)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Takahide Kuwahara (Japan)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Uxue Filibi (Spain)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Junbo Wang (China)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Vivi Nguyen (Czech Republic)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Junbo Wang (China)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Vivi Nguyen (Czech Republic)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Yiqiao Feng (China/Germany)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Young Talent Award</span><p class="winner-name">Maria Nicole Bresciani (Italy)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
                                     <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name">Luana Kyrychenko (Portugal)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Chi Ioi Alisha Cheong (Macau China)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Chi Ioi Alisha Cheong (Macau China)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Jing Cheng Liau (Macau China)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Jonathan Ortlieb (Germany)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Sana Ozaki (Japan/Spain)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">Finalist</span><p class="winner-name">Jonathan Ortlieb (Germany)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">Finalist</span><p class="winner-name">Sana Ozaki (Japan/Spain)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Yizhi Iris Luo (China/France)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Adam Znamirovsky (Czech Republic)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Adam Znamirovsky (Czech Republic)</p></div>
                                     <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Luca Newman (United Kingdom)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Yun Shangguan (China)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Yun Shangguan (China)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Jeremy Cao (USA)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd Prize</span><p class="winner-name">Crystal Pang (USA)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Zhu Zhizhao (China)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">Finalist</span><p class="winner-name">Zhu Zhizhao (China)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Yanyi Sun (China/UK)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Victoria Fang (USA)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Salome Pilgram (Switzerland)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Victoria Fang (USA)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Salome Pilgram (Switzerland)</p></div>
                                     <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Nina Okada (France)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Duoduo Nie (China)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Duoduo Nie (China)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Marta Tejero Fernandez (Spain)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Liurui Xu (China)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Liurui Xu (China)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Tatia Abashishvili (Georgia)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Aidan Keane (Ireland)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Lena Juszkiewicz (Poland)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">Finalist</span><p class="winner-name">Aidan Keane (Ireland)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">Finalist</span><p class="winner-name">Lena Juszkiewicz (Poland)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Iris Stoicescu (Ireland)</p></div>
                                 </div>
                             </div>
@@ -429,8 +429,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <laureates_2024_1.png" class="laureate-image rounded" alt="2024 Winners">
-                                <laureates_2024_2.png" class="laureate-image rounded" alt="2024 Gala">
+                                <img src="../Laureates images/laureates_2024_1.png" class="laureate-image rounded" alt="2024 Winners">
+                                <img src="../Laureates images/laureates_2024_2.png" class="laureate-image rounded" alt="2024 Gala">
                             </div>
                         </div>
                     </div>
@@ -444,7 +444,7 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Ei Fujimori (Japan)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Ei Fujimori (Japan)</p></div>
                                     <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Yulianna Beziazychna (Ukraine)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name">Alissa Merdian (Germany)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd Prize</span><p class="winner-name">Ben Yuan (Germany)</p></div>
@@ -452,27 +452,27 @@
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Dylan Keane (Ireland)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Dylan Keane (Ireland)</p></div>
                                     <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Richard Rait (Russia)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Nemanja Radulović (Montenegro)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Nemanja Radulović (Montenegro)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Kanon Saeki (Japan)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Louise Byrne (Ireland)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Louise Byrne (Ireland)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Jonas Mesakh Theuer (Switzerland)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Honorary Mention</span><p class="winner-name">Aavi Sircar (USA)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Phoebe Papandrea (United Kingdom)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Phoebe Papandrea (United Kingdom)</p></div>
                                     <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Manuel Nicolás Margineanu (Romania)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Estêvão Medeiros Gomes (Brazil)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Estêvão Medeiros Gomes (Brazil)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Sofiia Dorosh (Ukraine)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Filippos Klapsinakis (Greece/Romania)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Filippos Klapsinakis (Greece/Romania)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Duru Ercoskun (Turkey)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
                                     <div class="winner-item"><span class="winner-rank">1st Prize</span><p class="winner-name">Laura Brunou (France)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Akie Nakayama (Japan)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Akie Nakayama (Japan)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Dmitrii Kim (Russia)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd Prize</span><p class="winner-name">Alejandro de Castro (Spain)</p></div>
                                     <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Noelia Navas Padilla (Spain)</p></div>
@@ -490,8 +490,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <img src="laureates_2023_1.png" class="laureate-image rounded" alt="2023 Laureates">
-                                <img src="laureates_2023_2.png" class="laureate-image rounded" alt="2023 Ceremony">
+                                <img src="../Laureates images/laureates_2023_1.png" class="laureate-image rounded" alt="2023 Laureates">
+                                <img src="../Laureates images/laureates_2023_2.png" class="laureate-image rounded" alt="2023 Ceremony">
                             </div>
                         </div>
                     </div>
@@ -506,12 +506,12 @@
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
                                     <div class="winner-item"><span class="winner-rank">1st Prize</span><p class="winner-name">Akari BASTIAENS (Belgium)</p></div>
-                                    <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Viola della VECCHINA (Italy/Japan)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Viola della VECCHINA (Italy/Japan)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Alexander HOETZENECKER (Austria)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Mahault SKA (Belgium)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Mahault SKA (Belgium)</p></div>
                                     <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Oleksandr FEDIURKO (Ukraine)</p></div>
                                     <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name">Carlotta GALLI (Italy)</p></div>
                                     <div class="winner-item"><span class="winner-rank">3rd Prize</span><p class="winner-name">Era KUME (Albania)</p></div>
@@ -529,13 +529,13 @@
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize</span><p class="winner-name">Roman FEDIURKO (Ukraine)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name">Matteo WEBER (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Jakob AUMILLER (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Anna LINKOVA (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Rongrong GUO (China)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Sherri Hoi-Ching LUN (Hong Kong)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Anchi MAI (Taiwan)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize</span><p class="winner-name">Roman FEDIURKO (Ukraine)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name">Matteo WEBER (Germany)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Jakob AUMILLER (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Anna LINKOVA (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Rongrong GUO (China)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Sherri Hoi-Ching LUN (Hong Kong)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Anchi MAI (Taiwan)</p></div>
                                 </div>
                             </div>
                             <div class="special-awards-panel mt-16">
@@ -551,8 +551,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <img src="laureates_2022_1.png" class="laureate-image rounded" alt="2022 Winners">
-                                <img src="laureates_2022_2.png" class="laureate-image rounded" alt="2022 Winners">
+                                <img src="../Laureates images/laureates_2022_1.png" class="laureate-image rounded" alt="2022 Winners">
+                                <img src="../Laureates images/laureates_2022_2.png" class="laureate-image rounded" alt="2022 Winners">
                             </div>
                         </div>
                     </div>
@@ -566,35 +566,35 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize</span><p class="winner-name">Sophie Elizabeth Wagner (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Yukichiyo Yokota (Japan)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Evan Song (USA)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Léo Hoang (France)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Sofía Huerta Castrillo (Spain)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Mio Nakamura (Japan)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize</span><p class="winner-name">Sophie Elizabeth Wagner (Germany)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Yukichiyo Yokota (Japan)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Evan Song (USA)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Léo Hoang (France)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name">Sofía Huerta Castrillo (Spain)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Mio Nakamura (Japan)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Samuel Sabbah (Norway)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Yulia Nakashima (Japan/Korea)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name">Ryan Huang (USA/Canada)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize</span><p class="winner-name">Andromache Kammenos (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Michael Kabanovsky (USA)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Samuel Sabbah (Norway)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Yulia Nakashima (Japan/Korea)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name">Ryan Huang (USA/Canada)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd Prize</span><p class="winner-name">Andromache Kammenos (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Michael Kabanovsky (USA)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize & Public</span><p class="winner-name">Linus Reul (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name">Julius Legat (Austria/France)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Evelina Vitkovskaia (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Borys Komisarz (Poland)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize & Public</span><p class="winner-name">Linus Reul (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name">Julius Legat (Austria/France)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Evelina Vitkovskaia (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Borys Komisarz (Poland)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Perren-Luc Thiessen (USA)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Xing Chang (China)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name">Leander Brune (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize</span><p class="winner-name">Gevorg Matinyan (Armenia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Noa Kapelyushnik (Israel)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Perren-Luc Thiessen (USA)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Xing Chang (China)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name">Leander Brune (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd Prize</span><p class="winner-name">Gevorg Matinyan (Armenia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Noa Kapelyushnik (Israel)</p></div>
                                 </div>
                             </div>
                             <div class="special-awards-panel mt-16">
@@ -629,40 +629,40 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=UgtvD9CpveM" target="_blank" class="hover:text-copper transition-colors">Shan Liu (New Zealand)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=Bup_88XGTJI&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Pei Lin Oisin Pu (Ireland)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=d2otZ5UeAmM&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Akari Bastiaens (Belgium)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=lia4xUusII4" target="_blank" class="hover:text-copper transition-colors">Mio Nakamura (Japan)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Hrisiana Ivan Savova (Bulgaria)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Sophie Elizabeth Wagner (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Linda Yuan (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Stella Keller (Cyprus/Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=UgtvD9CpveM" target="_blank" class="hover:text-copper transition-colors">Shan Liu (New Zealand)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=Bup_88XGTJI&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Pei Lin Oisin Pu (Ireland)</a></p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=d2otZ5UeAmM&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Akari Bastiaens (Belgium)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=lia4xUusII4" target="_blank" class="hover:text-copper transition-colors">Mio Nakamura (Japan)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Hrisiana Ivan Savova (Bulgaria)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Sophie Elizabeth Wagner (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Linda Yuan (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Stella Keller (Cyprus/Germany)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=pARA8fk-gQU&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Anastasiya Shymchak (Belarus)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=IqwsBx48jtM" target="_blank" class="hover:text-copper transition-colors">Manuel Nicolás Margineanu (Romania)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=xvImAbMMYVY" target="_blank" class="hover:text-copper transition-colors">Ana Sofia Chereches (Romania)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=AXLIYQLKtDg&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Yu Chen Chen (Taiwan ROC)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=gmNVx1prWhg&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Emma Guercio (Italy)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=lW0tfW0VA_8" target="_blank" class="hover:text-copper transition-colors">Maria-Louisa Van Staden (Romania)</a></p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=pARA8fk-gQU&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Anastasiya Shymchak (Belarus)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=IqwsBx48jtM" target="_blank" class="hover:text-copper transition-colors">Manuel Nicolás Margineanu (Romania)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=xvImAbMMYVY" target="_blank" class="hover:text-copper transition-colors">Ana Sofia Chereches (Romania)</a></p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=AXLIYQLKtDg&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Yu Chen Chen (Taiwan ROC)</a></p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=gmNVx1prWhg&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Emma Guercio (Italy)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=lW0tfW0VA_8" target="_blank" class="hover:text-copper transition-colors">Maria-Louisa Van Staden (Romania)</a></p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=voNqAYNjLt8&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Zsombor Kemény (Hungary)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=-CwQ8WvdGYs&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Ildikó Rozsonits (Hungary)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=d14imV0MDms&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Ziyue Zeng (China)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=hT5n6jrBl9Q" target="_blank" class="hover:text-copper transition-colors">Constant Despres (France)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=lonI8Gd6gf0&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Monan Jülch (Germany)</a></p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=voNqAYNjLt8&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Zsombor Kemény (Hungary)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=-CwQ8WvdGYs&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Ildikó Rozsonits (Hungary)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=d14imV0MDms&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Ziyue Zeng (China)</a></p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=hT5n6jrBl9Q" target="_blank" class="hover:text-copper transition-colors">Constant Despres (France)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd Prize ex-aequo</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=lonI8Gd6gf0&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Monan Jülch (Germany)</a></p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=0dPmX22_Oi0&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Stefan Macovei (Romania)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=7v4Y9eLCjvU&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Qianchu Guo (China)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=YqJulZTn_G8&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Anna McCargow (UK/Russia)</a></p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Abraham Hernandez Rosado (Portugal)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Feiyi Liao (China)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Ivana Damjanov Ilic (Serbia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=0dPmX22_Oi0&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Stefan Macovei (Romania)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=7v4Y9eLCjvU&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Qianchu Guo (China)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd Prize</span><p class="winner-name"><a href="https://www.youtube.com/watch?v=YqJulZTn_G8&feature=youtu.be" target="_blank" class="hover:text-copper transition-colors">Anna McCargow (UK/Russia)</a></p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Abraham Hernandez Rosado (Portugal)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Feiyi Liao (China)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Ivana Damjanov Ilic (Serbia)</p></div>
                                 </div>
                             </div>
                             <div class="special-awards-panel mt-16">
@@ -694,33 +694,33 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Gabriele RIZZO (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Arya Su GÜLENÇ (Turkey)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Filippos KLAPSINAKIS (Greece)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Ziling HUANG (China)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Gabriele RIZZO (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Arya Su GÜLENÇ (Turkey)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Filippos KLAPSINAKIS (Greece)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Ziling HUANG (China)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Jan SCHULMEISTER (Czechia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Nina OKADA (Japan)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Ildikó ROZSONITS (Hungary)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize</span><p class="winner-name">Kevin LU (China)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Jan SCHULMEISTER (Czechia)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Nina OKADA (Japan)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Ildikó ROZSONITS (Hungary)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize</span><p class="winner-name">Kevin LU (China)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Johan Ferreira PERDIGÃO (Portugal)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Arthur Samuel COATALEN (France/Hungary)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Giacomo Luigi CORBETTA (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Noelia NAVAS PADILLA (Spain)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Diploma of Merit</span><p class="winner-name">Elitsa STEFANOVA (Bulgaria)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Johan Ferreira PERDIGÃO (Portugal)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Arthur Samuel COATALEN (France/Hungary)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Giacomo Luigi CORBETTA (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Noelia NAVAS PADILLA (Spain)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Diploma of Merit</span><p class="winner-name">Elitsa STEFANOVA (Bulgaria)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Ariana TAKAZOVA (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Mia PEČNIK (Croatia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Vincent LING (United Kingdom)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize</span><p class="winner-name">Lal KARAALIOGLU (Turkey)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Tamara POPOV (Moldova)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Ariana TAKAZOVA (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Mia PEČNIK (Croatia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Vincent LING (United Kingdom)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize</span><p class="winner-name">Lal KARAALIOGLU (Turkey)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Tamara POPOV (Moldova)</p></div>
                                 </div>
                             </div>
                             <div class="special-awards-panel mt-16">
@@ -735,8 +735,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <img src="laureates_2019_1.png" class="laureate-image rounded" alt="2019 Winners">
-                                <img src="laureates_2019_2.png" class="laureate-image rounded" alt="2019 Group">
+                                <img src="../Laureates images/laureates_2019_1.png" class="laureate-image rounded" alt="2019 Winners">
+                                <img src="../Laureates images/laureates_2019_2.png" class="laureate-image rounded" alt="2019 Group">
                             </div>
                         </div>
                     </div>
@@ -750,40 +750,40 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Carla ROMÁN VÁZQUEZ (Spain)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Alexander Wagner (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Laman SEYIDOVA (Azerbaijan)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Diana STOHNUSHENKO (Ukraine)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Sofia Teresa ALUISI (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Carla ROMÁN VÁZQUEZ (Spain)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Alexander Wagner (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Laman SEYIDOVA (Azerbaijan)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Diana STOHNUSHENKO (Ukraine)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Sofia Teresa ALUISI (Italy)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Colin Alexander PÜTZ (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Anna MARCHUK (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Philippe ELISTRATOV (France)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Arda AYHAN (Turkey)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Colin Alexander PÜTZ (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Anna MARCHUK (Russia)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Philippe ELISTRATOV (France)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Arda AYHAN (Turkey)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Rowel FRIERS (Ireland)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Mate DOMOTOR (Hungary)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Jiayin LI (China)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Mai KAWASAKI (Germany/Japan)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Mona KURIBAYASHI (Japan)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Ariel CHEN (USA)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Rowel FRIERS (Ireland)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Mate DOMOTOR (Hungary)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Jiayin LI (China)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Mai KAWASAKI (Germany/Japan)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Mona KURIBAYASHI (Japan)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Ariel CHEN (USA)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Andrei LESHKIN (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Antoni PIKUTA (Poland)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Daniil BOGDANOV (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize</span><p class="winner-name">Anna LIKHOTNIKOVA (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Lenny BUI-VANDEPUT (Belgium)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Andrei LESHKIN (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Antoni PIKUTA (Poland)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Daniil BOGDANOV (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize</span><p class="winner-name">Anna LIKHOTNIKOVA (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Lenny BUI-VANDEPUT (Belgium)</p></div>
                                 </div>
                             </div>
                             <div class="special-awards-panel mt-16">
-                                <div class="special-prize-item"><h5>CFIPC Prize</h5><p class="text-sm">Andrei LESHKIN (Russia)</p></div>
-                                <div class="special-prize-item"><h5>Public Prize</h5><p class="text-sm">Antoni PIKUTA (Poland)</p></div>
+                                <div class="special-prize-item"><h5>CFIPC Prize</h5><p>Andrei LESHKIN (Russia)</p></div>
+                                <div class="special-prize-item"><h5>Public Prize</h5><p>Antoni PIKUTA (Poland)</p></div>
                             </div>
                             <div class="mt-12 bg-[#1B2A27] p-8 rounded-sm border border-copper/10">
                                 <span class="jury-panel-header">Jury Panel 2018</span>
@@ -792,8 +792,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <img src="laureates_2018_1.png" class="laureate-image rounded" alt="2018 Winners">
-                                <img src="laureates_2018_2.png" class="laureate-image rounded" alt="2018 Ceremony">
+                                <img src="../Laureates images/laureates_2018_1.png" class="laureate-image rounded" alt="2018 Winners">
+                                <img src="../Laureates images/laureates_2018_2.png" class="laureate-image rounded" alt="2018 Ceremony">
                             </div>
                         </div>
                     </div>
@@ -807,41 +807,41 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize</span><p class="winner-name">Anastasiia SOLOVIOVA (Ukraine)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Guillermo HERNÁNDEZ BARROCAL (Spain)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Mattias Antonio GLAVINIC (Italy/Croatia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Konstantin TSYGANKOV (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Tali SHAFAR (Belarus)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize</span><p class="winner-name">Anastasiia SOLOVIOVA (Ukraine)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Guillermo HERNÁNDEZ BARROCAL (Spain)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize ex-aequo</span><p class="winner-name">Mattias Antonio GLAVINIC (Italy/Croatia)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Konstantin TSYGANKOV (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Tali SHAFAR (Belarus)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize</span><p class="winner-name">Andreas SALARU (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name">Monan JÜLCH (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Anastasia DOVGAN (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Anna SHCHUKINA (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Beatrice DISTEFANO (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize</span><p class="winner-name">Andreas SALARU (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name">Monan JÜLCH (Germany)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Anastasia DOVGAN (Russia)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Anna SHCHUKINA (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Beatrice DISTEFANO (Italy)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Kaan BAYSAL (Turkey)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Cristiana DRAGOS-ROMAN (Romania)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name">Zvjezdan VOJVODIČ (Croatia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Noel REDOLAR CORTÉS (Spain)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Milena CUK (Poland)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Kaan BAYSAL (Turkey)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize ex-aequo</span><p class="winner-name">Cristiana DRAGOS-ROMAN (Romania)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name">Zvjezdan VOJVODIČ (Croatia)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Noel REDOLAR CORTÉS (Spain)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Milena CUK (Poland)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st Prize</span><p class="winner-name">Alexandra SHCHERBAKOVA (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd Prize</span><p class="winner-name">Vsevolod BRIGIDA (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd Prize</span><p class="winner-name">Alexandra KAPTEIN (Netherlands)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Mia PEČNIK (Croatia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Volha MAKARAVA (Belarus)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st Prize</span><p class="winner-name">Alexandra SHCHERBAKOVA (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd Prize</span><p class="winner-name">Vsevolod BRIGIDA (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd Prize</span><p class="winner-name">Alexandra KAPTEIN (Netherlands)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Mia PEČNIK (Croatia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Volha MAKARAVA (Belarus)</p></div>
                                 </div>
                             </div>
                             <div class="special-awards-panel mt-16">
                                 <div class="special-prize-item">
                                     <h5>CFIPC Prize & Public Prize</h5>
-                                    <p class="text-sm"><strong>Alexandra SHCHERBAKOVA (Russia)</strong></p>
+                                    <p><strong>Alexandra SHCHERBAKOVA (Russia)</strong></p>
                                 </div>
                             </div>
                             <div class="mt-12 bg-[#1B2A27] p-8 rounded-sm border border-copper/10">
@@ -851,8 +851,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <img src="laureates_2017_1.png" class="laureate-image rounded" alt="2017 Winners">
-                                <img src="laureates_2017_2.png" class="laureate-image rounded" alt="2017 Awards">
+                                <img src="../Laureates images/laureates_2017_1.png" class="laureate-image rounded" alt="2017 Winners">
+                                <img src="../Laureates images/laureates_2017_2.png" class="laureate-image rounded" alt="2017 Awards">
                             </div>
                         </div>
                     </div>
@@ -866,41 +866,41 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Nanako MITSUBORI (Japan)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Ivaylo VASSILEV (Bulgaria)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize</span><p class="winner-name">Arianna CASTELLANI (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Emanuele PIOVESAN (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Naomi ROFAGHA (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Nanako MITSUBORI (Japan)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Ivaylo VASSILEV (Bulgaria)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize</span><p class="winner-name">Arianna CASTELLANI (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Emanuele PIOVESAN (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Naomi ROFAGHA (Germany)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Enrico Noel CZMOREK (Hungary)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Samuele VALENZANO (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize</span><p class="winner-name">Simonas MIKNIUS (Lithuania)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Kacper KUKLINSKI (Poland)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Ana-Maria UZUNOVA (Bulgaria)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Enrico Noel CZMOREK (Hungary)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Samuele VALENZANO (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize</span><p class="winner-name">Simonas MIKNIUS (Lithuania)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Kacper KUKLINSKI (Poland)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Ana-Maria UZUNOVA (Bulgaria)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Tiffany QIU (Ireland)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize</span><p class="winner-name">Boris UZUNOV (Bulgaria)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Momir DAMJANOVIC (Serbia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Anna McCARGOW (Russia/UK)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Chiara Martina RUBINO (Germany/Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Tiffany QIU (Ireland)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize</span><p class="winner-name">Boris UZUNOV (Bulgaria)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Momir DAMJANOVIC (Serbia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Anna McCARGOW (Russia/UK)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Chiara Martina RUBINO (Germany/Italy)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Pier Carmine GARZILLO (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Andrea MOLTENI (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize</span><p class="winner-name">Wouter VALVEKENS (Belgium)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Stefan MACOVEI (Romania)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">Finalist</span><p class="winner-name">Alexander PROMYSLOV (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Pier Carmine GARZILLO (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Andrea MOLTENI (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize</span><p class="winner-name">Wouter VALVEKENS (Belgium)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Stefan MACOVEI (Romania)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">Finalist</span><p class="winner-name">Alexander PROMYSLOV (Russia)</p></div>
                                 </div>
                             </div>
                             <div class="special-awards-panel mt-16">
                                 <div class="special-prize-item">
                                     <h5>CFIPC Prize & Public Prize</h5>
-                                    <p class="text-sm"><strong>Pier Carmine GARZILLO (Italy)</strong></p>
+                                    <p><strong>Pier Carmine GARZILLO (Italy)</strong></p>
                                 </div>
                             </div>
                             <div class="mt-12 bg-[#1B2A27] p-8 rounded-sm border border-copper/10">
@@ -910,8 +910,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <img src="laureates_2016_1.png" class="laureate-image rounded" alt="2016 Winners">
-                                <img src="laureates_2016_2.png" class="laureate-image rounded" alt="2016 Awards">
+                                <img src="../Laureates images/laureates_2016_1.png" class="laureate-image rounded" alt="2016 Winners">
+                                <img src="../Laureates images/laureates_2016_2.png" class="laureate-image rounded" alt="2016 Awards">
                             </div>
                         </div>
                     </div>
@@ -925,41 +925,41 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Dmitry ISHKHANOV (Russia/Malta)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Dilbar AGHAMAMMADOVA (Azerbaijan)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Maria NASYPANAYA (Ireland)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Nehir ÖZZENGIN (Turkey)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Dmitry ISHKHANOV (Russia/Malta)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Dilbar AGHAMAMMADOVA (Azerbaijan)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Maria NASYPANAYA (Ireland)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Nehir ÖZZENGIN (Turkey)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Leon ZIMMERMANN (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Roman FEDIURKO (Ukraine)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Alyssa KOK (Singapore)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Viktorija BAKE (Latvia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Orenc GRACA (Albania)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Sabina Maria SUCIU (Romania)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Leon ZIMMERMANN (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Roman FEDIURKO (Ukraine)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Alyssa KOK (Singapore)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Viktorija BAKE (Latvia)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Orenc GRACA (Albania)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Sabina Maria SUCIU (Romania)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Beatrice DALLAGNESE (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Eleonora DALLAGNESE (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Aneta KOLAR (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Shengye CHENG (China)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Giacomo MENEGARDI (Italy)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Beatrice DALLAGNESE (Italy)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Eleonora DALLAGNESE (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Aneta KOLAR (Germany)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Shengye CHENG (China)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Giacomo MENEGARDI (Italy)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Leonel MORALES HERRERO (Spain)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Alica MÜLLER (Germany)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Ning Hui SEE (Malaysia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Kamil PACHOLEC (Poland)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Maximillian TREBO (Italy)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Leonel MORALES HERRERO (Spain)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Alica MÜLLER (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Ning Hui SEE (Malaysia)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Kamil PACHOLEC (Poland)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">3rd prize ex-aequo</span><p class="winner-name">Maximillian TREBO (Italy)</p></div>
                                 </div>
                             </div>
                             <div class="special-awards-panel mt-16">
                                 <div class="special-prize-item">
                                     <h5>CFIPC Prize</h5>
-                                    <p class="text-sm"><strong>Leon ZIMMERMANN (Germany)</strong></p>
+                                    <p><strong>Leon ZIMMERMANN (Germany)</strong></p>
                                 </div>
                             </div>
                             <div class="mt-12 bg-[#1B2A27] p-8 rounded-sm border border-copper/10">
@@ -969,8 +969,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <img src="laureates_2015_1.png" class="laureate-image rounded" alt="2015 Winners">
-                                <img src="laureates_2015_2.png" class="laureate-image rounded" alt="2015 Winners">
+                                <img src="../Laureates images/laureates_2015_1.png" class="laureate-image rounded" alt="2015 Winners">
+                                <img src="../Laureates images/laureates_2015_2.png" class="laureate-image rounded" alt="2015 Winners">
                             </div>
                         </div>
                     </div>
@@ -984,34 +984,34 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Alexander DENISOV (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Evelina MEDVEDKO (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Anna Caterina BINDA (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Tatiana BASOVA (Russia)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Alexander DENISOV (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize ex-aequo</span><p class="winner-name">Evelina MEDVEDKO (Russia)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Anna Caterina BINDA (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Tatiana BASOVA (Russia)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Pascual SAFONT (Spain)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Anastasia BARABANOVA (Russia)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Lili FARKAS (Hungary)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Pascual SAFONT (Spain)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Anastasia BARABANOVA (Russia)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Lili FARKAS (Hungary)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Cristina Sanz HERNAN (Spain)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Susanna D. BRAUN (Switzerland)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Tom De BEUCKELAER (Belgium)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Cristina Sanz HERNAN (Spain)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Susanna D. BRAUN (Switzerland)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Tom De BEUCKELAER (Belgium)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Pedro Lopez SALAS (Spain)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Artur HAFTMAN (Poland)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Elias OPFERKUCH (Germany)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Pedro Lopez SALAS (Spain)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Artur HAFTMAN (Poland)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Elias OPFERKUCH (Germany)</p></div>
                                 </div>
                             </div>
                             <div class="special-awards-panel mt-16">
                                 <div class="special-prize-item">
                                     <h5>CFIPC Prize</h5>
-                                    <p class="text-sm"><strong>Pedro Salas LOPEZ (Spain)</strong></p>
+                                    <p><strong>Pedro Salas LOPEZ (Spain)</strong></p>
                                 </div>
                             </div>
                             <div class="mt-12 bg-[#1B2A27] p-8 rounded-sm border border-copper/10">
@@ -1021,8 +1021,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <img src="laureates_2014_1.png" class="laureate-image rounded" alt="2014 Winners">
-                                <img src="laureates_2014_2.png" class="laureate-image rounded" alt="2014 Ceremony">
+                                <img src="../Laureates images/laureates_2014_1.png" class="laureate-image rounded" alt="2014 Winners">
+                                <img src="../Laureates images/laureates_2014_2.png" class="laureate-image rounded" alt="2014 Ceremony">
                             </div>
                         </div>
                     </div>
@@ -1036,24 +1036,24 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category A</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Vera CECINO (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Youming XIA (Belgium)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Vera CECINO (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Youming XIA (Belgium)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category B</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Cristiana DRAGOS-ROMAN (Romania)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Elia CECINO (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Cristiana DRAGOS-ROMAN (Romania)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Elia CECINO (Italy)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category C</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Angelus BLANK (Belgium)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize</span><p class="winner-name">Gabriella BIELECKA (Poland)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Angelus BLANK (Belgium)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize</span><p class="winner-name">Gabriella BIELECKA (Poland)</p></div>
                                 </div>
                                 <div class="laureate-category-group">
                                     <h4 class="text-4xl serif italic text-copper mb-8 pb-2 border-b border-copper/20">Category D</h4>
-                                    <div class="winner-row"><span class="winner-rank">1st prize</span><p class="winner-name">Juan Jose Lorenzo EGEA (Spain)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Fernanda DAMIANO (Italy)</p></div>
-                                    <div class="winner-row"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Nuno SOUSA (Portugal)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">1st prize</span><p class="winner-name">Juan Jose Lorenzo EGEA (Spain)</p></div>
+                                    <div class="winner-item no-border"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Fernanda DAMIANO (Italy)</p></div>
+                                    <div class="winner-item"><span class="winner-rank">2nd prize ex-aequo</span><p class="winner-name">Nuno SOUSA (Portugal)</p></div>
                                 </div>
                             </div>
                             <div class="special-awards-panel mt-16">
@@ -1069,8 +1069,8 @@
                         </div>
                         <div class="lg:col-span-4">
                             <div class="laureate-image-container sticky top-48 space-y-8">
-                                <img src="laureates_2013_1.png" class="laureate-image rounded" alt="2013 Winners">
-                                <img src="laureates_2013_2.png" class="laureate-image rounded" alt="2013 Group">
+                                <img src="../Laureates images/laureates_2013_1.png" class="laureate-image rounded" alt="2013 Winners">
+                                <img src="../Laureates images/laureates_2013_2.png" class="laureate-image rounded" alt="2013 Group">
                             </div>
                         </div>
                     </div>
@@ -1080,7 +1080,6 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-forest text-copper pt-32 pb-16 px-8 mt-20">
         <div class="max-w-[1400px] mx-auto text-center">
             <p class="text-[9px] uppercase tracking-[0.3em] font-light">&copy; The Music Agency 2026</p>
@@ -1089,7 +1088,6 @@
 
     <script>
         lucide.createIcons();
-
         function handleNavClick(event, btn) {
             const menu = btn.nextElementSibling;
             const wasVisible = menu.classList.contains('is-visible');
@@ -1097,7 +1095,6 @@
             if (!wasVisible) menu.classList.add('is-visible');
             event.stopPropagation();
         }
-
         function toggleMobileMenu() {
             const overlay = document.getElementById('mobile-nav-overlay');
             if (overlay.classList.contains('open')) {
@@ -1110,10 +1107,7 @@
                 document.body.style.overflow = 'hidden';
             }
         }
-
-        window.addEventListener('click', () => {
-            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
-        });
+        window.onclick = () => document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
     </script>
 </body>
 </html>
