@@ -26,8 +26,7 @@
 
         h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
         
-        /* Force the specific section to be visible on this page */
-        .page-section { display: block; animation: sectionFade 0.6s ease-out; }
+        .page-section { display: block; animation: sectionFade 0.6s ease-out ; }
 
         @keyframes sectionFade {
             from { opacity: 0; transform: translateY(10px); }
@@ -48,6 +47,7 @@
             white-space: nowrap;
             background: none;
             border: none;
+            text-decoration: none;
         }
         .nav-link:hover { color: var(--copper); }
 
@@ -67,10 +67,10 @@
         }
 
         @media (min-width: 1024px) {
-            .dropdown-container:hover .dropdown-menu { display: block; animation: fadeIn 0.3s ease; }
+            .dropdown-container:hover .dropdown-menu { display: block; animation: fadeIn 0.3s ease ; }
         }
         
-        .dropdown-menu.is-visible { display: block !important; }
+        .dropdown-menu.is-visible { display: block !important ; }
 
         @keyframes fadeIn { 
             from { opacity: 0; transform: translate(-50%, 10px); } 
@@ -86,10 +86,8 @@
             color: var(--forest);
             transition: all 0.2s;
             text-align: center;
+            text-decoration: none;
             width: 100%;
-            background: none;
-            border: none;
-            cursor: pointer;
         }
         .dropdown-item:hover { 
             background: var(--forest); 
@@ -107,13 +105,13 @@
             overflow-y: auto;
             color: var(--parchment);
         }
-        #mobile-nav-overlay.open { display: flex; animation: overlayIn 0.4s ease forwards; }
+        #mobile-nav-overlay.open { display: flex; animation: overlayIn 0.4s ease forwards ; }
         
         @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
 
         .mobile-group { margin-bottom: 2.5rem; }
         .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
-        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; background: none; border: none; color: inherit; }
+        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; background: none; border: none; color: inherit; text-decoration: none; }
 
         .brand-logo {
             text-align: center;
@@ -121,8 +119,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: none;
-            border: none;
+            text-decoration: none;
         }
         
         .logo-image {
@@ -138,9 +135,9 @@
 
         .bg-forest { background-color: var(--forest); }
         .text-copper { color: var(--copper); }
-        .btn-copper { background-color: var(--copper); color: white; transition: all 0.3s ease; }
+        .btn-copper { background-color: var(--copper); color: white; transition: all 0.3s ease ; }
         .btn-copper:hover { background-color: var(--forest); }
-        
+
         .rules-card {
             background-color: white;
             padding: 2.5rem;
@@ -156,21 +153,11 @@
             border-color: var(--copper);
             box-shadow: 0 15px 35px rgba(27, 42, 39, 0.03);
         }
-
-        .glass-box {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(212, 163, 115, 0.2);
-            padding: 2.5rem;
-            height: 100%;
-            transition: all 0.3s ease;
-            border-radius: 2px;
-        }
     </style>
 </head>
 <body>
 
-    <!-- Mobile Navigation Overlay (Exact same as home) -->
+    <!-- Mobile Navigation Overlay -->
     <div id="mobile-nav-overlay">
         <div class="flex justify-between items-center mb-12">
             <span class="serif italic text-2xl text-parchment">Menu</span>
@@ -179,30 +166,30 @@
 
         <div class="mobile-group">
             <span class="mobile-label">Competition</span>
-            <button onclick="window.location.href='../#rules'" class="mobile-link">Rules</button>
-            <button onclick="window.location.href='../#prizes'" class="mobile-link">Prizes</button>
-            <button onclick="window.location.href='../#contact'" class="mobile-link">Application</button>
-            <button onclick="window.location.href='../#jury'" class="mobile-link">Jury</button>
-            <button onclick="window.location.href='../#laureates'" class="mobile-link">Laureates</button>
+            <a href="https://cfipc.github.io/cfipc/rules/" class="mobile-link">Rules</a>
+            <a href="https://cfipc.github.io/cfipc/prizes/" class="mobile-link">Prizes</a>
+            <a href="https://cfipc.github.io/cfipc/application/" class="mobile-link">Application</a>
+            <a href="https://cfipc.github.io/cfipc/jury/" class="mobile-link">Jury</a>
+            <a href="https://cfipc.github.io/cfipc/laureates/" class="mobile-link">Laureates</a>
         </div>
 
         <div class="mobile-group">
             <span class="mobile-label">Masterclasses</span>
-            <button onclick="window.location.href='../#masterclasses'" class="mobile-link">Winter Festival</button>
-            <button onclick="window.location.href='../#masterclasses'" class="mobile-link">Spring Festival</button>
-            <button onclick="window.location.href='../#masterclasses'" class="mobile-link">Summer Festival</button>
+            <a href="https://cfipc.github.io/cfipc/masterclasses/" class="mobile-link">Winter Festival</a>
+            <a href="https://cfipc.github.io/cfipc/masterclasses/" class="mobile-link">Spring Festival</a>
+            <a href="https://cfipc.github.io/cfipc/masterclasses/" class="mobile-link">Summer Festival</a>
         </div>
 
         <div class="mobile-group">
             <span class="mobile-label">About</span>
-            <button onclick="window.location.href='../#contact'" class="mobile-link">Contact Us</button>
-            <button onclick="window.location.href='../#about'" class="mobile-link">Legacy</button>
+            <a href="https://cfipc.github.io/cfipc/contact/" class="mobile-link">Contact Us</a>
+            <a href="https://cfipc.github.io/cfipc/about/" class="mobile-link">Legacy</a>
         </div>
 
-        <button onclick="window.location.href='../'" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</button>
+        <a href="https://cfipc.github.io/cfipc/" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold text-decoration-none">Return to Home</a>
     </div>
 
-    <!-- Main Navigation Header (EXACT MIRROR) -->
+    <!-- Main Navigation Header -->
     <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
         <div class="max-w-[1600px] mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center h-32 md:h-48">
@@ -214,59 +201,59 @@
 
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
                                 Competition 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
+                            </a>
                             <div class="dropdown-menu">
-                                <button onclick="window.location.href='../#rules'" class="dropdown-item">Rules</button>
-                                <button onclick="window.location.href='../#prizes'" class="dropdown-item">Prizes</button>
-                                <button onclick="window.location.href='../#contact'" class="dropdown-item">Application</button>
-                                <button onclick="window.location.href='../#jury'" class="dropdown-item">Jury</button>
-                                <button onclick="window.location.href='../#laureates'" class="dropdown-item">Laureates</button>
+                                <a href="https://cfipc.github.io/cfipc/rules/" class="dropdown-item">Rules</a>
+                                <a href="https://cfipc.github.io/cfipc/prizes/" class="dropdown-item">Prizes</a>
+                                <a href="https://cfipc.github.io/cfipc/application/" class="dropdown-item">Application</a>
+                                <a href="https://cfipc.github.io/cfipc/jury/" class="dropdown-item">Jury</a>
+                                <a href="https://cfipc.github.io/cfipc/laureates/" class="dropdown-item">Laureates</a>
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
                                 Masterclasses 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
+                            </a>
                             <div class="dropdown-menu">
-                                <button onclick="window.location.href='../#masterclasses'" class="dropdown-item">Winter Festival</button>
-                                <button onclick="window.location.href='../#masterclasses'" class="dropdown-item">Spring Festival</button>
-                                <button onclick="window.location.href='../#masterclasses'" class="dropdown-item">Summer Festival</button>
+                                <a href="https://cfipc.github.io/cfipc/masterclasses/" class="dropdown-item">Winter Festival</a>
+                                <a href="https://cfipc.github.io/cfipc/masterclasses/" class="dropdown-item">Spring Festival</a>
+                                <a href="https://cfipc.github.io/cfipc/masterclasses/" class="dropdown-item">Summer Festival</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="brand-logo cursor-pointer group px-2" onclick="window.location.href='../'">
-                    <img src="../Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
+                <a href="https://cfipc.github.io/cfipc/" class="brand-logo cursor-pointer group px-2">
+                    <img src="https://cfipc.github.io/cfipc/Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none' ; document.getElementById('fallback-logo').style.display='block' ;">
                     <div id="fallback-logo" class="hidden text-center">
                         <span class="serif italic text-2xl text-copper">CFIPC</span>
                     </div>
-                </button>
+                </a>
 
                 <div class="flex-1 flex justify-end items-center">
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
                                 About 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
+                            </a>
                             <div class="dropdown-menu">
-                                <button onclick="window.location.href='../#contact'" class="dropdown-item">Contact Us / Application</button>
-                                <button onclick="window.location.href='../#about'" class="dropdown-item">Legacy</button>
+                                <a href="https://cfipc.github.io/cfipc/contact/" class="dropdown-item">Contact Us</a>
+                                <a href="https://cfipc.github.io/cfipc/about/" class="dropdown-item">Legacy</a>
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <button class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
                                 Gallery 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </button>
+                            </a>
                             <div class="dropdown-menu">
-                                <button onclick="window.location.href='../#media'" class="dropdown-item">Media</button>
-                                <button onclick="window.location.href='../#gallery'" class="dropdown-item">Pictures</button>
+                                <a href="https://cfipc.github.io/cfipc/media/" class="dropdown-item">Media</a>
+                                <a href="https://cfipc.github.io/cfipc/gallery/" class="dropdown-item">Pictures</a>
                             </div>
                         </div>
                     </div>
@@ -276,20 +263,18 @@
     </nav>
 
     <main class="pt-32 md:pt-48">
-        <!-- PAGE: APPLICATION (EXACTLY AS IN MAIN CODE) -->
         <section id="contact" class="page-section py-32 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
                     <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Registration Portal</h4>
                     <h2 class="text-5xl md:text-7xl serif italic text-forest">Application 2026</h2>
-                    <p class="text-copper font-bold uppercase tracking-[0.2em] text-[14px] mt-6">Deadline: November 1st, 2026</p>
+                    <p class="text-copper font-bold uppercase tracking-[0.2em] text-[14px] mt-6">Deadline : November 1st, 2026</p>
                 </div>
 
-                <!-- Parental Consent & Download Section -->
                 <div class="mb-24 bg-white p-12 border border-forest/5 rounded-sm shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
                     <div>
                         <h3 class="serif text-3xl italic text-forest mb-2">Required Documentation</h3>
-                        <p class="text-stone-500 font-light">Contestants in Categories A, B, & C must submit a signed Parental Consent Form.</p>
+                        <p class="text-stone-500 font-light">Contestants in Categories A, B, & C must submit a signed Parental Consent Form .</p>
                     </div>
                     <a href="https://e.pcloud.link/publink/show?code=XZ3mgGZ7nUTo0ILKHfCdsBUeUWnnugwckc7" target="_blank" class="btn-copper flex items-center gap-3 px-8 py-5 text-[10px] uppercase font-bold tracking-[0.3em] rounded-sm shadow-md">
                         <i data-lucide="download" class="w-4 h-4"></i>
@@ -297,7 +282,6 @@
                     </a>
                 </div>
 
-                <!-- Quick Information Recap -->
                 <div class="mb-24">
                     <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Age Categories & Performance Timing</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -305,43 +289,43 @@
                             <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category A</h4>
                             <p class="text-5xl serif mb-4 italic text-forest">10 & Under</p>
                             <div class="space-y-3 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-sm uppercase">Fee: €80</p>
+                                <p class="text-forest font-bold text-sm uppercase">Fee : €80</p>
                                 <div class="mt-6 pt-6 border-t border-forest/5 text-[12px] uppercase tracking-widest text-stone-500 font-semibold space-y-2">
-                                    <p class="flex justify-between"><span>Semi-Final:</span> <span class="text-forest">6 mins</span></p>
-                                    <p class="flex justify-between"><span>Finals:</span> <span class="text-forest">10 mins</span></p>
+                                    <p class="flex justify-between"><span>Semi-Final :</span> <span class="text-forest">6 mins</span></p>
+                                    <p class="flex justify-between"><span>Finals :</span> <span class="text-forest">10 mins</span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="rules-card text-center min-h-[400px]">
                             <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category B</h4>
-                            <p class="text-5xl serif mb-4 italic text-forest">11 — 13</p>
+                            <p class="text-5xl serif mb-4 italic text-forest">11 - 13</p>
                             <div class="space-y-3 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-sm uppercase">Fee: €90</p>
+                                <p class="text-forest font-bold text-sm uppercase">Fee : €90</p>
                                 <div class="mt-6 pt-6 border-t border-forest/5 text-[12px] uppercase tracking-widest text-stone-500 font-semibold space-y-2">
-                                    <p class="flex justify-between"><span>Semi-Final:</span> <span class="text-forest">8 mins</span></p>
-                                    <p class="flex justify-between"><span>Finals:</span> <span class="text-forest">12 mins</span></p>
+                                    <p class="flex justify-between"><span>Semi-Final :</span> <span class="text-forest">8 mins</span></p>
+                                    <p class="flex justify-between"><span>Finals :</span> <span class="text-forest">12 mins</span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="rules-card text-center min-h-[400px]">
                             <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category C</h4>
-                            <p class="text-5xl serif mb-4 italic text-forest">14 — 16</p>
+                            <p class="text-5xl serif mb-4 italic text-forest">14 - 16</p>
                             <div class="space-y-3 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-sm uppercase">Fee: €100</p>
+                                <p class="text-forest font-bold text-sm uppercase">Fee : €100</p>
                                 <div class="mt-6 pt-6 border-t border-forest/5 text-[12px] uppercase tracking-widest text-stone-500 font-semibold space-y-2">
-                                    <p class="flex justify-between"><span>Semi-Final:</span> <span class="text-forest">10 mins</span></p>
-                                    <p class="flex justify-between"><span>Finals:</span> <span class="text-forest">15 mins</span></p>
+                                    <p class="flex justify-between"><span>Semi-Final :</span> <span class="text-forest">10 mins</span></p>
+                                    <p class="flex justify-between"><span>Finals :</span> <span class="text-forest">15 mins</span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="rules-card text-center min-h-[400px]">
                             <h4 class="text-copper text-[12px] uppercase font-bold tracking-[0.2em] mb-4">Category D</h4>
-                            <p class="text-5xl serif mb-4 italic text-forest">17 — 21</p>
+                            <p class="text-5xl serif mb-4 italic text-forest">17 - 21</p>
                             <div class="space-y-3 pt-6 border-t border-forest/10">
-                                <p class="text-forest font-bold text-sm uppercase">Fee: €110</p>
+                                <p class="text-forest font-bold text-sm uppercase">Fee : €110</p>
                                 <div class="mt-6 pt-6 border-t border-forest/5 text-[12px] uppercase tracking-widest text-stone-500 font-semibold space-y-2">
-                                    <p class="flex justify-between"><span>Semi-Final:</span> <span class="text-forest">15 mins</span></p>
-                                    <p class="flex justify-between"><span>Finals:</span> <span class="text-forest">30 mins</span></p>
+                                    <p class="flex justify-between"><span>Semi-Final :</span> <span class="text-forest">15 mins</span></p>
+                                    <p class="flex justify-between"><span>Finals :</span> <span class="text-forest">30 mins</span></p>
                                 </div>
                             </div>
                         </div>
@@ -351,27 +335,26 @@
                         <div class="bg-white p-10 border-l-4 border-copper shadow-sm">
                             <h5 class="serif text-2xl italic mb-6">Bank Transfer Details</h5>
                             <div class="space-y-3 text-sm text-stone-600 font-light">
-                                <p><span class="font-bold text-forest uppercase text-[10px]">Account Name:</span> CFIPC</p>
-                                <p><span class="font-bold text-forest uppercase text-[10px]">Bank:</span> BNP Paribas Fortis</p>
-                                <p><span class="font-bold text-forest uppercase text-[10px]">IBAN:</span> BE28 0016 9098 3620</p>
-                                <p><span class="font-bold text-forest uppercase text-[10px]">BIC:</span> GEBABEBB</p>
-                                <div class="pt-4 text-forest font-bold text-xs uppercase tracking-widest">Address:</div>
+                                <p><span class="font-bold text-forest uppercase text-[10px]">Account Name :</span> CFIPC</p>
+                                <p><span class="font-bold text-forest uppercase text-[10px]">Bank :</span> BNP Paribas Fortis</p>
+                                <p><span class="font-bold text-forest uppercase text-[10px]">IBAN :</span> BE28 0016 9098 3620</p>
+                                <p><span class="font-bold text-forest uppercase text-[10px]">BIC :</span> GEBABEBB</p>
+                                <div class="pt-4 text-forest font-bold text-xs uppercase tracking-widest">Address :</div>
                                 <p>Lijsterbessenbomenlaan 6, Kraainem 1950, BELGIUM</p>
                             </div>
                         </div>
                         <div class="bg-white p-10 border-l-4 border-forest shadow-sm">
                             <h5 class="serif text-2xl italic mb-6">PayPal Alternative</h5>
-                            <p class="text-sm text-stone-600 mb-6 font-light">Pay via PayPal to <span class="font-bold">office@cfipc.com</span>.</p>
-                            <p class="text-xs italic text-stone-400">Note: There is a 5€ surcharge for PayPal transfers.</p>
+                            <p class="text-sm text-stone-600 mb-6 font-light">Pay via PayPal to <span class="font-bold">office@cfipc.com</span> .</p>
+                            <p class="text-xs italic text-stone-400">Note : There is a 5€ surcharge for PayPal transfers .</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Form Section -->
                 <div class="mb-32">
                     <h3 class="serif text-4xl italic mb-12 text-forest border-b border-forest/5 pb-4">Application Form</h3>
                     <div class="bg-white p-4 md:p-8 rounded-sm shadow-xl border border-forest/5">
-                        <div style="width:100%;height:600px;" data-fillout-id="oXJB2kADFMus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+                        <div style="width:100% ;height:600px ;" data-fillout-id="oXJB2kADFMus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
                         <script src="https://server.fillout.com/embed/v1/"></script>
                     </div>
                 </div>
@@ -401,11 +384,11 @@
             const overlay = document.getElementById('mobile-nav-overlay');
             if (overlay.classList.contains('open')) {
                 overlay.classList.remove('open');
-                setTimeout(() => { overlay.style.display = 'none'; }, 400);
+                setTimeout(() => { overlay.style.display = 'none' ; }, 400);
                 document.body.style.overflow = 'auto';
             } else {
                 overlay.style.display = 'flex';
-                setTimeout(() => { overlay.classList.add('open'); }, 10);
+                setTimeout(() => { overlay.classList.add('open') ; }, 10);
                 document.body.style.overflow = 'hidden';
             }
         }
