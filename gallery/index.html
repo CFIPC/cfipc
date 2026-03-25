@@ -17,208 +17,211 @@
         }
 
         body { 
-            font-family: 'Outfit' , sans-serif ; 
-            background-color: var(--parchment) ;
-            color: var(--forest) ;
-            -webkit-font-smoothing: antialiased ;
-            overflow-x: hidden ;
+            font-family: 'Outfit' , sans-serif; 
+            background-color: var(--parchment);
+            color: var(--forest);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond' , serif ; }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond' , serif; }
         
-        .page-section { display: block ; animation: sectionFade 0.6s ease-out ; }
+        .page-section { display: block ; animation: sectionFade 0.6s ease-out; }
 
         @keyframes sectionFade {
-            from { opacity: 0 ; transform: translateY(10px) ; }
-            to { opacity: 1 ; transform: translateY(0) ; }
+            from { opacity: 0 ; transform: translateY(10px); }
+            to { opacity: 1 ; transform: translateY(0); }
         }
 
         .nav-link {
-            letter-spacing: 0.12em ;
-            font-size: 0.9rem ;
-            font-weight: 700 ;
-            text-transform: uppercase ;
-            color: var(--forest) ;
-            transition: all 0.3s ease ;
-            cursor: pointer ;
-            padding: 1.5rem 0 ;
-            display: flex ;
-            align-items: center ;
-            white-space: nowrap ;
-            text-decoration: none ;
+            letter-spacing: 0.12em;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--forest);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            text-decoration: none;
         }
-        .nav-link:hover { color: var(--copper) ; }
+        .nav-link:hover { color: var(--copper); }
 
-        .dropdown-container { position: relative ; }
+        .dropdown-container { position: relative; }
         .dropdown-menu {
-            position: absolute ;
-            top: 100% ;
-            left: 50% ;
-            transform: translateX(-50%) ;
-            background: var(--parchment) ;
-            border: 1px solid rgba(27, 42, 39, 0.1) ;
-            min-width: 220px ;
-            display: none ;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15) ;
-            z-index: 1000 ;
-            padding: 0.75rem 0 ;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--parchment);
+            border: 1px solid rgba(27, 42, 39, 0.1);
+            min-width: 220px;
+            display: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            z-index: 1000;
+            padding: 0.75rem 0;
         }
 
         @media (min-width: 1024px) {
-            .dropdown-container:hover .dropdown-menu { display: block ; animation: fadeIn 0.3s ease ; }
+            .dropdown-container:hover .dropdown-menu { display: block ; animation: fadeIn 0.3s ease; }
         }
         
-        .dropdown-menu.is-visible { display: block !important ; }
+        .dropdown-menu.is-visible { display: block !important; }
 
         @keyframes fadeIn { 
-            from { opacity: 0 ; transform: translate(-50%, 10px) ; } 
-            to { opacity: 1 ; transform: translate(-50%, 0) ; } 
+            from { opacity: 0 ; transform: translate(-50%, 10px); } 
+            to { opacity: 1 ; transform: translate(-50%, 0); } 
         }
 
         .dropdown-item {
-            display: block ;
-            padding: 0.8rem 1.5rem ;
-            font-size: 0.85rem ;
-            text-transform: uppercase ;
-            letter-spacing: 0.1em ;
-            color: var(--forest) ;
-            transition: all 0.2s ;
-            text-align: center ;
-            text-decoration: none ;
-            width: 100% ;
+            display: block;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--forest);
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
         }
         .dropdown-item:hover { 
-            background: var(--forest) ; 
-            color: var(--copper) ; 
+            background: var(--forest); 
+            color: var(--copper); 
         }
 
         #mobile-nav-overlay {
-            position: fixed ;
-            inset: 0 ;
-            background: var(--forest) ;
-            z-index: 2000 ;
-            display: none ;
-            flex-direction: column ;
-            padding: 4rem 2rem ;
-            overflow-y: auto ;
-            color: var(--parchment) ;
+            position: fixed;
+            inset: 0;
+            background: var(--forest);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            padding: 4rem 2rem;
+            overflow-y: auto;
+            color: var(--parchment);
         }
-        #mobile-nav-overlay.open { display: flex ; animation: overlayIn 0.4s ease forwards ; }
+        #mobile-nav-overlay.open { display: flex ; animation: overlayIn 0.4s ease forwards; }
         
         @keyframes overlayIn { from { opacity: 0 ; } to { opacity: 1 ; } }
 
         .brand-logo {
-            text-align: center ;
-            display: flex ;
-            flex-direction: column ;
-            align-items: center ;
-            justify-content: center ;
-            text-decoration: none ;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
         }
         
         .logo-image {
-            height: 100px ;
-            width: auto ;
-            object-fit: contain ;
-            transition: height 0.3s ease ;
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+            transition: height 0.3s ease;
         }
         
         @media (min-width: 768px) {
-            .logo-image { height: 150px ; }
+            .logo-image { height: 150px; }
         }
 
         /* Slideshow Layout */
         .gallery-block {
-            max-width: 1000px ;
-            margin: 0 auto 100px ;
+            max-width: 1100px;
+            margin: 0 auto 120px;
+            padding: 0 1rem;
         }
 
         .slideshow-container {
-            position: relative ;
-            width: 100% ;
-            aspect-ratio: 16/9 ;
-            background: #000 ;
-            overflow: hidden ;
-            border-radius: 2px ;
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            overflow: hidden;
+            border-radius: 2px;
         }
 
         .slide {
-            position: absolute ;
-            inset: 0 ;
-            opacity: 0 ;
-            transition: opacity 0.6s ease-in-out ;
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .slide.active { opacity: 1 ; }
 
         .slide img {
-            width: 100% ;
-            height: 100% ;
-            object-fit: contain ;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .slide-control {
-            position: absolute ;
-            top: 50% ;
-            transform: translateY(-50%) ;
-            background: rgba(0,0,0,0.2) ;
-            color: white ;
-            border: none ;
-            width: 50px ;
-            height: 100px ;
-            cursor: pointer ;
-            z-index: 10 ;
-            transition: all 0.3s ;
-            display: flex ;
-            align-items: center ;
-            justify-content: center ;
-            opacity: 0.5 ;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.1);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 100%;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .slide-control:hover { background: rgba(0,0,0,0.6) ; opacity: 1 ; color: var(--copper) ; }
+        .slide-control:hover { background: rgba(0,0,0,0.4); color: var(--copper); }
         .prev { left: 0 ; }
         .next { right: 0 ; }
 
-        /* Thumbnails strip style */
+        /* Thumbnails strip style as requested */
         .thumb-strip {
-            display: flex ;
-            gap: 4px ;
-            margin-top: 4px ;
-            width: 100% ;
-            overflow-x: auto ;
-            scrollbar-width: none ; /* Firefox */
+            display: flex;
+            gap: 5px;
+            margin-top: 5px;
+            width: 100%;
+            justify-content: center;
         }
-        .thumb-strip::-webkit-scrollbar { display: none ; } /* Chrome/Safari */
 
         .thumb {
-            flex: 1 ;
-            min-width: 0 ;
-            aspect-ratio: 16/9 ;
-            cursor: pointer ;
-            opacity: 0.4 ;
-            transition: all 0.3s ;
-            border: 2px solid transparent ;
+            flex: 1;
+            max-width: 120px;
+            aspect-ratio: 16/9;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            overflow: hidden;
+            background: #000;
         }
-        .thumb.active { opacity: 1 ; border-color: var(--copper) ; }
-        .thumb img { width: 100% ; height: 100% ; object-fit: cover ; }
+        .thumb.active { opacity: 1 ; border-color: var(--copper); }
+        .thumb img { width: 100%; height: 100%; object-fit: cover; }
 
         .social-circle-footer {
-            width: 44px ;
-            height: 44px ;
-            border-radius: 50% ;
-            border: 1.5px solid var(--copper) ;
-            display: flex ;
-            align-items: center ;
-            justify-content: center ;
-            color: var(--copper) ;
-            transition: all 0.3s ease ;
-            text-decoration: none ;
-            background: transparent ;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--copper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--copper);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: transparent;
         }
         .social-circle-footer:hover {
-            background-color: var(--copper) ;
-            color: var(--forest) ;
+            background-color: var(--copper);
+            color: var(--forest);
         }
-        .social-circle-footer svg { width: 22px ; height: 22px ; }
+        .social-circle-footer svg { width: 22px; height: 22px; }
     </style>
 </head>
 <body>
@@ -251,7 +254,7 @@
         <a href="https://cfipc.github.io/cfipc/" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</a>
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Navigation Header -->
     <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
         <div class="max-w-[1600px] mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center h-32 md:h-48">
@@ -324,7 +327,7 @@
                     <div id="gallery-2025" class="relative group">
                         <div class="slideshow-container">
                             <button class="slide-control prev" onclick="moveSlide('2025', -1)"><i data-lucide="chevron-left"></i></button>
-                            <div class="slides-inner h-full"></div>
+                            <div class="slides-inner h-full w-full"></div>
                             <button class="slide-control next" onclick="moveSlide('2025', 1)"><i data-lucide="chevron-right"></i></button>
                         </div>
                         <div class="thumb-strip" id="thumbs-2025"></div>
@@ -340,7 +343,7 @@
                     <div id="gallery-2024" class="relative group">
                         <div class="slideshow-container">
                             <button class="slide-control prev" onclick="moveSlide('2024', -1)"><i data-lucide="chevron-left"></i></button>
-                            <div class="slides-inner h-full"></div>
+                            <div class="slides-inner h-full w-full"></div>
                             <button class="slide-control next" onclick="moveSlide('2024', 1)"><i data-lucide="chevron-right"></i></button>
                         </div>
                         <div class="thumb-strip" id="thumbs-2024"></div>
@@ -356,7 +359,7 @@
                     <div id="gallery-2023" class="relative group">
                         <div class="slideshow-container">
                             <button class="slide-control prev" onclick="moveSlide('2023', -1)"><i data-lucide="chevron-left"></i></button>
-                            <div class="slides-inner h-full"></div>
+                            <div class="slides-inner h-full w-full"></div>
                             <button class="slide-control next" onclick="moveSlide('2023', 1)"><i data-lucide="chevron-right"></i></button>
                         </div>
                         <div class="thumb-strip" id="thumbs-2023"></div>
@@ -401,13 +404,14 @@
                 for (let i = 1; i <= 10; i++) {
                     const slide = document.createElement('div');
                     slide.className = `slide ${i === 1 ? 'active' : ''}`;
-                    slide.innerHTML = `<img src="${year}_${i}.jpg" alt="${year} Image ${i}" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">`;
+                    // Changed extension from .jpg to .png based on GitHub screenshot
+                    slide.innerHTML = `<img src="${year}_${i}.png" alt="${year} Image ${i}" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">`;
                     inner.appendChild(slide);
 
                     const thumb = document.createElement('div');
                     thumb.className = `thumb ${i === 1 ? 'active' : ''}`;
                     thumb.onclick = () => jumpToSlide(year, i - 1);
-                    thumb.innerHTML = `<img src="${year}_${i}.jpg" alt="Thumb ${i}" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">`;
+                    thumb.innerHTML = `<img src="${year}_${i}.png" alt="Thumb ${i}" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">`;
                     thumbStrip.appendChild(thumb);
                 }
 
@@ -420,6 +424,7 @@
             resetTimer(year);
             const slides = document.querySelectorAll(`#gallery-${year} .slide`);
             const thumbs = document.querySelectorAll(`#thumbs-${year} .thumb`);
+            if (slides.length === 0) return;
             
             slides[indices[year]].classList.remove('active');
             thumbs[indices[year]].classList.remove('active');
