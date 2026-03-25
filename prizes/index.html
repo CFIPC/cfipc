@@ -17,155 +17,155 @@
         }
 
         body { 
-            font-family: 'Outfit', sans-serif; 
-            background-color: var(--parchment);
-            color: var(--forest);
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
+            font-family: 'Outfit' , sans-serif ; 
+            background-color: var(--parchment) ;
+            color: var(--forest) ;
+            -webkit-font-smoothing: antialiased ;
+            overflow-x: hidden ;
         }
 
-        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond' , serif ; }
         
-        .page-section { display: block; animation: sectionFade 0.6s ease-out ; }
+        .page-section { display: block ; animation: sectionFade 0.6s ease-out ; }
 
         @keyframes sectionFade {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0 ; transform: translateY(10px) ; }
+            to { opacity: 1 ; transform: translateY(0) ; }
         }
 
         .nav-link {
-            letter-spacing: 0.12em;
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--forest);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            padding: 1.5rem 0;
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-            background: none;
-            border: none;
-            text-decoration: none;
+            letter-spacing: 0.12em ;
+            font-size: 0.9rem ;
+            font-weight: 700 ;
+            text-transform: uppercase ;
+            color: var(--forest) ;
+            transition: all 0.3s ease ;
+            cursor: pointer ;
+            padding: 1.5rem 0 ;
+            display: flex ;
+            align-items: center ;
+            white-space: nowrap ;
+            background: none ;
+            border: none ;
+            text-decoration: none ;
         }
-        .nav-link:hover { color: var(--copper); }
+        .nav-link:hover { color: var(--copper) ; }
 
-        .dropdown-container { position: relative; }
+        .dropdown-container { position: relative ; }
         .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--parchment);
-            border: 1px solid rgba(27, 42, 39, 0.1);
-            min-width: 220px;
-            display: none;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-            z-index: 1000;
-            padding: 0.75rem 0;
+            position: absolute ;
+            top: 100% ;
+            left: 50% ;
+            transform: translateX(-50%) ;
+            background: var(--parchment) ;
+            border: 1px solid rgba(27, 42, 39, 0.1) ;
+            min-width: 220px ;
+            display: none ;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15) ;
+            z-index: 1000 ;
+            padding: 0.75rem 0 ;
         }
 
         @media (min-width: 1024px) {
-            .dropdown-container:hover .dropdown-menu { display: block; animation: fadeIn 0.3s ease ; }
+            .dropdown-container:hover .dropdown-menu { display: block ; animation: fadeIn 0.3s ease ; }
         }
         
         .dropdown-menu.is-visible { display: block !important ; }
 
         @keyframes fadeIn { 
-            from { opacity: 0; transform: translate(-50%, 10px); } 
-            to { opacity: 1; transform: translate(-50%, 0); } 
+            from { opacity: 0 ; transform: translate(-50%, 10px) ; } 
+            to { opacity: 1 ; transform: translate(-50%, 0) ; } 
         }
 
         .dropdown-item {
-            display: block;
-            padding: 0.8rem 1.5rem;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--forest);
-            transition: all 0.2s;
-            text-align: center;
-            text-decoration: none;
-            width: 100%;
+            display: block ;
+            padding: 0.8rem 1.5rem ;
+            font-size: 0.85rem ;
+            text-transform: uppercase ;
+            letter-spacing: 0.1em ;
+            color: var(--forest) ;
+            transition: all 0.2s ;
+            text-align: center ;
+            text-decoration: none ;
+            width: 100% ;
         }
         .dropdown-item:hover { 
-            background: var(--forest); 
-            color: var(--copper); 
+            background: var(--forest) ; 
+            color: var(--copper) ; 
         }
 
         #mobile-nav-overlay {
-            position: fixed;
-            inset: 0;
-            background: var(--forest);
-            z-index: 2000;
-            display: none;
-            flex-direction: column;
-            padding: 4rem 2rem;
-            overflow-y: auto;
-            color: var(--parchment);
+            position: fixed ;
+            inset: 0 ;
+            background: var(--forest) ;
+            z-index: 2000 ;
+            display: none ;
+            flex-direction: column ;
+            padding: 4rem 2rem ;
+            overflow-y: auto ;
+            color: var(--parchment) ;
         }
-        #mobile-nav-overlay.open { display: flex; animation: overlayIn 0.4s ease forwards ; }
+        #mobile-nav-overlay.open { display: flex ; animation: overlayIn 0.4s ease forwards ; }
         
-        @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes overlayIn { from { opacity: 0 ; } to { opacity: 1 ; } }
 
-        .mobile-group { margin-bottom: 2.5rem; }
-        .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
-        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; background: none; border: none; color: inherit; text-decoration: none; }
+        .mobile-group { margin-bottom: 2.5rem ; }
+        .mobile-label { font-family: 'Cormorant Garamond' , serif ; font-size: 2.2rem ; font-style: italic ; color: var(--copper) ; margin-bottom: 0.5rem ; display: block ; border-bottom: 1px solid rgba(212, 163, 115, 0.2) ; }
+        .mobile-link { display: block ; padding: 0.75rem 0 ; font-size: 1.1rem ; text-transform: uppercase ; letter-spacing: 0.15em ; opacity: 0.8 ; width: 100% ; text-align: left ; background: none ; border: none ; color: inherit ; text-decoration: none ; }
 
         .brand-logo {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            text-align: center ;
+            display: flex ;
+            flex-direction: column ;
+            align-items: center ;
+            justify-content: center ;
+            text-decoration: none ;
         }
         
         .logo-image {
-            height: 100px;
-            width: auto;
-            object-fit: contain;
-            transition: height 0.3s ease;
+            height: 100px ;
+            width: auto ;
+            object-fit: contain ;
+            transition: height 0.3s ease ;
         }
         
         @media (min-width: 768px) {
-            .logo-image { height: 150px; }
+            .logo-image { height: 150px ; }
         }
 
-        .bg-forest { background-color: var(--forest); }
-        .text-copper { color: var(--copper); }
-        .btn-copper { background-color: var(--copper); color: white; transition: all 0.3s ease ; }
-        .btn-copper:hover { background-color: var(--forest); }
+        .bg-forest { background-color: var(--forest) ; }
+        .text-copper { color: var(--copper) !important ; }
+        .btn-copper { background-color: var(--copper) ; color: white ; transition: all 0.3s ease ; }
+        .btn-copper:hover { background-color: var(--forest) ; }
 
         .prize-column-box {
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 163, 115, 0.2);
-            padding: 2.5rem;
-            height: 100%;
-            transition: all 0.3s ease;
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.4) ;
+            backdrop-filter: blur(10px) ;
+            border: 1px solid rgba(212, 163, 115, 0.2) ;
+            padding: 2.5rem ;
+            height: 100% ;
+            transition: all 0.3s ease ;
+            border-radius: 4px ;
         }
         .prize-column-box:hover {
-            background: rgba(255, 255, 255, 0.6);
-            border-color: var(--copper);
-            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.6) ;
+            border-color: var(--copper) ;
+            transform: translateY(-5px) ;
         }
 
         .special-prize-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(212, 163, 115, 0.2);
-            padding: 2rem;
-            width: 100%;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
+            background: rgba(255, 255, 255, 0.03) ;
+            border: 1px solid rgba(212, 163, 115, 0.2) ;
+            padding: 2rem ;
+            width: 100% ;
+            transition: all 0.3s ease ;
+            display: flex ;
+            align-items: center ;
+            gap: 2rem ;
         }
         .special-prize-card:hover {
-            background: rgba(255, 255, 255, 0.07);
-            border-color: var(--copper);
+            background: rgba(255, 255, 255, 0.07) ;
+            border-color: var(--copper) ;
         }
     </style>
 </head>
@@ -180,7 +180,7 @@
 
         <div class="mobile-group">
             <span class="mobile-label">Competition</span>
-            <a href="https://cfipc.github.io/cfipc/rules/" class="mobile-link">Rules</a>
+            <a href="https://cfipc.github.io/cfipc/" class="mobile-link">Rules</a>
             <a href="https://cfipc.github.io/cfipc/prizes/" class="mobile-link">Prizes</a>
             <a href="https://cfipc.github.io/cfipc/application/" class="mobile-link">Application</a>
             <a href="https://cfipc.github.io/cfipc/jury/" class="mobile-link">Jury</a>
@@ -189,9 +189,9 @@
 
         <div class="mobile-group">
             <span class="mobile-label">Masterclasses</span>
-            <a href="https://cfipc.github.io/cfipc/masterclasses/" class="mobile-link">Winter Festival</a>
-            <a href="https://cfipc.github.io/cfipc/masterclasses/" class="mobile-link">Spring Festival</a>
-            <a href="https://cfipc.github.io/cfipc/masterclasses/" class="mobile-link">Summer Festival</a>
+            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="mobile-link">Winter Masterclass</a>
+            <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="mobile-link">Spring Masterclass</a>
+            <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="mobile-link">Summer Masterclass</a>
         </div>
 
         <div class="mobile-group">
@@ -215,7 +215,7 @@
 
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="https://cfipc.github.io/cfipc/" class="nav-link">
                                 Competition 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </a>
@@ -228,14 +228,14 @@
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link">
                                 Masterclasses 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </a>
                             <div class="dropdown-menu">
-                                <a href="https://cfipc.github.io/cfipc/masterclasses/" class="dropdown-item">Winter Festival</a>
-                                <a href="https://cfipc.github.io/cfipc/masterclasses/" class="dropdown-item">Spring Festival</a>
-                                <a href="https://cfipc.github.io/cfipc/masterclasses/" class="dropdown-item">Summer Festival</a>
+                                <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
+                                <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="dropdown-item">Spring Masterclass</a>
+                                <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="dropdown-item">Summer Masterclass</a>
                             </div>
                         </div>
                     </div>
@@ -277,7 +277,6 @@
     </nav>
 
     <main class="pt-32 md:pt-48">
-        <!-- PAGE: PRIZES -->
         <section id="prizes" class="page-section py-32 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
@@ -296,7 +295,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">1st Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 550€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €100 cash prize</li>
                                 <li>&bull; Concert with orchestra in April 2027</li>
                                 <li>&bull; €250 fee for concerto performance</li>
@@ -306,7 +305,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">2nd Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 250€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €50 cash prize</li>
                                 <li>&bull; €100 Scholarship (CF Young Talents Festival)</li>
                                 <li>&bull; €100 Scholarship (IMF Paris Masterclass)</li>
@@ -315,7 +314,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">3rd Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 100€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €100 Scholarship (IMF Paris Masterclass)</li>
                                 <li>&bull; Invitation to CF Young Talents Festival 2027</li>
                             </ul>
@@ -333,7 +332,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">1st Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 650€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €200 cash prize</li>
                                 <li>&bull; Concert with orchestra in April 2027</li>
                                 <li>&bull; €250 fee for concerto performance</li>
@@ -343,7 +342,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">2nd Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 280€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €80 cash prize</li>
                                 <li>&bull; €100 Scholarship (CF Young Talents Festival)</li>
                                 <li>&bull; €100 Scholarship (IMF Paris Masterclass)</li>
@@ -352,7 +351,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">3rd Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 100€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €200 Scholarship (CF Young Talents Festival)</li>
                                 <li>&bull; Invitation to CF Young Talents Festival 2027</li>
                             </ul>
@@ -370,7 +369,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">1st Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 750€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €300 cash prize</li>
                                 <li>&bull; Concert with orchestra in April 2027</li>
                                 <li>&bull; €250 fee for concerto performance</li>
@@ -380,7 +379,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">2nd Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 320€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €120 cash prize</li>
                                 <li>&bull; €100 Scholarship (CF Young Talents Festival)</li>
                                 <li>&bull; €100 Scholarship (IMF Paris Masterclass)</li>
@@ -389,7 +388,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">3rd Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 100€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €100 Scholarship (IMF Paris Masterclass)</li>
                                 <li>&bull; Invitation to CF Young Talents Festival 2027</li>
                             </ul>
@@ -407,7 +406,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">1st Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 1450€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €1000 cash prize</li>
                                 <li>&bull; Concert with orchestra in April 2027</li>
                                 <li>&bull; €250 fee for concerto performance</li>
@@ -418,7 +417,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">2nd Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 600€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €400 cash prize</li>
                                 <li>&bull; €100 Scholarship (CF Young Talents Festival)</li>
                                 <li>&bull; €100 Scholarship (IMF Paris Masterclass)</li>
@@ -427,7 +426,7 @@
                         <div class="prize-column-box">
                             <h5 class="text-forest font-bold uppercase text-[11px] mb-4 tracking-widest">3rd Prize</h5>
                             <p class="text-copper font-bold text-2xl mb-8 border-b border-copper/20 pb-4 italic">Valued at 200€</p>
-                            <ul class="text-sm space-y-4 text-stone-600">
+                            <ul class="text-sm space-y-4 text-stone-600 font-light">
                                 <li>&bull; €100 Scholarship (CF Young Talents Festival)</li>
                                 <li>&bull; €100 Scholarship (IMF Paris Masterclass)</li>
                             </ul>
@@ -493,7 +492,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-16 text-center italic text-copper/50 text-sm">Other special prizes to be announced soon</div>
+                    <div class="mt-16 text-center italic text-copper/30 text-sm">Other special prizes to be announced soon</div>
                 </div>
             </div>
         </section>
