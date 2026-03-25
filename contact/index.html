@@ -17,170 +17,183 @@
         }
 
         body { 
-            font-family: 'Outfit' , sans-serif ; 
-            background-color: var(--parchment) ;
-            color: var(--forest) ;
-            -webkit-font-smoothing: antialiased ;
-            overflow-x: hidden ;
+            font-family: 'Outfit' , sans-serif; 
+            background-color: var(--parchment);
+            color: var(--forest);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond' , serif ; }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond' , serif; }
         
-        .page-section { display: block ; animation: sectionFade 0.6s ease-out ; }
+        .page-section { display: block ; animation: sectionFade 0.6s ease-out; }
 
         @keyframes sectionFade {
-            from { opacity: 0 ; transform: translateY(10px) ; }
-            to { opacity: 1 ; transform: translateY(0) ; }
+            from { opacity: 0 ; transform: translateY(10px); }
+            to { opacity: 1 ; transform: translateY(0); }
         }
 
         .nav-link {
-            letter-spacing: 0.12em ;
-            font-size: 0.9rem ;
-            font-weight: 700 ;
-            text-transform: uppercase ;
-            color: var(--forest) ;
-            transition: all 0.3s ease ;
-            cursor: pointer ;
-            padding: 1.5rem 0 ;
-            display: flex ;
-            align-items: center ;
-            white-space: nowrap ;
-            text-decoration: none ;
+            letter-spacing: 0.12em;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--forest);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            text-decoration: none;
         }
-        .nav-link:hover { color: var(--copper) ; }
+        .nav-link:hover { color: var(--copper); }
 
-        .dropdown-container { position: relative ; }
+        .dropdown-container { position: relative; }
         .dropdown-menu {
-            position: absolute ;
-            top: 100% ;
-            left: 50% ;
-            transform: translateX(-50%) ;
-            background: var(--parchment) ;
-            border: 1px solid rgba(27, 42, 39, 0.1) ;
-            min-width: 220px ;
-            display: none ;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15) ;
-            z-index: 1000 ;
-            padding: 0.75rem 0 ;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--parchment);
+            border: 1px solid rgba(27, 42, 39, 0.1);
+            min-width: 220px;
+            display: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            z-index: 1000;
+            padding: 0.75rem 0;
         }
 
         @media (min-width: 1024px) {
-            .dropdown-container:hover .dropdown-menu { display: block ; animation: fadeIn 0.3s ease ; }
+            .dropdown-container:hover .dropdown-menu { display: block ; animation: fadeIn 0.3s ease; }
         }
         
-        .dropdown-menu.is-visible { display: block !important ; }
+        .dropdown-menu.is-visible { display: block !important; }
 
         @keyframes fadeIn { 
-            from { opacity: 0 ; transform: translate(-50%, 10px) ; } 
-            to { opacity: 1 ; transform: translate(-50%, 0) ; } 
+            from { opacity: 0 ; transform: translate(-50%, 10px); } 
+            to { opacity: 1 ; transform: translate(-50%, 0); } 
         }
 
         .dropdown-item {
-            display: block ;
-            padding: 0.8rem 1.5rem ;
-            font-size: 0.85rem ;
-            text-transform: uppercase ;
-            letter-spacing: 0.1em ;
-            color: var(--forest) ;
-            transition: all 0.2s ;
-            text-align: center ;
-            text-decoration: none ;
-            width: 100% ;
+            display: block;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--forest);
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
         }
         .dropdown-item:hover { 
-            background: var(--forest) ; 
-            color: var(--copper) ; 
+            background: var(--forest); 
+            color: var(--copper); 
         }
 
         #mobile-nav-overlay {
-            position: fixed ;
-            inset: 0 ;
-            background: var(--forest) ;
-            z-index: 2000 ;
-            display: none ;
-            flex-direction: column ;
-            padding: 4rem 2rem ;
-            overflow-y: auto ;
-            color: var(--parchment) ;
+            position: fixed;
+            inset: 0;
+            background: var(--forest);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            padding: 4rem 2rem;
+            overflow-y: auto;
+            color: var(--parchment);
         }
-        #mobile-nav-overlay.open { display: flex ; animation: overlayIn 0.4s ease forwards ; }
+        #mobile-nav-overlay.open { display: flex ; animation: overlayIn 0.4s ease forwards; }
         
         @keyframes overlayIn { from { opacity: 0 ; } to { opacity: 1 ; } }
 
-        .mobile-group { margin-bottom: 2.5rem ; }
-        .mobile-label { font-family: 'Cormorant Garamond' , serif ; font-size: 2.2rem ; font-style: italic ; color: var(--copper) ; margin-bottom: 0.5rem ; display: block ; border-bottom: 1px solid rgba(212, 163, 115, 0.2) ; }
-        .mobile-link { display: block ; padding: 0.75rem 0 ; font-size: 1.1rem ; text-transform: uppercase ; letter-spacing: 0.15em ; opacity: 0.8 ; width: 100% ; text-align: left ; background: none ; border: none ; color: inherit ; text-decoration: none ; }
+        .mobile-group { margin-bottom: 2.5rem; }
+        .mobile-label { font-family: 'Cormorant Garamond' , serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
+        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; background: none; border: none; color: inherit; text-decoration: none; }
 
         .brand-logo {
-            text-align: center ;
-            display: flex ;
-            flex-direction: column ;
-            align-items: center ;
-            justify-content: center ;
-            text-decoration: none ;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
         }
         
         .logo-image {
-            height: 100px ;
-            width: auto ;
-            object-fit: contain ;
-            transition: height 0.3s ease ;
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+            transition: height 0.3s ease;
         }
         
         @media (min-width: 768px) {
-            .logo-image { height: 150px ; }
+            .logo-image { height: 150px; }
         }
 
-        .bg-forest { background-color: var(--forest) !important ; }
-        .text-copper { color: var(--copper) !important ; }
-        .btn-copper { background-color: var(--copper) ; color: white ; transition: all 0.3s ease ; border-radius: 2px ; }
-        .btn-copper:hover { background-color: var(--forest) ; }
+        .bg-forest { background-color: var(--forest) !important; }
+        .text-copper { color: var(--copper) !important; }
+        .btn-copper { background-color: var(--copper); color: white; transition: all 0.3s ease; border-radius: 2px; }
+        .btn-copper:hover { background-color: var(--forest); }
 
         .shadow-box-beige {
-            background-color: #F2F0E9 ;
-            padding: 2.5rem ;
-            border-radius: 2px ;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.08) ;
-            border: 1px solid rgba(27, 42, 39, 0.05) ;
+            background-color: #F2F0E9;
+            padding: 2.5rem;
+            border-radius: 2px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            border: 1px solid rgba(27, 42, 39, 0.05);
         }
 
         .form-input {
-            width: 100% ;
-            background: white ;
-            border: 1px solid rgba(27, 42, 39, 0.1) ;
-            padding: 1rem ;
-            border-radius: 2px ;
-            font-family: 'Outfit' , sans-serif ;
-            transition: border-color 0.3s ease ;
+            width: 100%;
+            background: white;
+            border: 1px solid rgba(27, 42, 39, 0.1);
+            padding: 1rem;
+            border-radius: 2px;
+            font-family: 'Outfit' , sans-serif;
+            transition: border-color 0.3s ease;
         }
         .form-input:focus {
             outline: none ;
-            border-color: var(--copper) ;
+            border-color: var(--copper);
         }
         label {
-            display: block ;
-            font-size: 10px ;
-            text-transform: uppercase ;
-            font-weight: 700 ;
-            letter-spacing: 0.1em ;
-            margin-bottom: 0.5rem ;
-            color: var(--forest) ;
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            color: var(--forest);
         }
 
+        /* Black social icons with circle */
         .social-circle {
-            width: 40px ;
-            height: 40px ;
-            border-radius: 50% ;
-            border: 1.5px solid black ;
-            display: flex ;
-            align-items: center ;
-            justify-content: center ;
-            color: black ;
-            transition: all 0.3s ease ;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            background: transparent;
+            color: black;
         }
         .social-circle:hover {
-            background-color: black ;
-            color: white ;
+            background-color: black;
+            color: white;
+        }
+        .social-circle svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2px;
+            stroke: black;
+            fill: none;
+            transition: all 0.3s ease;
+        }
+        .social-circle:hover svg {
+            stroke: white;
         }
     </style>
 </head>
@@ -300,8 +313,8 @@
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-32">
-                    <!-- Left Side : Practical Info & Note -->
-                    <div class="flex flex-col gap-8">
+                    <!-- Left Side : Information -->
+                    <div class="grid grid-cols-1 gap-8">
                         <div class="shadow-box-beige">
                             <h3 class="serif text-4xl italic text-forest mb-8">Practical Information</h3>
                             <div class="space-y-6 text-sm text-forest font-light leading-relaxed">
@@ -317,17 +330,16 @@
                                     <h5 class="text-copper font-bold uppercase tracking-widest text-[10px] mb-3">Follow Us</h5>
                                     <div class="flex gap-4">
                                         <a href="https://www.facebook.com/cfipc" target="_blank" class="social-circle">
-                                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                                            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                                         </a>
                                         <a href="https://www.instagram.com/cfipc_official/" target="_blank" class="social-circle">
-                                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                                            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Assistance Note -->
                         <div class="bg-forest p-10 rounded-sm shadow-xl border border-copper/10 text-copper">
                             <p class="serif italic text-2xl mb-4 text-white">We are here to help</p>
                             <p class="text-sm font-light leading-relaxed opacity-80">
@@ -336,10 +348,10 @@
                         </div>
                     </div>
 
-                    <!-- Right Side : Contact Form -->
+                    <!-- Right Side : AJAX Form -->
                     <div class="shadow-box-beige">
                         <h3 class="serif text-4xl italic text-forest mb-8">Send a Message</h3>
-                        <form action="https://formspree.io/f/mojparqo" method="POST" class="space-y-6">
+                        <form id="contact-form" class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="name">Full Name</label>
@@ -359,13 +371,13 @@
                                 <textarea id="message" name="message" rows="6" placeholder="How can we assist you ?" class="form-input" required></textarea>
                             </div>
                             <div class="pt-4">
-                                <button type="submit" class="btn-copper w-full py-5 text-[10px] uppercase font-bold tracking-[0.3em] shadow-lg">Send Message</button>
+                                <button type="submit" id="submit-btn" class="btn-copper w-full py-5 text-[10px] uppercase font-bold tracking-[0.3em] shadow-lg">Send Message</button>
                             </div>
+                            <div id="form-status" class="hidden mt-4 p-4 rounded-sm text-center text-xs uppercase tracking-widest font-bold"></div>
                         </form>
                     </div>
                 </div>
 
-                <!-- Google Map Embed -->
                 <div class="w-full aspect-[21/9] bg-stone-200 shadow-2xl overflow-hidden rounded-sm relative grayscale hover:grayscale-0 transition-all duration-1000 border border-forest/5">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.315551973137!2d4.462126752425898!3d50.86235767622139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3dc605379603f%3A0x3e2d4b260549ea02!2sGC%20de%20Lijsterbes!5e0!3m2!1sen!2sbe!4v1774342012257!5m2!1sen!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -373,7 +385,6 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-forest text-copper pt-32 pb-16 px-8 mt-20">
         <div class="max-w-[1400px] mx-auto text-center">
             <p class="text-[9px] uppercase tracking-[0.3em] font-light">&copy; The Music Agency 2026</p>
@@ -404,9 +415,52 @@
             }
         }
 
-        window.addEventListener('click', () => {
-            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
-        });
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+        const submitBtn = document.getElementById("submit-btn");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Sending ...";
+            
+            const data = new FormData(event.target);
+            
+            fetch("https://formspree.io/f/mojparqo", {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Thank you ! Your message has been sent successfully .";
+                    status.className = "mt-4 p-4 rounded-sm text-center text-xs uppercase tracking-widest font-bold bg-forest text-copper block";
+                    form.reset();
+                    submitBtn.innerText = "Send Message";
+                    submitBtn.disabled = false;
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            status.innerHTML = "Oops ! There was a problem submitting your form .";
+                        }
+                        status.className = "mt-4 p-4 rounded-sm text-center text-xs uppercase tracking-widest font-bold bg-red-100 text-red-800 block";
+                        submitBtn.innerText = "Send Message";
+                        submitBtn.disabled = false;
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops ! There was a problem submitting your form .";
+                status.className = "mt-4 p-4 rounded-sm text-center text-xs uppercase tracking-widest font-bold bg-red-100 text-red-800 block";
+                submitBtn.innerText = "Send Message";
+                submitBtn.disabled = false;
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+
+        window.onclick = () => document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
     </script>
 </body>
 </html>
