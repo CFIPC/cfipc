@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | César Franck International Piano Competition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600;1,700&family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest: #1B2A27;
+            --copper: #D4A373;
+            --sage: #7D8B7A;
+            --parchment: #F2F0E9;
+            --dusty-white: #EAE8E1;
+        }
+
+        body { 
+            font-family: 'Outfit' , sans-serif ; 
+            background-color: var(--parchment) ;
+            color: var(--forest) ;
+            -webkit-font-smoothing: antialiased ;
+            overflow-x: hidden ;
+        }
+
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond' , serif ; }
+        
+        .page-section { display: block ; animation: sectionFade 0.6s ease-out ; }
+
+        @keyframes sectionFade {
+            from { opacity: 0 ; transform: translateY(10px) ; }
+            to { opacity: 1 ; transform: translateY(0) ; }
+        }
+
+        .nav-link {
+            letter-spacing: 0.12em ;
+            font-size: 0.9rem ;
+            font-weight: 700 ;
+            text-transform: uppercase ;
+            color: var(--forest) ;
+            transition: all 0.3s ease ;
+            cursor: pointer ;
+            padding: 1.5rem 0 ;
+            display: flex ;
+            align-items: center ;
+            white-space: nowrap ;
+            text-decoration: none ;
+        }
+        .nav-link:hover { color: var(--copper) ; }
+
+        .dropdown-container { position: relative ; }
+        .dropdown-menu {
+            position: absolute ;
+            top: 100% ;
+            left: 50% ;
+            transform: translateX(-50%) ;
+            background: var(--parchment) ;
+            border: 1px solid rgba(27, 42, 39, 0.1) ;
+            min-width: 220px ;
+            display: none ;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15) ;
+            z-index: 1000 ;
+            padding: 0.75rem 0 ;
+        }
+
+        @media (min-width: 1024px) {
+            .dropdown-container:hover .dropdown-menu { display: block ; animation: fadeIn 0.3s ease ; }
+        }
+        
+        .dropdown-menu.is-visible { display: block !important ; }
+
+        @keyframes fadeIn { 
+            from { opacity: 0 ; transform: translate(-50%, 10px) ; } 
+            to { opacity: 1 ; transform: translate(-50%, 0) ; } 
+        }
+
+        .dropdown-item {
+            display: block ;
+            padding: 0.8rem 1.5rem ;
+            font-size: 0.85rem ;
+            text-transform: uppercase ;
+            letter-spacing: 0.1em ;
+            color: var(--forest) ;
+            transition: all 0.2s ;
+            text-align: center ;
+            text-decoration: none ;
+            width: 100% ;
+        }
+        .dropdown-item:hover { 
+            background: var(--forest) ; 
+            color: var(--copper) ; 
+        }
+
+        #mobile-nav-overlay {
+            position: fixed ;
+            inset: 0 ;
+            background: var(--forest) ;
+            z-index: 2000 ;
+            display: none ;
+            flex-direction: column ;
+            padding: 4rem 2rem ;
+            overflow-y: auto ;
+            color: var(--parchment) ;
+        }
+        #mobile-nav-overlay.open { display: flex ; animation: overlayIn 0.4s ease forwards ; }
+        
+        @keyframes overlayIn { from { opacity: 0 ; } to { opacity: 1 ; } }
+
+        .brand-logo {
+            text-align: center ;
+            display: flex ;
+            flex-direction: column ;
+            align-items: center ;
+            justify-content: center ;
+            text-decoration: none ;
+        }
+        
+        .logo-image {
+            height: 100px ;
+            width: auto ;
+            object-fit: contain ;
+            transition: height 0.3s ease ;
+        }
+        
+        @media (min-width: 768px) {
+            .logo-image { height: 150px ; }
+        }
+
+        /* Slideshow Styles */
+        .slideshow-container {
+            position: relative ;
+            width: 100% ;
+            aspect-ratio: 16/9 ;
+            background: #000 ;
+            overflow: hidden ;
+            border-radius: 2px ;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2) ;
+        }
+
+        .slide {
+            position: absolute ;
+            inset: 0 ;
+            opacity: 0 ;
+            transition: opacity 0.8s ease-in-out ;
+            display: flex ;
+            align-items: center ;
+            justify-content: center ;
+        }
+
+        .slide.active {
+            opacity: 1 ;
+        }
+
+        .slide img {
+            width: 100% ;
+            height: 100% ;
+            object-fit: cover ;
+        }
+
+        .slide-control {
+            position: absolute ;
+            top: 50% ;
+            transform: translateY(-50%) ;
+            background: rgba(0,0,0,0.3) ;
+            color: white ;
+            border: none ;
+            padding: 1.5rem 1rem ;
+            cursor: pointer ;
+            z-index: 10 ;
+            transition: background 0.3s ;
+            display: flex ;
+            align-items: center ;
+        }
+        .slide-control:hover { background: var(--copper) ; }
+        .prev { left: 0 ; border-radius: 0 4px 4px 0 ; }
+        .next { right: 0 ; border-radius: 4px 0 0 4px ; }
+
+        .thumb-grid {
+            display: grid ;
+            grid-template-cols: repeat(5, 1fr) ;
+            gap: 10px ;
+            margin-top: 20px ;
+        }
+
+        @media (min-width: 768px) {
+            .thumb-grid { grid-template-cols: repeat(10, 1fr) ; }
+        }
+
+        .thumb {
+            aspect-ratio: 1/1 ;
+            cursor: pointer ;
+            opacity: 0.5 ;
+            transition: all 0.3s ;
+            border: 2px solid transparent ;
+            border-radius: 2px ;
+            overflow: hidden ;
+        }
+        .thumb.active { opacity: 1 ; border-color: var(--copper) ; }
+        .thumb img { width: 100% ; height: 100% ; object-fit: cover ; }
+
+        .social-circle-footer {
+            width: 44px ;
+            height: 44px ;
+            border-radius: 50% ;
+            border: 1.5px solid var(--copper) ;
+            display: flex ;
+            align-items: center ;
+            justify-content: center ;
+            color: var(--copper) ;
+            transition: all 0.3s ease ;
+            text-decoration: none ;
+            background: transparent ;
+        }
+        .social-circle-footer:hover {
+            background-color: var(--copper) ;
+            color: var(--forest) ;
+        }
+        .social-circle-footer svg { width: 22px ; height: 22px ; }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-nav-overlay">
+        <div class="flex justify-between items-center mb-12">
+            <span class="serif italic text-2xl text-parchment">Menu</span>
+            <button onclick="toggleMobileMenu()" class="text-copper text-4xl leading-none">&times;</button>
+        </div>
+        <div class="mobile-group">
+            <span class="mobile-label">Competition</span>
+            <a href="https://cfipc.github.io/cfipc/" class="mobile-link">Rules</a>
+            <a href="https://cfipc.github.io/cfipc/prizes/" class="mobile-link">Prizes</a>
+            <a href="https://cfipc.github.io/cfipc/application/" class="mobile-link">Application</a>
+            <a href="https://cfipc.github.io/cfipc/jury/" class="mobile-link">Jury</a>
+            <a href="https://cfipc.github.io/cfipc/laureates/" class="mobile-link">Laureates</a>
+        </div>
+        <div class="mobile-group">
+            <span class="mobile-label">Masterclasses</span>
+            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="mobile-link">Winter Masterclass</a>
+            <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="mobile-link">Spring Masterclass</a>
+            <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="mobile-link">Summer Masterclass</a>
+        </div>
+        <div class="mobile-group">
+            <span class="mobile-label">About</span>
+            <a href="https://cfipc.github.io/cfipc/contact/" class="mobile-link">Contact Us</a>
+            <a href="https://cfipc.github.io/cfipc/about/" class="mobile-link">Legacy</a>
+        </div>
+        <a href="https://cfipc.github.io/cfipc/" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</a>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
+        <div class="max-w-[1600px] mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-center h-32 md:h-48">
+                <div class="flex-1 flex justify-start items-center">
+                    <button class="md:hidden flex flex-col items-center justify-center space-y-1 p-2" onclick="toggleMobileMenu()">
+                        <div class="w-6 h-[1.5px] bg-forest"></div>
+                        <div class="w-6 h-[1.5px] bg-forest"></div>
+                    </button>
+                    <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
+                        <div class="dropdown-container">
+                            <a href="https://cfipc.github.io/cfipc/" class="nav-link">Competition <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
+                            <div class="dropdown-menu">
+                                <a href="https://cfipc.github.io/cfipc/rules/" class="dropdown-item">Rules</a>
+                                <a href="https://cfipc.github.io/cfipc/prizes/" class="dropdown-item">Prizes</a>
+                                <a href="https://cfipc.github.io/cfipc/application/" class="dropdown-item">Application</a>
+                                <a href="https://cfipc.github.io/cfipc/jury/" class="dropdown-item">Jury</a>
+                                <a href="https://cfipc.github.io/cfipc/laureates/" class="dropdown-item">Laureates</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-container">
+                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link">Masterclasses <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
+                            <div class="dropdown-menu">
+                                <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
+                                <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="dropdown-item">Spring Masterclass</a>
+                                <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="dropdown-item">Summer Masterclass</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://cfipc.github.io/cfipc/" class="brand-logo px-2">
+                    <img src="https://cfipc.github.io/cfipc/Logo26.png" alt="CFIPC Logo" class="logo-image">
+                </a>
+                <div class="flex-1 flex justify-end items-center">
+                    <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
+                        <div class="dropdown-container">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">About <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
+                            <div class="dropdown-menu">
+                                <a href="https://cfipc.github.io/cfipc/contact/" class="dropdown-item">Contact Us</a>
+                                <a href="https://cfipc.github.io/cfipc/about/" class="dropdown-item">Legacy</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-container">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">Gallery <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
+                            <div class="dropdown-menu">
+                                <a href="https://cfipc.github.io/cfipc/media/" class="dropdown-item">Media</a>
+                                <a href="https://cfipc.github.io/cfipc/gallery/" class="dropdown-item">Pictures</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 md:pt-48">
+        <section class="page-section py-24 px-4 md:px-8">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="text-center mb-24">
+                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Capturing the Spirit</h4>
+                    <h2 class="text-5xl md:text-7xl serif italic text-forest">Photo Gallery</h2>
+                    <p class="text-stone-400 uppercase tracking-widest text-[11px] mt-6">Visual chronicles of artistic excellence</p>
+                </div>
+
+                <!-- Gallery 2025 -->
+                <div class="mb-32">
+                    <div class="flex items-center gap-6 mb-12">
+                        <h3 class="serif text-4xl italic text-copper">Edition 2025</h3>
+                        <div class="h-[1px] flex-grow bg-forest/5"></div>
+                    </div>
+                    <div class="slideshow-wrapper" id="gallery-2025">
+                        <div class="slideshow-container">
+                            <button class="slide-control prev" onclick="moveSlide('2025', -1)"><i data-lucide="chevron-left"></i></button>
+                            <div class="slides-inner">
+                                <!-- Slides will be generated by JS -->
+                            </div>
+                            <button class="slide-control next" onclick="moveSlide('2025', 1)"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                        <div class="thumb-grid" id="thumbs-2025">
+                            <!-- Thumbs will be generated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 2024 -->
+                <div class="mb-32">
+                    <div class="flex items-center gap-6 mb-12">
+                        <h3 class="serif text-4xl italic text-copper">Edition 2024</h3>
+                        <div class="h-[1px] flex-grow bg-forest/5"></div>
+                    </div>
+                    <div class="slideshow-wrapper" id="gallery-2024">
+                        <div class="slideshow-container">
+                            <button class="slide-control prev" onclick="moveSlide('2024', -1)"><i data-lucide="chevron-left"></i></button>
+                            <div class="slides-inner"></div>
+                            <button class="slide-control next" onclick="moveSlide('2024', 1)"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                        <div class="thumb-grid" id="thumbs-2024"></div>
+                    </div>
+                </div>
+
+                <!-- Gallery 2023 -->
+                <div class="mb-32">
+                    <div class="flex items-center gap-6 mb-12">
+                        <h3 class="serif text-4xl italic text-copper">Edition 2023</h3>
+                        <div class="h-[1px] flex-grow bg-forest/5"></div>
+                    </div>
+                    <div class="slideshow-wrapper" id="gallery-2023">
+                        <div class="slideshow-container">
+                            <button class="slide-control prev" onclick="moveSlide('2023', -1)"><i data-lucide="chevron-left"></i></button>
+                            <div class="slides-inner"></div>
+                            <button class="slide-control next" onclick="moveSlide('2023', 1)"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                        <div class="thumb-grid" id="thumbs-2023"></div>
+                    </div>
+                </div>
+
+                <div class="mt-32 text-center">
+                    <p class="text-xs uppercase tracking-[0.3em] text-sage">Join us for the next edition ...</p>
+                    <a href="https://cfipc.github.io/cfipc/application/" class="inline-block mt-8 btn-copper px-10 py-5 text-[10px] uppercase font-bold tracking-widest shadow-lg">Apply Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#1B2A27] text-copper pt-24 pb-12 px-8">
+        <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-10">
+            <div class="flex gap-6">
+                <a href="https://www.facebook.com/cfipc" target="_blank" class="social-circle-footer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://www.instagram.com/cfipc_official/" target="_blank" class="social-circle-footer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="mailto:office@cfipc.com" class="social-circle-footer" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+            <p class="text-[9px] uppercase tracking-[0.3em] font-light opacity-60">&copy; The Music Agency 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        const years = ['2025', '2024', '2023'];
+        const indices = { '2025': 0, '2024': 0, '2023': 0 };
+        const intervals = {};
+
+        function initGalleries() {
+            years.forEach(year => {
+                const inner = document.querySelector(`#gallery-${year} .slides-inner`);
+                const thumbGrid = document.querySelector(`#thumbs-${year}`);
+                
+                for (let i = 1; i <= 10; i++) {
+                    // Create Slide
+                    const slide = document.createElement('div');
+                    slide.className = `slide ${i === 1 ? 'active' : ''}`;
+                    slide.innerHTML = `<img src="${year}_${i}.jpg" alt="${year} Gallery Image ${i}" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">`;
+                    inner.appendChild(slide);
+
+                    // Create Thumb
+                    const thumb = document.createElement('div');
+                    thumb.className = `thumb ${i === 1 ? 'active' : ''}`;
+                    thumb.onclick = () => jumpToSlide(year, i - 1);
+                    thumb.innerHTML = `<img src="${year}_${i}.jpg" alt="Thumb ${i}" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">`;
+                    thumbGrid.appendChild(thumb);
+                }
+
+                startTimer(year);
+            });
+            lucide.createIcons();
+        }
+
+        function moveSlide(year, direction) {
+            resetTimer(year);
+            const slides = document.querySelectorAll(`#gallery-${year} .slide`);
+            const thumbs = document.querySelectorAll(`#thumbs-${year} .thumb`);
+            
+            slides[indices[year]].classList.remove('active');
+            thumbs[indices[year]].classList.remove('active');
+
+            indices[year] = (indices[year] + direction + 10) % 10;
+
+            slides[indices[year]].classList.add('active');
+            thumbs[indices[year]].classList.add('active');
+        }
+
+        function jumpToSlide(year, index) {
+            resetTimer(year);
+            const slides = document.querySelectorAll(`#gallery-${year} .slide`);
+            const thumbs = document.querySelectorAll(`#thumbs-${year} .thumb`);
+            
+            slides[indices[year]].classList.remove('active');
+            thumbs[indices[year]].classList.remove('active');
+
+            indices[year] = index;
+
+            slides[indices[year]].classList.add('active');
+            thumbs[indices[year]].classList.add('active');
+        }
+
+        function startTimer(year) {
+            intervals[year] = setInterval(() => moveSlide(year, 1), 4000);
+        }
+
+        function resetTimer(year) {
+            clearInterval(intervals[year]);
+            startTimer(year);
+        }
+
+        function handleNavClick(event, btn) {
+            const menu = btn.nextElementSibling;
+            const wasVisible = menu.classList.contains('is-visible');
+            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
+            if (!wasVisible) menu.classList.add('is-visible');
+            event.stopPropagation();
+        }
+
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobile-nav-overlay');
+            if (overlay.classList.contains('open')) {
+                overlay.classList.remove('open');
+                setTimeout(() => { overlay.style.display = 'none' ; }, 400);
+                document.body.style.overflow = 'auto';
+            } else {
+                overlay.style.display = 'flex';
+                setTimeout(() => { overlay.classList.add('open') ; }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        window.onclick = () => document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
+        
+        window.onload = initGalleries;
+    </script>
+</body>
+</html>
