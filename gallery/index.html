@@ -250,6 +250,11 @@
             <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="mobile-link">Summer Masterclass</a>
         </div>
         <div class="mobile-group">
+            <span class="mobile-label">Gallery</span>
+            <a href="https://cfipc.github.io/cfipc/media/" class="mobile-link">Media</a>
+            <a href="https://cfipc.github.io/cfipc/gallery/" class="mobile-link">Pictures</a>
+        </div>
+        <div class="mobile-group">
             <span class="mobile-label">About</span>
             <a href="https://cfipc.github.io/cfipc/contact/" class="mobile-link">Contact Us</a>
             <a href="https://cfipc.github.io/cfipc/about/" class="mobile-link">Legacy</a>
@@ -262,13 +267,13 @@
         <div class="max-w-[1600px] mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center h-32 md:h-48">
                 <div class="flex-1 flex justify-start items-center">
+                    <!-- Fixed: Hamburger lines now black for better visibility -->
                     <button class="md:hidden flex flex-col items-center justify-center space-y-1 p-2" onclick="toggleMobileMenu()">
-                        <div class="w-6 h-[1.5px] bg-forest"></div>
-                        <div class="w-6 h-[1.5px] bg-forest"></div>
+                        <div class="w-6 h-[1.5px] bg-black"></div>
+                        <div class="w-6 h-[1.5px] bg-black"></div>
                     </button>
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <!-- Fixed: handleNavClick added for touch devices -->
                             <a href="https://cfipc.github.io/cfipc/" class="nav-link" onclick="handleNavClick(event, this)">Competition <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/rules/" class="dropdown-item">Rules</a>
@@ -279,7 +284,6 @@
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <!-- Fixed: handleNavClick added for touch devices -->
                             <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link" onclick="handleNavClick(event, this)">Masterclasses <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
@@ -302,6 +306,7 @@
                             </div>
                         </div>
                         <div class="dropdown-container">
+                            <!-- Fixed: Gallery dropdown added -->
                             <a href="#" class="nav-link" onclick="handleNavClick(event, this)">Gallery <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/media/" class="dropdown-item">Media</a>
@@ -427,6 +432,7 @@
             years.forEach(year => {
                 const inner = document.querySelector(`#gallery-${year} .slides-inner`);
                 const thumbStrip = document.querySelector(`#thumbs-${year}`);
+                if (!inner || !thumbStrip) return;
                 const count = config[year].count;
                 
                 for (let i = 1; i <= count; i++) {
@@ -489,6 +495,7 @@
             const menu = btn.nextElementSibling;
             if (!menu || !menu.classList.contains('dropdown-menu')) return;
             
+            // On touch devices, first click opens dropdown, second follows link
             const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
             
             if (isTouch) {
@@ -496,7 +503,7 @@
                 document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
                 
                 if (!wasVisible) {
-                    event.preventDefault(); // Prevent navigation on first tap
+                    event.preventDefault(); 
                     menu.classList.add('is-visible');
                 }
             }
