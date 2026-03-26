@@ -17,210 +17,214 @@
         }
 
         body { 
-            font-family: 'Outfit' , sans-serif ; 
-            background-color: var(--parchment) ;
-            color: var(--forest) ;
-            -webkit-font-smoothing: antialiased ;
-            overflow-x: hidden ;
+            font-family: 'Outfit' , sans-serif; 
+            background-color: var(--parchment);
+            color: var(--forest);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond' , serif ; }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond' , serif; }
         
-        .page-section { display: block ; animation: sectionFade 0.6s ease-out ; }
+        .page-section { display: block ; animation: sectionFade 0.6s ease-out; }
 
         @keyframes sectionFade {
-            from { opacity: 0 ; transform: translateY(10px) ; }
-            to { opacity: 1 ; transform: translateY(0) ; }
+            from { opacity: 0 ; transform: translateY(10px); }
+            to { opacity: 1 ; transform: translateY(0); }
         }
 
         .nav-link {
-            letter-spacing: 0.12em ;
-            font-size: 0.9rem ;
-            font-weight: 700 ;
-            text-transform: uppercase ;
-            color: var(--forest) ;
-            transition: all 0.3s ease ;
-            cursor: pointer ;
-            padding: 1.5rem 0 ;
-            display: flex ;
-            align-items: center ;
-            white-space: nowrap ;
-            text-decoration: none ;
+            letter-spacing: 0.12em;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--forest);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            text-decoration: none;
         }
-        .nav-link:hover { color: var(--copper) ; }
+        .nav-link:hover { color: var(--copper); }
 
-        .dropdown-container { position: relative ; }
+        .dropdown-container { position: relative; }
         .dropdown-menu {
-            position: absolute ;
-            top: 100% ;
-            left: 50% ;
-            transform: translateX(-50%) ;
-            background: var(--parchment) ;
-            border: 1px solid rgba(27, 42, 39, 0.1) ;
-            min-width: 220px ;
-            display: none ;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15) ;
-            z-index: 1000 ;
-            padding: 0.75rem 0 ;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--parchment);
+            border: 1px solid rgba(27, 42, 39, 0.1);
+            min-width: 220px;
+            display: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            z-index: 1000;
+            padding: 0.75rem 0;
         }
 
         @media (min-width: 1024px) {
-            .dropdown-container:hover .dropdown-menu { display: block ; animation: fadeIn 0.3s ease ; }
+            .dropdown-container:hover .dropdown-menu { display: block ; animation: fadeIn 0.3s ease; }
         }
         
-        .dropdown-menu.is-visible { display: block !important ; }
+        .dropdown-menu.is-visible { display: block !important; }
 
         @keyframes fadeIn { 
-            from { opacity: 0 ; transform: translate(-50%, 10px) ; } 
-            to { opacity: 1 ; transform: translate(-50%, 0) ; } 
+            from { opacity: 0 ; transform: translate(-50%, 10px); } 
+            to { opacity: 1 ; transform: translate(-50%, 0); } 
         }
 
         .dropdown-item {
-            display: block ;
-            padding: 0.8rem 1.5rem ;
-            font-size: 0.85rem ;
-            text-transform: uppercase ;
-            letter-spacing: 0.1em ;
-            color: var(--forest) ;
-            transition: all 0.2s ;
-            text-align: center ;
-            text-decoration: none ;
-            width: 100% ;
+            display: block;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--forest);
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
         }
         .dropdown-item:hover { 
-            background: var(--forest) ; 
-            color: var(--copper) ; 
+            background: var(--forest); 
+            color: var(--copper); 
         }
 
         #mobile-nav-overlay {
-            position: fixed ;
-            inset: 0 ;
-            background: var(--forest) ;
-            z-index: 2000 ;
-            display: none ;
-            flex-direction: column ;
-            padding: 4rem 2rem ;
-            overflow-y: auto ;
-            color: var(--parchment) ;
+            position: fixed;
+            inset: 0;
+            background: var(--forest);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            padding: 4rem 2rem;
+            overflow-y: auto;
+            color: var(--parchment);
         }
-        #mobile-nav-overlay.open { display: flex ; animation: overlayIn 0.4s ease forwards ; }
+        #mobile-nav-overlay.open { display: flex ; animation: overlayIn 0.4s ease forwards; }
         
         @keyframes overlayIn { from { opacity: 0 ; } to { opacity: 1 ; } }
 
+        .mobile-group { margin-bottom: 2.5rem; }
+        .mobile-label { font-family: 'Cormorant Garamond' , serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
+        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; background: none; border: none; color: inherit; text-decoration: none; }
+
         .brand-logo {
-            text-align: center ;
-            display: flex ;
-            flex-direction: column ;
-            align-items: center ;
-            justify-content: center ;
-            text-decoration: none ;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
         }
         
         .logo-image {
-            height: 100px ;
-            width: auto ;
-            object-fit: contain ;
-            transition: height 0.3s ease ;
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+            transition: height 0.3s ease;
         }
         
         @media (min-width: 768px) {
-            .logo-image { height: 150px ; }
+            .logo-image { height: 150px; }
         }
 
         /* Slideshow Layout */
         .gallery-block {
-            max-width: 1100px ;
-            margin: 0 auto 120px ;
-            padding: 0 1rem ;
+            max-width: 1100px;
+            margin: 0 auto 120px;
+            padding: 0 1rem;
         }
 
         .slideshow-container {
-            position: relative ;
-            width: 100% ;
-            aspect-ratio: 16/9 ;
-            background: #000 ;
-            overflow: hidden ;
-            border-radius: 2px ;
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            overflow: hidden;
+            border-radius: 2px;
         }
 
         .slide {
-            position: absolute ;
-            inset: 0 ;
-            opacity: 0 ;
-            transition: opacity 0.6s ease-in-out ;
-            display: flex ;
-            align-items: center ;
-            justify-content: center ;
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .slide.active { opacity: 1 ; }
 
         .slide img {
-            width: 100% ;
-            height: 100% ;
-            object-fit: contain ;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .slide-control {
-            position: absolute ;
-            top: 50% ;
-            transform: translateY(-50%) ;
-            background: rgba(0,0,0,0.1) ;
-            color: white ;
-            border: none ;
-            width: 60px ;
-            height: 100% ;
-            cursor: pointer ;
-            z-index: 10 ;
-            transition: all 0.3s ;
-            display: flex ;
-            align-items: center ;
-            justify-content: center ;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.1);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 100%;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .slide-control:hover { background: rgba(0,0,0,0.4) ; color: var(--copper) ; }
+        .slide-control:hover { background: rgba(0,0,0,0.4); color: var(--copper); }
         .prev { left: 0 ; }
         .next { right: 0 ; }
 
         .thumb-strip {
-            display: flex ;
-            gap: 5px ;
-            margin-top: 5px ;
-            width: 100% ;
-            justify-content: center ;
+            display: flex;
+            gap: 5px;
+            margin-top: 5px;
+            width: 100%;
+            justify-content: center;
         }
 
         .thumb {
-            flex: 1 ;
-            max-width: 120px ;
-            aspect-ratio: 16/9 ;
-            cursor: pointer ;
-            opacity: 0.4 ;
-            transition: all 0.3s ease ;
-            border: 2px solid transparent ;
-            overflow: hidden ;
-            background: #000 ;
+            flex: 1;
+            max-width: 120px;
+            aspect-ratio: 16/9;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            overflow: hidden;
+            background: #000;
         }
-        .thumb.active { opacity: 1 ; border-color: var(--copper) ; }
-        .thumb img { width: 100% ; height: 100% ; object-fit: cover ; }
+        .thumb.active { opacity: 1 ; border-color: var(--copper); }
+        .thumb img { width: 100%; height: 100%; object-fit: cover; }
 
         .social-circle-footer {
-            width: 44px ;
-            height: 44px ;
-            border-radius: 50% ;
-            border: 1.5px solid var(--copper) ;
-            display: flex ;
-            align-items: center ;
-            justify-content: center ;
-            color: var(--copper) ;
-            transition: all 0.3s ease ;
-            text-decoration: none ;
-            background: transparent ;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--copper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--copper);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: transparent;
         }
         .social-circle-footer:hover {
-            background-color: var(--copper) ;
-            color: var(--forest) ;
+            background-color: var(--copper);
+            color: var(--forest);
         }
-        .social-circle-footer svg { width: 22px ; height: 22px ; }
+        .social-circle-footer svg { width: 22px; height: 22px; }
     </style>
 </head>
 <body>
@@ -233,7 +237,7 @@
         </div>
         <div class="mobile-group">
             <span class="mobile-label">Competition</span>
-            <a href="https://cfipc.github.io/cfipc/" class="mobile-link">Rules</a>
+            <a href="https://cfipc.github.io/cfipc/rules/" class="mobile-link">Rules</a>
             <a href="https://cfipc.github.io/cfipc/prizes/" class="mobile-link">Prizes</a>
             <a href="https://cfipc.github.io/cfipc/application/" class="mobile-link">Application</a>
             <a href="https://cfipc.github.io/cfipc/jury/" class="mobile-link">Jury</a>
@@ -253,7 +257,7 @@
         <a href="https://cfipc.github.io/cfipc/" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</a>
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Navigation Header -->
     <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
         <div class="max-w-[1600px] mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center h-32 md:h-48">
@@ -264,7 +268,8 @@
                     </button>
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <a href="https://cfipc.github.io/cfipc/" class="nav-link">Competition <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
+                            <!-- Fixed: handleNavClick added for touch devices -->
+                            <a href="https://cfipc.github.io/cfipc/" class="nav-link" onclick="handleNavClick(event, this)">Competition <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/rules/" class="dropdown-item">Rules</a>
                                 <a href="https://cfipc.github.io/cfipc/prizes/" class="dropdown-item">Prizes</a>
@@ -274,7 +279,8 @@
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link">Masterclasses <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
+                            <!-- Fixed: handleNavClick added for touch devices -->
+                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link" onclick="handleNavClick(event, this)">Masterclasses <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
                                 <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="dropdown-item">Spring Masterclass</a>
@@ -481,9 +487,19 @@
 
         function handleNavClick(event, btn) {
             const menu = btn.nextElementSibling;
-            const wasVisible = menu.classList.contains('is-visible');
-            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
-            if (!wasVisible) menu.classList.add('is-visible');
+            if (!menu || !menu.classList.contains('dropdown-menu')) return;
+            
+            const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            
+            if (isTouch) {
+                const wasVisible = menu.classList.contains('is-visible');
+                document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
+                
+                if (!wasVisible) {
+                    event.preventDefault(); // Prevent navigation on first tap
+                    menu.classList.add('is-visible');
+                }
+            }
             event.stopPropagation();
         }
 
