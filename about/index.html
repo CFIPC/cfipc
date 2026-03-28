@@ -201,6 +201,20 @@
             padding-left: 2rem;
             margin: 3rem 0;
         }
+
+        /* Portrait Slideshow */
+        .portrait-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .portrait-slide.active {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -300,7 +314,7 @@
             <div class="relative z-10 text-center px-8">
                 <h4 class="text-copper uppercase tracking-[0.5em] text-xs font-bold mb-6">THE SOUL AND VISIONARY</h4>
                 <h1 class="text-white serif italic text-5xl md:text-8xl">Magda Calleeuw</h1>
-                <p class="text-white/60 uppercase tracking-[0.2em] text-sm mt-8">Painter - Founder of the CFIPC - Visionary</p>
+                <p class="text-white/60 uppercase tracking-[0.2em] text-sm mt-8">Founder of the CFIPC - Painter - Visionary</p>
             </div>
         </section>
 
@@ -315,7 +329,7 @@
                                 Magda Calleeuw was the driving force behind the César Franck International Piano Competition (CFIPC) and a defining figure in the Belgian cultural landscape. As both a painter and a cultural leader, her life was a vibrant tapestry woven from visual art, music, and a profound dedication to the next generation of performers.
                             </p>
                             <p>
-                                As the founder and soul of the CFIPC, Magda was far more than a director; she was the spiritual heart of the competition. She infused the event with a warmth and artistic integrity that came to define its very character.
+                                As the founder and first President of the CFIPC, Magda was far more than a director; she was the spiritual heart of the competition. She infused the event with a warmth and artistic integrity that came to define its very character.
                             </p>
                             <p>
                                 Guided by the belief that art should be a shared, living experience, she created a platform where young pianists from around the globe could find not only a stage for their talent, but a home for their creative growth. Through her unwavering resolve and infectious energy, she transformed a personal dream into a prestigious global reality that continues to resonate in the hearts of musicians worldwide.
@@ -323,8 +337,15 @@
                         </div>
                     </div>
                     <div class="relative pt-12">
-                        <div class="aspect-[3/4] bg-forest rounded-sm overflow-hidden shadow-2xl">
-                            <img src="magda_portrait.png" class="w-full h-full object-cover" alt="Magda Calleeuw Portrait">
+                        <div class="aspect-[3/4] bg-forest rounded-sm overflow-hidden shadow-2xl relative">
+                            <!-- Interactive Slideshow for Portrait -->
+                            <div id="portrait-slideshow" class="w-full h-full">
+                                <img src="magda_1.png" class="portrait-slide active" alt="Magda Calleeuw 1">
+                                <img src="magda_2.png" class="portrait-slide" alt="Magda Calleeuw 2">
+                                <img src="magda_3.png" class="portrait-slide" alt="Magda Calleeuw 3">
+                                <img src="magda_4.png" class="portrait-slide" alt="Magda Calleeuw 4">
+                                <img src="magda_5.png" class="portrait-slide" alt="Magda Calleeuw 5">
+                            </div>
                         </div>
                         <div class="absolute -bottom-10 -left-10 bg-copper p-8 text-white hidden md:block">
                             <p class="serif italic text-xl !text-white">"The invisible rhythms of the soul"</p>
@@ -349,7 +370,7 @@
                     </div>
                     <div class="bg-white p-12 border border-copper/20 rounded-sm shadow-sm">
                         <p class="text-black font-light leading-relaxed">
-                            Though Magda Calleeuw passed away in late 2020, her legacy remains a vivid and guiding light for all who step onto our stage. She did not merely build a competition; she fostered a global family of musicians united by the same passion that fueled her own life. To look upon her paintings or to hear the opening notes of a CFIPC recital is to encounter her spirit anew.
+                            Though Magda Calleeuw passed away in late 2020, her legacy remains a vivid and guiding light for all who step onto our stage. She did not merely build a competition; she fostered a global family of musicians united by the same passion that fueled her own life. To look upon her paintings or to hear the opening notes of a CFIPC recital is to encounter her spirit anew .
                         </p>
                     </div>
                 </div>
@@ -426,6 +447,21 @@
 
     <script>
         lucide.createIcons();
+
+        // Main Portrait Slideshow logic
+        let currentPortraitIndex = 0;
+        const portraitSlides = document.querySelectorAll('.portrait-slide');
+
+        function nextPortraitSlide() {
+            if (portraitSlides.length === 0) return;
+            portraitSlides[currentPortraitIndex].classList.remove('active');
+            currentPortraitIndex = (currentPortraitIndex + 1) % portraitSlides.length;
+            portraitSlides[currentPortraitIndex].classList.add('active');
+        }
+
+        if (portraitSlides.length > 0) {
+            setInterval(nextPortraitSlide, 5000);
+        }
 
         function handleNavClick(event, btn) {
             const menu = btn.nextElementSibling;
