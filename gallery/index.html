@@ -17,20 +17,20 @@
         }
 
         body { 
-            font-family: 'Outfit' , sans-serif; 
+            font-family: 'Outfit', sans-serif; 
             background-color: var(--parchment);
             color: var(--forest);
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond' , serif; }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
         
-        .page-section { display: block ; animation: sectionFade 0.6s ease-out; }
+        .page-section { display: block; animation: sectionFade 0.6s ease-out; }
 
         @keyframes sectionFade {
-            from { opacity: 0 ; transform: translateY(10px); }
-            to { opacity: 1 ; transform: translateY(0); }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .nav-link {
@@ -65,14 +65,14 @@
         }
 
         @media (min-width: 1024px) {
-            .dropdown-container:hover .dropdown-menu { display: block ; animation: fadeIn 0.3s ease; }
+            .dropdown-container:hover .dropdown-menu { display: block; animation: fadeIn 0.3s ease; }
         }
         
         .dropdown-menu.is-visible { display: block !important; }
 
         @keyframes fadeIn { 
-            from { opacity: 0 ; transform: translate(-50%, 10px); } 
-            to { opacity: 1 ; transform: translate(-50%, 0); } 
+            from { opacity: 0; transform: translate(-50%, 10px); } 
+            to { opacity: 1; transform: translate(-50%, 0); } 
         }
 
         .dropdown-item {
@@ -103,12 +103,12 @@
             overflow-y: auto;
             color: var(--parchment);
         }
-        #mobile-nav-overlay.open { display: flex ; animation: overlayIn 0.4s ease forwards; }
+        #mobile-nav-overlay.open { display: flex; animation: overlayIn 0.4s ease forwards; }
         
-        @keyframes overlayIn { from { opacity: 0 ; } to { opacity: 1 ; } }
+        @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
 
         .mobile-group { margin-bottom: 2.5rem; }
-        .mobile-label { font-family: 'Cormorant Garamond' , serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
+        .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
         .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; background: none; border: none; color: inherit; text-decoration: none; }
 
         .brand-logo {
@@ -131,7 +131,6 @@
             .logo-image { height: 150px; }
         }
 
-        /* Slideshow Layout */
         .gallery-block {
             max-width: 1100px;
             margin: 0 auto 120px;
@@ -157,7 +156,7 @@
             justify-content: center;
         }
 
-        .slide.active { opacity: 1 ; }
+        .slide.active { opacity: 1; }
 
         .slide img {
             width: 100%;
@@ -182,8 +181,8 @@
             justify-content: center;
         }
         .slide-control:hover { background: rgba(0,0,0,0.4); color: var(--copper); }
-        .prev { left: 0 ; }
-        .next { right: 0 ; }
+        .prev { left: 0; }
+        .next { right: 0; }
 
         .thumb-strip {
             display: flex;
@@ -204,7 +203,7 @@
             overflow: hidden;
             background: #000;
         }
-        .thumb.active { opacity: 1 ; border-color: var(--copper); }
+        .thumb.active { opacity: 1; border-color: var(--copper); }
         .thumb img { width: 100%; height: 100%; object-fit: cover; }
 
         .social-circle-footer {
@@ -229,7 +228,6 @@
 </head>
 <body>
 
-    <!-- Mobile Navigation Overlay -->
     <div id="mobile-nav-overlay">
         <div class="flex justify-between items-center mb-12">
             <span class="serif italic text-2xl text-parchment">Menu</span>
@@ -247,7 +245,7 @@
             <span class="mobile-label">Masterclasses</span>
             <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="mobile-link">Winter Masterclass</a>
             <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="mobile-link">Spring Masterclass</a>
-            <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="mobile-link">Summer Masterclass</a>
+            <a href="https://www.masterclass-volodos.com/" class="mobile-link">Volodos Masterclass</a>
         </div>
         <div class="mobile-group">
             <span class="mobile-label">Gallery</span>
@@ -262,12 +260,10 @@
         <a href="https://cfipc.github.io/cfipc/" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</a>
     </div>
 
-    <!-- Navigation Header -->
     <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
         <div class="max-w-[1600px] mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center h-32 md:h-48">
                 <div class="flex-1 flex justify-start items-center">
-                    <!-- Fixed: Hamburger lines now black for better visibility -->
                     <button class="md:hidden flex flex-col items-center justify-center space-y-1 p-2" onclick="toggleMobileMenu()">
                         <div class="w-6 h-[1.5px] bg-black"></div>
                         <div class="w-6 h-[1.5px] bg-black"></div>
@@ -288,7 +284,7 @@
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
                                 <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="dropdown-item">Spring Masterclass</a>
-                                <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="dropdown-item">Summer Masterclass</a>
+                                <a href="https://www.masterclass-volodos.com/" class="dropdown-item">Volodos Masterclass</a>
                             </div>
                         </div>
                     </div>
@@ -306,7 +302,6 @@
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <!-- Fixed: Gallery dropdown added -->
                             <a href="#" class="nav-link" onclick="handleNavClick(event, this)">Gallery <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/media/" class="dropdown-item">Media</a>
@@ -323,12 +318,11 @@
         <section class="page-section py-24 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
-                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Capturing the Spirit</h4>
+                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">CAPTURING THE SPIRIT</h4>
                     <h2 class="text-5xl md:text-7xl serif italic text-forest">Photo Gallery</h2>
-                    <p class="text-stone-400 uppercase tracking-widest text-[11px] mt-6">Visual chronicles of artistic excellence</p>
+                    <p class="text-copper uppercase tracking-widest text-[11px] mt-6">VISUAL CHRONICLES OF ARTISTIC EXCELLENCE</p>
                 </div>
 
-                <!-- Gallery 2025 -->
                 <div class="gallery-block">
                     <div class="flex items-center justify-between mb-8">
                         <h3 class="serif text-3xl italic text-copper">Edition 2025</h3>
@@ -344,7 +338,6 @@
                     </div>
                 </div>
 
-                <!-- Gallery 2024 -->
                 <div class="gallery-block">
                     <div class="flex items-center justify-between mb-8">
                         <h3 class="serif text-3xl italic text-copper">Edition 2024</h3>
@@ -360,7 +353,6 @@
                     </div>
                 </div>
 
-                <!-- Gallery 2023 -->
                 <div class="gallery-block">
                     <div class="flex items-center justify-between mb-8">
                         <h3 class="serif text-3xl italic text-copper">Edition 2023</h3>
@@ -376,7 +368,6 @@
                     </div>
                 </div>
 
-                <!-- Previous Editions -->
                 <div class="gallery-block">
                     <div class="flex items-center justify-between mb-8">
                         <h3 class="serif text-3xl italic text-copper">Previous Editions</h3>
@@ -413,7 +404,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </a>
             </div>
-            <p class="text-[9px] uppercase tracking-[0.3em] font-light opacity-60">&copy; The Music Agency 2026</p>
+            <p class="text-[9px] uppercase tracking-[0.3em] font-light text-copper opacity-100">&copy; The Music Agency 2026</p>
         </div>
     </footer>
 
@@ -494,14 +485,10 @@
         function handleNavClick(event, btn) {
             const menu = btn.nextElementSibling;
             if (!menu || !menu.classList.contains('dropdown-menu')) return;
-            
-            // On touch devices, first click opens dropdown, second follows link
             const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-            
             if (isTouch) {
                 const wasVisible = menu.classList.contains('is-visible');
                 document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
-                
                 if (!wasVisible) {
                     event.preventDefault(); 
                     menu.classList.add('is-visible');
@@ -514,11 +501,11 @@
             const overlay = document.getElementById('mobile-nav-overlay');
             if (overlay.classList.contains('open')) {
                 overlay.classList.remove('open');
-                setTimeout(() => { overlay.style.display = 'none' ; }, 400);
+                setTimeout(() => { overlay.style.display = 'none'; }, 400);
                 document.body.style.overflow = 'auto';
             } else {
                 overlay.style.display = 'flex';
-                setTimeout(() => { overlay.classList.add('open') ; }, 10);
+                setTimeout(() => { overlay.classList.add('open'); }, 10);
                 document.body.style.overflow = 'hidden';
             }
         }
