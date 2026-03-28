@@ -206,6 +206,8 @@
         .thumb.active { opacity: 1; border-color: var(--copper); }
         .thumb img { width: 100%; height: 100%; object-fit: cover; }
 
+        .text-copper { color: var(--copper) !important; }
+
         .social-circle-footer {
             width: 44px;
             height: 44px;
@@ -318,8 +320,10 @@
         <section class="page-section py-24 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
+                    <!-- Confirming copper color -->
                     <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">CAPTURING THE SPIRIT</h4>
                     <h2 class="text-5xl md:text-7xl serif italic text-forest">Photo Gallery</h2>
+                    <!-- Fixed: copper color for subtitle -->
                     <p class="text-copper uppercase tracking-widest text-[11px] mt-6">VISUAL CHRONICLES OF ARTISTIC EXCELLENCE</p>
                 </div>
 
@@ -404,6 +408,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </a>
             </div>
+            <!-- Fixed: Full copper color for footer text -->
             <p class="text-[9px] uppercase tracking-[0.3em] font-light text-copper opacity-100">&copy; The Music Agency 2026</p>
         </div>
     </footer>
@@ -429,13 +434,15 @@
                 for (let i = 1; i <= count; i++) {
                     const slide = document.createElement('div');
                     slide.className = `slide ${i === 1 ? 'active' : ''}`;
-                    slide.innerHTML = `<img src="${year}_${i}.png" alt="${year} Image ${i}" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">`;
+                    // Fixed: removed onerror to follow user instructions
+                    slide.innerHTML = `<img src="${year}_${i}.png" alt="${year} Image ${i}">`;
                     inner.appendChild(slide);
 
                     const thumb = document.createElement('div');
                     thumb.className = `thumb ${i === 1 ? 'active' : ''}`;
                     thumb.onclick = () => jumpToSlide(year, i - 1);
-                    thumb.innerHTML = `<img src="${year}_${i}.png" alt="Thumb ${i}" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">`;
+                    // Fixed: removed onerror to follow user instructions
+                    thumb.innerHTML = `<img src="${year}_${i}.png" alt="Thumb ${i}">`;
                     thumbStrip.appendChild(thumb);
                 }
                 startTimer(year);
