@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy | Magda Calleeuw | César Franck International Piano Competition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600;1,700&family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest: #1B2A27;
+            --copper: #D4A373;
+            --sage: #7D8B7A;
+            --parchment: #F2F0E9;
+            --dusty-white: #EAE8E1;
+        }
+
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background-color: var(--parchment);
+            color: var(--forest);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* All headings and titles in copper as requested */
+        h1, h2, h3, h4, h5, .serif { 
+            font-family: 'Cormorant Garamond', serif; 
+            color: var(--copper) !important;
+        }
+        
+        .page-section { display: block; animation: sectionFade 0.6s ease-out; }
+
+        @keyframes sectionFade {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-link {
+            letter-spacing: 0.12em;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--forest);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        .nav-link:hover { color: var(--copper); }
+
+        .dropdown-container { position: relative; }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--parchment);
+            border: 1px solid rgba(27, 42, 39, 0.1);
+            min-width: 220px;
+            display: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            z-index: 1000;
+            padding: 0.75rem 0;
+        }
+
+        @media (min-width: 1024px) {
+            .dropdown-container:hover .dropdown-menu { display: block; animation: fadeIn 0.3s ease; }
+        }
+        
+        .dropdown-menu.is-visible { display: block !important; }
+
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translate(-50%, 10px); } 
+            to { opacity: 1; transform: translate(-50%, 0); } 
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--forest);
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+        }
+        .dropdown-item:hover { 
+            background: var(--forest); 
+            color: var(--copper); 
+        }
+
+        #mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: var(--forest);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            padding: 4rem 2rem;
+            overflow-y: auto;
+            color: var(--parchment);
+        }
+        #mobile-nav-overlay.open { display: flex; animation: overlayIn 0.4s ease forwards; }
+        
+        @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .mobile-group { margin-bottom: 2.5rem; }
+        .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--copper) !important; margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
+        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; background: none; border: none; color: inherit; text-decoration: none; }
+
+        .brand-logo {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        
+        .logo-image {
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+            transition: height 0.3s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .logo-image { height: 150px; }
+        }
+
+        .social-circle-footer {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--copper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--copper);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: transparent;
+        }
+        .social-circle-footer:hover {
+            background-color: var(--copper);
+            color: var(--forest);
+        }
+        .social-circle-footer svg { width: 22px; height: 22px; }
+
+        .legacy-hero {
+            height: 80vh;
+            background-color: var(--forest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .legacy-hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+
+        .anecdote-card {
+            background: var(--forest);
+            padding: 2.5rem;
+            border: 1px solid rgba(212, 163, 115, 0.1);
+            border-radius: 2px;
+            height: 100%;
+            transition: transform 0.3s ease;
+            color: var(--copper);
+        }
+        .anecdote-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .anecdote-card p {
+            color: var(--copper) !important;
+            opacity: 0.9;
+        }
+        /* Make titles in boxes bigger and uppercase */
+        .anecdote-card h5 {
+            font-size: 1.25rem !important;
+            letter-spacing: 0.15em;
+            line-height: 1.4;
+        }
+
+        .quote-box {
+            border-left: 1px solid var(--copper);
+            padding-left: 2rem;
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-nav-overlay">
+        <div class="flex justify-between items-center mb-12">
+            <span class="serif italic text-2xl text-parchment">Menu</span>
+            <button onclick="toggleMobileMenu()" class="text-copper text-4xl leading-none">&times;</button>
+        </div>
+        <div class="mobile-group">
+            <span class="mobile-label">Competition</span>
+            <a href="https://cfipc.github.io/cfipc/rules/" class="mobile-link">Rules</a>
+            <a href="https://cfipc.github.io/cfipc/prizes/" class="mobile-link">Prizes</a>
+            <a href="https://cfipc.github.io/cfipc/application/" class="mobile-link">Application</a>
+            <a href="https://cfipc.github.io/cfipc/jury/" class="mobile-link">Jury</a>
+            <a href="https://cfipc.github.io/cfipc/laureates/" class="mobile-link">Laureates</a>
+        </div>
+        <div class="mobile-group">
+            <span class="mobile-label">Masterclasses</span>
+            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="mobile-link">Winter Masterclass</a>
+            <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="mobile-link">Spring Masterclass</a>
+            <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="mobile-link">Summer Masterclass</a>
+        </div>
+        <div class="mobile-group">
+            <span class="mobile-label">Gallery</span>
+            <a href="https://cfipc.github.io/cfipc/media/" class="mobile-link">Media</a>
+            <a href="https://cfipc.github.io/cfipc/gallery/" class="mobile-link">Pictures</a>
+        </div>
+        <div class="mobile-group">
+            <span class="mobile-label">About</span>
+            <a href="https://cfipc.github.io/cfipc/contact/" class="mobile-link">Contact Us</a>
+            <a href="https://cfipc.github.io/cfipc/about/" class="mobile-link">Legacy</a>
+        </div>
+        <a href="https://cfipc.github.io/cfipc/" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</a>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="fixed w-full z-50 bg-[#F2F0E9]/95 backdrop-blur-md border-b border-forest/5">
+        <div class="max-w-[1600px] mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-center h-32 md:h-48">
+                <div class="flex-1 flex justify-start items-center">
+                    <button class="md:hidden flex flex-col items-center justify-center space-y-1 p-2" onclick="toggleMobileMenu()">
+                        <div class="w-6 h-[1.5px] bg-black"></div>
+                        <div class="w-6 h-[1.5px] bg-black"></div>
+                    </button>
+                    <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
+                        <div class="dropdown-container">
+                            <a href="https://cfipc.github.io/cfipc/" class="nav-link" onclick="handleNavClick(event, this)">Competition <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
+                            <div class="dropdown-menu">
+                                <a href="https://cfipc.github.io/cfipc/rules/" class="dropdown-item">Rules</a>
+                                <a href="https://cfipc.github.io/cfipc/prizes/" class="dropdown-item">Prizes</a>
+                                <a href="https://cfipc.github.io/cfipc/application/" class="dropdown-item">Application</a>
+                                <a href="https://cfipc.github.io/cfipc/jury/" class="dropdown-item">Jury</a>
+                                <a href="https://cfipc.github.io/cfipc/laureates/" class="dropdown-item">Laureates</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-container">
+                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link" onclick="handleNavClick(event, this)">Masterclasses <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
+                            <div class="dropdown-menu">
+                                <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
+                                <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="dropdown-item">Spring Masterclass</a>
+                                <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="dropdown-item">Summer Masterclass</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://cfipc.github.io/cfipc/" class="brand-logo px-2">
+                    <img src="https://cfipc.github.io/cfipc/Logo26.png" alt="CFIPC Logo" class="logo-image">
+                </a>
+                <div class="flex-1 flex justify-end items-center">
+                    <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
+                        <div class="dropdown-container">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">About <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
+                            <div class="dropdown-menu">
+                                <a href="https://cfipc.github.io/cfipc/contact/" class="dropdown-item">Contact Us</a>
+                                <a href="https://cfipc.github.io/cfipc/about/" class="dropdown-item">Legacy</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-container">
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">Gallery <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
+                            <div class="dropdown-menu">
+                                <a href="https://cfipc.github.io/cfipc/media/" class="dropdown-item">Media</a>
+                                <a href="https://cfipc.github.io/cfipc/gallery/" class="dropdown-item">Pictures</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="legacy-hero">
+            <img src="magda_hero.png" alt="Magda Calleeuw Painting" onerror="this.src='https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=2090'">
+            <div class="relative z-10 text-center px-8">
+                <h4 class="text-copper uppercase tracking-[0.5em] text-xs font-bold mb-6">THE SOUL AND VISIONARY</h4>
+                <h1 class="text-white serif italic text-5xl md:text-8xl">Magda Calleeuw</h1>
+                <p class="text-white/60 uppercase tracking-[0.2em] text-sm mt-8">Founder of the CFIPC - Painter - Visionary</p>
+            </div>
+        </section>
+
+        <!-- Main Biography Section -->
+        <section class="py-32 px-4 md:px-8">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+                    <div>
+                        <h2 class="serif text-5xl italic mb-12">A Life Dedicated to Art</h2>
+                        <div class="space-y-6 text-stone-600 leading-relaxed font-light text-justify">
+                            <p>
+                                Magda Calleeuw was the driving force behind the César Franck International Piano Competition (CFIPC) and a defining figure in the Belgian cultural landscape. As both a painter and a cultural leader, her life was a vibrant tapestry woven from visual art, music, and a profound dedication to the next generation of performers.
+                            </p>
+                            <p>
+                                As the founder and first President of the CFIPC, Magda was far more than a director; she was the spiritual heart of the competition. She infused the event with a warmth and artistic integrity that came to define its very character.
+                            </p>
+                            <p>
+                                Guided by the belief that art should be a shared, living experience, she created a platform where young pianists from around the globe could find not only a stage for their talent, but a home for their creative growth. Through her unwavering resolve and infectious energy, she transformed a personal dream into a prestigious global reality that continues to resonate in the hearts of musicians worldwide.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative pt-12">
+                        <div class="aspect-[3/4] bg-forest rounded-sm overflow-hidden shadow-2xl">
+                            <img src="magda_portrait.png" class="w-full h-full object-cover" alt="Magda Calleeuw Portrait" onerror="this.src='https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=2000'">
+                        </div>
+                        <div class="absolute -bottom-10 -left-10 bg-copper p-8 text-white hidden md:block">
+                            <p class="serif italic text-xl !text-white">"The invisible rhythms of the soul"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership & Vision Section -->
+        <section class="bg-dusty-white py-32 px-4 md:px-8">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8 text-black font-light leading-relaxed">
+                        <h3 class="serif text-4xl italic mb-8">Architect of Community</h3>
+                        <p>
+                            Beyond her personal artistry, Magda was a tireless architect of community and culture. Her leadership spanned from the chairmanship of the Culture Council in Kraainem to the presidency of the International Music Festival and Competition in Paris. In every role, she moved with an unwavering willpower that turned ambitious visions into reality.
+                        </p>
+                        <p>
+                            Whether she was mentoring students at the GC de Lijsterbes or coordinating world-class international juries, her approach was always grounded in a deep respect for the artist’s journey. She understood that the pursuit of excellence required both rigorous discipline and a supportive, nurturing environment - a philosophy that remains the foundational pillar of the CFIPC today.
+                        </p>
+                    </div>
+                    <div class="bg-white p-12 border border-copper/20 rounded-sm shadow-sm">
+                        <p class="text-black font-light leading-relaxed">
+                            Though Magda Calleeuw passed away in late 2020, her legacy remains a vivid and guiding light for all who step onto our stage. She did not merely build a competition; she fostered a global family of musicians united by the same passion that fueled her own life. To look upon her paintings or to hear the opening notes of a CFIPC recital is to encounter her spirit anew.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anecdotes Section -->
+        <section class="py-32 px-4 md:px-8">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="text-center mb-24">
+                    <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">THE PAINTER'S STORY</h4>
+                    <h2 class="text-5xl serif italic mb-12">Anecdotes about the Works</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Anecdote 1 -->
+                    <div class="anecdote-card">
+                        <div class="w-12 h-[1px] bg-copper mb-6"></div>
+                        <h5 class="font-bold uppercase mb-4">PICTURES AT AN EXHIBITION</h5>
+                        <p class="font-light leading-relaxed text-sm">
+                            This intrinsic connection between the brush and the keyboard reached its pinnacle in her celebrated collaboration with her son, the pianist Philippe Raskin. In a landmark project, she created five original paintings to interpret the lost visual inspirations of Mussorgsky’s suite, effectively completing the sensory circle the composer had envisioned over a century ago.
+                        </p>
+                    </div>
+                    <!-- Anecdote 2 -->
+                    <div class="anecdote-card">
+                        <div class="w-12 h-[1px] bg-copper mb-6"></div>
+                        <h5 class="font-bold uppercase mb-4">LYRICAL ABSTRACTION</h5>
+                        <p class="font-light leading-relaxed text-sm">
+                            Her canvases were known for their ethereal depth, often reflecting a state of synesthesia where colors seemed to vibrate with the resonance of a musical chord. She sought to capture the "inner space" of human emotion, proving that the boundaries between sight and sound are beautifully porous.
+                        </p>
+                    </div>
+                    <!-- Anecdote 3 -->
+                    <div class="anecdote-card">
+                        <div class="w-12 h-[1px] bg-copper mb-6"></div>
+                        <h5 class="font-bold uppercase mb-4">THE ARTIESTENPARCOURS</h5>
+                        <p class="font-light leading-relaxed text-sm">
+                            As Chair of the Culture Council, Magda spearheaded initiatives like the <span class="italic">Artiestenparcours</span> to bring art directly into the lives of the public. Her tireless advocacy meant that art was never a static object in a gallery but a living, breathing part of the community in Kraainem and beyond.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selection of Works -->
+        <section class="py-24 bg-dusty-white px-4 md:px-8">
+            <div class="max-w-[1400px] mx-auto text-center">
+                <h3 class="serif text-4xl italic mb-16">The Artistic Vision</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square bg-stone-200 overflow-hidden rounded-sm"><img src="magda_1.png" class="w-full h-full object-cover hover:scale-110 transition duration-700" alt="Magda Calleeuw Work 1" onerror="this.src='https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=2070'"></div>
+                    <div class="aspect-square bg-stone-200 overflow-hidden rounded-sm"><img src="magda_2.png" class="w-full h-full object-cover hover:scale-110 transition duration-700" alt="Magda Calleeuw Work 2" onerror="this.src='https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=2038'"></div>
+                    <div class="aspect-square bg-stone-200 overflow-hidden rounded-sm"><img src="magda_3.png" class="w-full h-full object-cover hover:scale-110 transition duration-700" alt="Magda Calleeuw Work 3" onerror="this.src='https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?q=80&w=2180'"></div>
+                    <div class="aspect-square bg-stone-200 overflow-hidden rounded-sm"><img src="magda_4.png" class="w-full h-full object-cover hover:scale-110 transition duration-700" alt="Magda Calleeuw Work 4" onerror="this.src='https://images.unsplash.com/photo-1578301978018-3005759f48f7?q=80&w=2088'"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1B2A27] text-copper pt-24 pb-12 px-8">
+        <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-10">
+            <div class="flex gap-6">
+                <a href="https://www.facebook.com/cfipc" target="_blank" class="social-circle-footer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://www.instagram.com/cfipc_official/" target="_blank" class="social-circle-footer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="mailto:office@cfipc.com" class="social-circle-footer" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+            <p class="text-[9px] uppercase tracking-[0.3em] font-light opacity-60">&copy; The Music Agency 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function handleNavClick(event, btn) {
+            const menu = btn.nextElementSibling;
+            if (!menu || !menu.classList.contains('dropdown-menu')) return;
+            const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            if (isTouch) {
+                const wasVisible = menu.classList.contains('is-visible');
+                document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
+                if (!wasVisible) {
+                    event.preventDefault(); 
+                    menu.classList.add('is-visible');
+                }
+            }
+            event.stopPropagation();
+        }
+
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobile-nav-overlay');
+            if (overlay.classList.contains('open')) {
+                overlay.classList.remove('open');
+                setTimeout(() => { overlay.style.display = 'none'; }, 400);
+                document.body.style.overflow = 'auto';
+            } else {
+                overlay.style.display = 'flex';
+                setTimeout(() => { overlay.classList.add('open'); }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        window.onclick = () => document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
+    </script>
+</body>
+</html>
