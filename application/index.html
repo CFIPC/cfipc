@@ -134,7 +134,7 @@
         }
 
         .bg-forest { background-color: var(--forest); }
-        .text-copper { color: var(--copper); }
+        .text-copper { color: var(--copper) !important; }
         .btn-copper { background-color: var(--copper); color: white; transition: all 0.3s ease; }
         .btn-copper:hover { background-color: var(--forest); }
 
@@ -153,6 +153,25 @@
             border-color: var(--copper);
             box-shadow: 0 15px 35px rgba(27, 42, 39, 0.03);
         }
+
+        .social-circle-footer {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--copper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--copper);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: transparent;
+        }
+        .social-circle-footer:hover {
+            background-color: var(--copper);
+            color: var(--forest);
+        }
+        .social-circle-footer svg { width: 22px; height: 22px; }
     </style>
 </head>
 <body>
@@ -181,6 +200,12 @@
         </div>
 
         <div class="mobile-group">
+            <span class="mobile-label">Gallery</span>
+            <a href="https://cfipc.github.io/cfipc/media/" class="mobile-link">Media</a>
+            <a href="https://cfipc.github.io/cfipc/gallery/" class="mobile-link">Pictures</a>
+        </div>
+
+        <div class="mobile-group">
             <span class="mobile-label">About</span>
             <a href="https://cfipc.github.io/cfipc/contact/" class="mobile-link">Contact Us</a>
             <a href="https://cfipc.github.io/cfipc/about/" class="mobile-link">Legacy</a>
@@ -201,7 +226,7 @@
 
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <a href="https://cfipc.github.io/cfipc/" class="nav-link">
+                            <a href="https://cfipc.github.io/cfipc/" class="nav-link" onclick="handleNavClick(event, this)">
                                 Competition 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </a>
@@ -214,7 +239,7 @@
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link">
+                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link" onclick="handleNavClick(event, this)">
                                 Masterclasses 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </a>
@@ -227,7 +252,7 @@
                     </div>
                 </div>
 
-                <a href="https://cfipc.github.io/cfipc/" class="brand-logo cursor-pointer group px-2">
+                <a href="https://cfipc.github.io/cfipc/" class="brand-logo px-2">
                     <img src="https://cfipc.github.io/cfipc/Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
                     <div id="fallback-logo" class="hidden text-center">
                         <span class="serif italic text-2xl text-copper">CFIPC</span>
@@ -376,7 +401,6 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </a>
             </div>
-            <!-- Fixed: Explicitly set text to copper color with important flag if needed -->
             <p class="text-[9px] uppercase tracking-[0.3em] font-light text-copper" style="color: var(--copper) !important; opacity: 1;">&copy; The Music Agency 2026</p>
         </div>
     </footer>
