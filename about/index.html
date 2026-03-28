@@ -29,6 +29,9 @@
             font-family: 'Cormorant Garamond', serif; 
             color: var(--copper) !important;
         }
+
+        /* Custom utility for copper text since it's not standard Tailwind */
+        .text-copper { color: var(--copper) !important; }
         
         .page-section { display: block; animation: sectionFade 0.6s ease-out; }
 
@@ -189,10 +192,11 @@
             color: var(--copper) !important;
             opacity: 0.9;
         }
+        /* Increased title size for anecdote boxes */
         .anecdote-card h5 {
-            font-size: 1.25rem !important;
+            font-size: 1.4rem !important;
             letter-spacing: 0.15em;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
         .quote-box {
@@ -235,7 +239,6 @@
             <span class="mobile-label">Masterclasses</span>
             <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="mobile-link">Winter Masterclass</a>
             <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="mobile-link">Spring Masterclass</a>
-            <!-- Updated to Volodos -->
             <a href="https://www.masterclass-volodos.com/" class="mobile-link">Volodos Masterclass</a>
         </div>
         <div class="mobile-group">
@@ -276,7 +279,6 @@
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
                                 <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="dropdown-item">Spring Masterclass</a>
-                                <!-- Updated to Volodos -->
                                 <a href="https://www.masterclass-volodos.com/" class="dropdown-item">Volodos Masterclass</a>
                             </div>
                         </div>
@@ -314,7 +316,7 @@
             <div class="relative z-10 text-center px-8">
                 <h4 class="text-copper uppercase tracking-[0.5em] text-xs font-bold mb-6">THE SOUL AND VISIONARY</h4>
                 <h1 class="text-white serif italic text-5xl md:text-8xl">Magda Calleeuw</h1>
-                <p class="text-white/60 uppercase tracking-[0.2em] text-sm mt-8">Founder of the CFIPC - Painter - Visionary</p>
+                <p class="text-white/60 uppercase tracking-[0.2em] text-sm mt-8">Painter - Founder of the CFIPC - Visionary</p>
             </div>
         </section>
 
@@ -340,22 +342,19 @@
                         <div class="aspect-[3/4] bg-forest rounded-sm overflow-hidden shadow-2xl relative">
                             <!-- Portrait Slideshow -->
                             <div id="portrait-slideshow" class="w-full h-full">
-                                <img src="magda_1.png" class="portrait-slide active" alt="Magda Calleeuw 1">
-                                <img src="magda_2.png" class="portrait-slide" alt="Magda Calleeuw 2">
-                                <img src="magda_3.png" class="portrait-slide" alt="Magda Calleeuw 3">
-                                <img src="magda_4.png" class="portrait-slide" alt="Magda Calleeuw 4">
-                                <img src="magda_5.png" class="portrait-slide" alt="Magda Calleeuw 5">
+                                <img src="Magda Calleeuw 1.png" class="portrait-slide active" alt="Magda Calleeuw 1">
+                                <img src="Magda Calleeuw 2.png" class="portrait-slide" alt="Magda Calleeuw 2">
+                                <img src="Magda Calleeuw 3.png" class="portrait-slide" alt="Magda Calleeuw 3">
+                                <img src="Magda Calleeuw 4.png" class="portrait-slide" alt="Magda Calleeuw 4">
+                                <img src="Magda Calleeuw 5.png" class="portrait-slide" alt="Magda Calleeuw 5">
                             </div>
-                        </div>
-                        <div class="absolute -bottom-10 -left-10 bg-copper p-8 text-white hidden md:block">
-                            <p class="serif italic text-xl !text-white">"The invisible rhythms of the soul"</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Leadership Section: Text set to BLACK -->
+        <!-- Leadership Section -->
         <section class="bg-dusty-white py-32 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -370,14 +369,14 @@
                     </div>
                     <div class="bg-white p-12 border border-copper/20 rounded-sm shadow-sm">
                         <p class="text-black font-light leading-relaxed">
-                            Though Magda Calleeuw passed away in late 2020, her legacy remains a vivid and guiding light for all who step onto our stage. She did not merely build a competition; she fostered a global family of musicians united by the same passion that fueled her own life. To look upon her paintings or to hear the opening notes of a CFIPC recital is to encounter her spirit anew .
+                            Though Magda Calleeuw passed away in late 2020, her legacy remains a vivid and guiding light for all who step onto our stage. She did not merely build a competition; she fostered a global family of musicians united by the same passion that fueled her own life. To look upon her paintings or to hear the opening notes of a CFIPC recital is to encounter her spirit anew.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Anecdotes: Forest boxes with copper text -->
+        <!-- Anecdotes Section -->
         <section class="py-32 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
@@ -385,6 +384,7 @@
                     <h2 class="text-5xl serif italic mb-12">Anecdotes about the Works</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Anecdote 1 -->
                     <div class="anecdote-card">
                         <div class="w-12 h-[1px] bg-copper mb-6"></div>
                         <h5 class="font-bold uppercase mb-4">PICTURES AT AN EXHIBITION</h5>
@@ -392,6 +392,7 @@
                             This intrinsic connection between the brush and the keyboard reached its pinnacle in her celebrated collaboration with her son, the pianist Philippe Raskin. In a landmark project, she created five original paintings to interpret the lost visual inspirations of Mussorgsky’s suite, effectively completing the sensory circle the composer had envisioned over a century ago.
                         </p>
                     </div>
+                    <!-- Anecdote 2 -->
                     <div class="anecdote-card">
                         <div class="w-12 h-[1px] bg-copper mb-6"></div>
                         <h5 class="font-bold uppercase mb-4">LYRICAL ABSTRACTION</h5>
@@ -399,6 +400,7 @@
                             Her canvases were known for their ethereal depth, often reflecting a state of synesthesia where colors seemed to vibrate with the resonance of a musical chord. She sought to capture the "inner space" of human emotion, proving that the boundaries between sight and sound are beautifully porous.
                         </p>
                     </div>
+                    <!-- Anecdote 3 -->
                     <div class="anecdote-card">
                         <div class="w-12 h-[1px] bg-copper mb-6"></div>
                         <h5 class="font-bold uppercase mb-4">THE ARTIESTENPARCOURS</h5>
@@ -410,7 +412,7 @@
             </div>
         </section>
 
-        <!-- Gallery of Works -->
+        <!-- Selection of Works -->
         <section class="py-24 bg-dusty-white px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto text-center">
                 <h3 class="serif text-4xl italic mb-16">The Artistic Vision</h3>
@@ -424,7 +426,8 @@
         </section>
     </main>
 
-    <footer class="bg-[#1B2A27] text-copper pt-24 pb-12 px-8">
+    <!-- FOOTER -->
+    <footer class="bg-[#1B2A27] pt-24 pb-12 px-8">
         <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-10">
             <div class="flex gap-6">
                 <a href="https://www.facebook.com/cfipc" target="_blank" class="social-circle-footer" aria-label="Facebook">
@@ -437,8 +440,8 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </a>
             </div>
-            <!-- Fixed: Full copper color for footer text -->
-            <p class="text-[9px] uppercase tracking-[0.3em] font-light text-copper opacity-100">&copy; The Music Agency 2026</p>
+            <!-- Fixed: Explicitly set text to copper color with important flag if needed -->
+            <p class="text-[9px] uppercase tracking-[0.3em] font-light text-copper" style="color: var(--copper) !important; opacity: 1;">&copy; The Music Agency 2026</p>
         </div>
     </footer>
 
