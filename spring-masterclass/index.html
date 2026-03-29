@@ -186,6 +186,25 @@
             margin: 1.5rem auto;
         }
 
+        .social-circle-footer {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--copper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--copper);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: transparent;
+        }
+        .social-circle-footer:hover {
+            background-color: var(--copper);
+            color: var(--forest);
+        }
+        .social-circle-footer svg { width: 22px; height: 22px; }
+
         @keyframes slowZoom {
             from { transform: scale(1); }
             to { transform: scale(1.05); }
@@ -212,7 +231,7 @@
             <span class="mobile-label">Masterclasses</span>
             <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="mobile-link">Winter Masterclass</a>
             <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="mobile-link">Spring Masterclass</a>
-            <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="mobile-link">Summer Masterclass</a>
+            <a href="https://www.masterclass-volodos.com/" class="mobile-link">Volodos Masterclass</a>
         </div>
         <div class="mobile-group">
             <span class="mobile-label">Gallery</span>
@@ -236,7 +255,6 @@
                         <div class="w-6 h-[1.5px] bg-black"></div>
                         <div class="w-6 h-[1.5px] bg-black"></div>
                     </button>
-
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
                             <a href="https://cfipc.github.io/cfipc/" class="nav-link" onclick="handleNavClick(event, this)">
@@ -259,19 +277,17 @@
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
                                 <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="dropdown-item">Spring Masterclass</a>
-                                <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="dropdown-item">Summer Masterclass</a>
+                                <a href="https://www.masterclass-volodos.com/" class="dropdown-item">Volodos Masterclass</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <a href="https://cfipc.github.io/cfipc/" class="brand-logo cursor-pointer group px-2">
+                <a href="https://cfipc.github.io/cfipc/" class="brand-logo px-2">
                     <img src="https://cfipc.github.io/cfipc/Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
                     <div id="fallback-logo" class="hidden text-center">
                         <span class="serif italic text-2xl text-copper">CFIPC</span>
                     </div>
                 </a>
-
                 <div class="flex-1 flex justify-end items-center">
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
@@ -306,7 +322,6 @@
                 <img src="cfyto.png" class="w-full h-full object-cover opacity-40" alt="Festival Background" style="animation: slowZoom 20s infinite alternate;" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">
                 <div class="absolute inset-0 bg-gradient-to-b from-forest/60 via-forest/40 to-forest"></div>
             </div>
-
             <div class="max-w-[1200px] mx-auto px-8 relative z-10 w-full pt-32 md:pt-48">
                 <h4 class="text-copper uppercase tracking-[0.5em] text-[10px] md:text-xs font-black mb-6">EDUCATIONAL PROGRAMS</h4>
                 <h1 class="text-white serif italic text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 max-w-5xl mx-auto [text-shadow:_0px_5px_20px_rgba(0,0,0,0.6)]">
@@ -411,7 +426,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="bg-forest p-12 text-copper rounded-sm shadow-xl border border-copper/10">
                         <h3 class="serif text-3xl italic mb-8 text-white">Concerto Selection</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm font-light leading-relaxed">
@@ -474,7 +488,6 @@
                             <p class="mt-6 text-xs italic opacity-60">Masterclass fee is non-refundable. Applying is legally binding.</p>
                         </div>
                     </div>
-
                     <div class="shadow-box-beige">
                         <h3 class="serif text-4xl italic text-forest mb-8">Bank Transfer Details</h3>
                         <div class="space-y-4 text-sm font-light leading-relaxed">
@@ -529,9 +542,21 @@
         </section>
     </main>
 
-    <footer class="bg-forest text-copper pt-32 pb-16 px-8">
-        <div class="max-w-[1400px] mx-auto text-center">
-            <p class="text-[9px] uppercase tracking-[0.3em] font-light">&copy; The Music Agency 2026</p>
+    <!-- FOOTER -->
+    <footer class="bg-[#1B2A27] pt-24 pb-12 px-8">
+        <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-10">
+            <div class="flex gap-6">
+                <a href="https://www.facebook.com/cfipc" target="_blank" class="social-circle-footer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://www.instagram.com/cfipc_official/" target="_blank" class="social-circle-footer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="mailto:office@cfipc.com" class="social-circle-footer" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+            <p class="text-[9px] uppercase tracking-[0.3em] font-light text-copper" style="color: var(--copper) !important; opacity: 1;">&copy; THE MUSIC AGENCY 2026</p>
         </div>
     </footer>
 
@@ -541,13 +566,10 @@
         function handleNavClick(event, btn) {
             const menu = btn.nextElementSibling;
             if (!menu || !menu.classList.contains('dropdown-menu')) return;
-            
             const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-            
             if (isTouch) {
                 const wasVisible = menu.classList.contains('is-visible');
                 document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
-                
                 if (!wasVisible) {
                     event.preventDefault(); 
                     menu.classList.add('is-visible');
