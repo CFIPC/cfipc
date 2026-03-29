@@ -24,7 +24,7 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+        h1, h2, h3, h4, h5, .serif { font-family: 'Cormorant Garamond', serif; }
         
         .page-section { display: block; animation: sectionFade 0.6s ease-out; }
 
@@ -45,8 +45,6 @@
             display: flex;
             align-items: center;
             white-space: nowrap;
-            background: none;
-            border: none;
             text-decoration: none;
         }
         .nav-link:hover { color: var(--copper); }
@@ -168,8 +166,6 @@
             backdrop-filter: blur(8px);
             border: 1px solid rgba(212, 163, 115, 0.2);
             padding: 2.5rem;
-            height: 100%;
-            transition: all 0.3s ease;
             border-radius: 2px;
         }
 
@@ -191,6 +187,12 @@
             color: var(--forest);
         }
         .social-circle-footer svg { width: 22px; height: 22px; }
+
+        .regulation-item {
+            border-left: 2px solid var(--copper);
+            padding-left: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
     </style>
 </head>
 <body>
@@ -201,7 +203,6 @@
             <span class="serif italic text-2xl text-parchment">Menu</span>
             <button onclick="toggleMobileMenu()" class="text-copper text-4xl leading-none">&times;</button>
         </div>
-
         <div class="mobile-group">
             <span class="mobile-label">Competition</span>
             <a href="https://cfipc.github.io/cfipc/rules/" class="mobile-link">Rules</a>
@@ -210,21 +211,18 @@
             <a href="https://cfipc.github.io/cfipc/jury/" class="mobile-link">Jury</a>
             <a href="https://cfipc.github.io/cfipc/laureates/" class="mobile-link">Laureates</a>
         </div>
-
         <div class="mobile-group">
             <span class="mobile-label">Masterclasses</span>
             <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="mobile-link">Winter Masterclass</a>
             <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="mobile-link">Spring Masterclass</a>
             <a href="https://www.masterclass-volodos.com/" class="mobile-link">Volodos Masterclass</a>
         </div>
-
         <div class="mobile-group">
             <span class="mobile-label">About</span>
             <a href="https://cfipc.github.io/cfipc/contact/" class="mobile-link">Contact Us</a>
             <a href="https://cfipc.github.io/cfipc/about/" class="mobile-link">Legacy</a>
         </div>
-
-        <a href="https://cfipc.github.io/cfipc/" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold text-decoration-none">Return to Home</a>
+        <a href="https://cfipc.github.io/cfipc/" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold">Return to Home</a>
     </div>
 
     <!-- Main Navigation Header -->
@@ -236,13 +234,9 @@
                         <div class="w-6 h-[1.5px] bg-black"></div>
                         <div class="w-6 h-[1.5px] bg-black"></div>
                     </button>
-
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <a href="https://cfipc.github.io/cfipc/" class="nav-link">
-                                Competition 
-                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </a>
+                            <a href="https://cfipc.github.io/cfipc/" class="nav-link">Competition <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/rules/" class="dropdown-item">Rules</a>
                                 <a href="https://cfipc.github.io/cfipc/prizes/" class="dropdown-item">Prizes</a>
@@ -252,10 +246,7 @@
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link">
-                                Masterclasses 
-                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </a>
+                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link">Masterclasses <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
                                 <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="dropdown-item">Spring Masterclass</a>
@@ -264,31 +255,20 @@
                         </div>
                     </div>
                 </div>
-
-                <a href="https://cfipc.github.io/cfipc/" class="brand-logo cursor-pointer group px-2">
-                    <img src="https://cfipc.github.io/cfipc/Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
-                    <div id="fallback-logo" class="hidden text-center">
-                        <span class="serif italic text-2xl text-copper">CFIPC</span>
-                    </div>
+                <a href="https://cfipc.github.io/cfipc/" class="brand-logo px-2">
+                    <img src="https://cfipc.github.io/cfipc/Logo26.png" alt="CFIPC Logo" class="logo-image">
                 </a>
-
                 <div class="flex-1 flex justify-end items-center">
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
-                                About 
-                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </a>
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">About <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/contact/" class="dropdown-item">Contact Us</a>
                                 <a href="https://cfipc.github.io/cfipc/about/" class="dropdown-item">Legacy</a>
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">
-                                Gallery 
-                                <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
-                            </a>
+                            <a href="#" class="nav-link" onclick="handleNavClick(event, this)">Gallery <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/media/" class="dropdown-item">Media</a>
                                 <a href="https://cfipc.github.io/cfipc/gallery/" class="dropdown-item">Pictures</a>
@@ -301,7 +281,7 @@
     </nav>
 
     <main class="pt-32 md:pt-48">
-        <section id="rules" class="page-section py-32 px-4 md:px-8">
+        <section id="rules" class="page-section py-24 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
                     <h4 class="text-copper uppercase tracking-[0.4em] text-[10px] font-bold mb-4">Official Regulations</h4>
@@ -364,33 +344,92 @@
                     </div>
                 </div>
 
+                <!-- PROGRAM REQUIREMENTS -->
+                <div class="mb-32">
+                    <h3 class="serif text-4xl italic text-forest mb-12 border-b border-forest/5 pb-4">Program Requirements</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-sm text-stone-600 font-light leading-relaxed">
+                        <div class="space-y-8">
+                            <div class="regulation-item">
+                                <h5 class="font-bold text-xs uppercase tracking-widest text-forest mb-2">Repertoire Selection</h5>
+                                <p>For both rounds , a free program can be chosen for Category A & B applicants . However , applicants from Categories C & D must include at least one movement from a "Viennese Classic" composer ( Haydn , Mozart , or Beethoven ) in their Finals program .</p>
+                            </div>
+                            <div class="regulation-item">
+                                <h5 class="font-bold text-xs uppercase tracking-widest text-forest mb-2">Belgian Composers</h5>
+                                <p>It is not obligatory but recommended to include at least one piece written by a Belgian composer in the semi-final or the final round .</p>
+                            </div>
+                            <div class="regulation-item">
+                                <h5 class="font-bold text-xs uppercase tracking-widest text-forest mb-2">Memory Interpretation</h5>
+                                <p>Memory interpretation is required for both rounds of the competition except for certain contemporary pieces after a personal request and approval by the competition .</p>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <div class="regulation-item">
+                                <h5 class="font-bold text-xs uppercase tracking-widest text-forest mb-2">Program Changes</h5>
+                                <p>It is NOT possible to change the semi-finals program after submission . For all selected finalists , it is possible to change your finals program until November 15th 2026 . Candidates may include in their Finals program previously recorded works from the 1st round .</p>
+                            </div>
+                            <div class="regulation-item">
+                                <h5 class="font-bold text-xs uppercase tracking-widest text-forest mb-2">Score Submission</h5>
+                                <p>A copy of your program ( Urtext or original editions as preferred by the jury ) must be scanned and sent by all finalists to office@cfipc.com before November 15th 2026 . Programme changes are not permitted after this date . Any candidate who fails to submit the required scores by the deadline risks disqualification .</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- SEMI-FINALS (ONLINE) -->
                 <div class="mb-32 bg-forest p-12 md:p-20 rounded-sm shadow-2xl relative overflow-hidden">
                     <h3 class="serif text-4xl italic mb-12 text-copper relative z-10">Semi-Finals (Online)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-                        <div class="glass-box">
-                            <h5 class="text-copper font-bold uppercase tracking-widest text-[10px] mb-4">Video Standards</h5>
-                            <ul class="space-y-4 text-sm text-copper">
-                                <li class="flex gap-3"><span>&bull;</span> All video submissions should not be edited (audio). Edited videos will be disqualified.</li>
-                                <li class="flex gap-3"><span>&bull;</span> Recordings must be made in 2026, recorded in one take without cuts.</li>
-                                <li class="flex gap-3"><span>&bull;</span> Upload to YouTube, Vimeo, Dailymotion, Dropbox. No WeTransfer or DVDs.</li>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
+                        <div class="glass-box text-copper">
+                            <h5 class="font-bold uppercase tracking-widest text-[11px] mb-6">Video Standards</h5>
+                            <ul class="space-y-4 text-sm font-light">
+                                <li class="flex gap-3"><span>&bull;</span> All video submissions should not be edited ( audio ) . All edited videos will be automatically disqualified .</li>
+                                <li class="flex gap-3"><span>&bull;</span> Recordings must be made in 2026 and recorded in one take without cuts , also between pieces , like in a live competition ( i.e. a single link ) .</li>
+                                <li class="flex gap-3"><span>&bull;</span> Must be uploaded directly to a streaming service ( YouTube , Vimeo , Dailymotion , Dropbox ) where it can be streamed without downloading . No WeTransfer or DVDs .</li>
                             </ul>
                         </div>
-                        <div class="glass-box">
-                            <h5 class="text-copper font-bold uppercase tracking-widest text-[10px] mb-4">Logistics</h5>
-                            <ul class="space-y-4 text-sm text-copper">
-                                <li class="flex gap-3"><span>&bull;</span> Candidates must ensure links remain active until selection announcement.</li>
-                                <li class="flex gap-3"><span>&bull;</span> Smartphone/Upright piano recordings are accepted and will not be penalised.</li>
-                                <li class="flex gap-3"><span>&bull;</span> Maximum 5 finalists per category. Results announced Nov 10th 2026.</li>
+                        <div class="glass-box text-copper">
+                            <h5 class="font-bold uppercase tracking-widest text-[11px] mb-6">Logistics & Evaluation</h5>
+                            <ul class="space-y-4 text-sm font-light">
+                                <li class="flex gap-3"><span>&bull;</span> Candidates must ensure links remain active until selection announcement . Recordings on upright pianos and smartphones are accepted and will not be penalised .</li>
+                                <li class="flex gap-3"><span>&bull;</span> A maximum of 5 finalists will be selected per category , subject to the discretion of the jury .</li>
+                                <li class="flex gap-3"><span>&bull;</span> Results announced on <strong>November 10th 2026</strong> via email and social media .</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- GENERAL REGULATIONS -->
+                <!-- FEES & PAYMENT -->
+                <div class="mb-32 shadow-box-beige">
+                    <h3 class="serif text-4xl italic text-forest mb-12 border-b border-forest/10 pb-4 text-center">Fees & Payment</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-forest">
+                        <div>
+                            <h5 class="text-copper font-bold uppercase tracking-widest text-xs mb-6">Bank Transfer Details</h5>
+                            <div class="space-y-4 text-sm font-light leading-relaxed">
+                                <p>Please state : <strong>CFIPC 2026 + Full Name + Category</strong></p>
+                                <ul class="pl-4 border-l border-copper/30 space-y-1">
+                                    <li>Account Name : CFIPC</li>
+                                    <li>Bank : BNP Paribas Fortis</li>
+                                    <li>IBAN : BE28 0016 9098 3620</li>
+                                    <li>BIC : GEBABEBB</li>
+                                    <li>Address : Lijsterbessenbomenlaan 6, Kraainem 1950, BELGIUM</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-l border-forest/5 md:pl-12">
+                            <h5 class="text-copper font-bold uppercase tracking-widest text-xs mb-6">PayPal Alternative</h5>
+                            <p class="text-sm font-light mb-6">Pay via PayPal to <strong>office@cfipc.com</strong> .</p>
+                            <div class="bg-forest/5 p-6 border border-forest/10 rounded-sm italic text-xs text-stone-500">
+                                Note : There is a 5€ surcharge for the transfer fee on top of the application fee should you wish to pay using PayPal .
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GENERAL REGULATIONS / RULES -->
                 <div class="mb-32 bg-forest p-12 md:p-24 rounded-sm shadow-2xl relative overflow-hidden">
                     <h3 class="serif text-4xl italic mb-12 text-copper relative z-10 border-b border-copper/20 pb-4">General Regulations</h3>
                     
+                    <!-- KEY DATES BOXES -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 relative z-10">
                         <div class="highlight-box border-copper/50 bg-forest/40">
                             <h5 class="text-[11px] font-bold uppercase tracking-[0.2em] text-copper mb-3">Semifinals (Online) Deadline</h5>
@@ -413,30 +452,29 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-                        <div class="glass-box text-copper">
-                            <p class="font-bold uppercase tracking-widest text-[11px] mb-3">1. Eligibility</p>
-                            <p class="font-light text-sm">Open to all nationalities aged 21 or less at the time of the Finals.</p>
+                    <!-- 18 GENERAL RULES -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6 text-sm text-copper font-light leading-relaxed relative z-10">
+                        <div class="space-y-6">
+                            <p><strong>1.</strong> The 14th César Franck IPC is open to all nationalities aged 21 or less at the time of the Finals ( 18-20 December 2026 ) . Live finals take place at De Lijsterbes , Belgium .</p>
+                            <p><strong>2.</strong> Applicants must complete the online form and upload : CV , high-res photo ( max 2MB ) , passport scan ( candidate & parent ) , proof of payment , program and video link before 1st November 2026 .</p>
+                            <p><strong>3.</strong> Candidacy is only confirmed after we have received the application fee .</p>
+                            <p><strong>4.</strong> A maximum of 5 participants from each category will be selected to perform in the finals , however , the final and exact number of participants selected is subject to the discretion of the jury .</p>
+                            <p><strong>5.</strong> The decision of the jury is final and will not be subjected to reviews or appeals .</p>
+                            <p><strong>6.</strong> The results of the semi-finals will be announced on 10th November 2026 via email and social media .</p>
+                            <p><strong>7.</strong> The application fee is not refundable and the candidates are responsible for any bank/PayPal transfer fees .</p>
+                            <p><strong>8.</strong> The entry in the competition implies the acceptance of the present rules without any reservation .</p>
+                            <p><strong>9.</strong> The competition registration acts as an agreement for all candidates and their parents .</p>
                         </div>
-                        <div class="glass-box text-copper">
-                            <p class="font-bold uppercase tracking-widest text-[11px] mb-3">2. Submission</p>
-                            <p class="font-light text-sm">Submit : CV, High-res photo, Passport scan, Proof of payment, Program, and Video link.</p>
-                        </div>
-                        <div class="glass-box text-copper">
-                            <p class="font-bold uppercase tracking-widest text-[11px] mb-3">3. Jury Integrity</p>
-                            <p class="font-light text-sm">Jury decisions are final. Teacher names are hidden; jury members do not vote for their own students.</p>
-                        </div>
-                        <div class="glass-box text-copper">
-                            <p class="font-bold uppercase tracking-widest text-[11px] mb-3">4. Broadcast Rights</p>
-                            <p class="font-light text-sm">Organizers reserve rights to record/broadcast. Candidates renounce all fees regarding recordings.</p>
-                        </div>
-                        <div class="glass-box text-copper">
-                            <p class="font-bold uppercase tracking-widest text-[11px] mb-3">5. Supervision</p>
-                            <p class="font-light text-sm">Contestants under 18 must be accompanied by a responsible adult at all times.</p>
-                        </div>
-                        <div class="glass-box text-copper">
-                            <p class="font-bold uppercase tracking-widest text-[11px] mb-3">6. Acceptance</p>
-                            <p class="font-light text-sm">Entry implies acceptance of all rules without reservation by candidates and parents.</p>
+                        <div class="space-y-6">
+                            <p><strong>10.</strong> Organizers reserve the right to record all performances during the competition for radio and television broadcasts . Each candidate renounces all rights , fees and claims regarding such recordings .</p>
+                            <p><strong>11.</strong> All contestants under 18 must be accompanied by an adult who will carry full responsibility at all times . If not a parent , a signed permission note is required .</p>
+                            <p><strong>12.</strong> All travel expenses , tickets and visas are to be carried out by the participant . Invitation letters are available upon request for visa applications .</p>
+                            <p><strong>13.</strong> Contestants are responsible for their own accommodation costs . A special deal with a hotel partner will normally be offered to each candidate .</p>
+                            <p><strong>14.</strong> The competition is not responsible for any accidents or incidents involving contestants beyond the standard insurance of the Community Centre De Lijsterbes .</p>
+                            <p><strong>15.</strong> It is advised to check personal insurance for coverage of accidents and incidents outside the competition venue .</p>
+                            <p><strong>16.</strong> The name of the candidate’s teacher/professor will not be printed in the program for the jury .</p>
+                            <p><strong>17.</strong> If a candidate is studying with a member of the jury , this particular jury member will not be allowed to vote for their student .</p>
+                            <p><strong>18.</strong> Rules may be subject to change without notice .</p>
                         </div>
                     </div>
                 </div>
@@ -493,9 +531,7 @@
             }
         }
 
-        window.addEventListener('click', () => {
-            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
-        });
+        window.onclick = () => document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
     </script>
 </body>
 </html>
