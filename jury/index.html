@@ -17,185 +17,202 @@
         }
 
         body { 
-            font-family: 'Outfit' , sans-serif ; 
-            background-color: var(--parchment) ;
-            color: var(--forest) ;
-            -webkit-font-smoothing: antialiased ;
-            overflow-x: hidden ;
+            font-family: 'Outfit', sans-serif; 
+            background-color: var(--parchment);
+            color: var(--forest);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond' , serif ; }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
         
-        .page-section { display: block ; animation: sectionFade 0.6s ease-out ; }
+        .page-section { display: block; animation: sectionFade 0.6s ease-out; }
 
         @keyframes sectionFade {
-            from { opacity: 0 ; transform: translateY(10px) ; }
-            to { opacity: 1 ; transform: translateY(0) ; }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .nav-link {
-            letter-spacing: 0.12em ;
-            font-size: 0.9rem ;
-            font-weight: 700 ;
-            text-transform: uppercase ;
-            color: var(--forest) ;
-            transition: all 0.3s ease ;
-            cursor: pointer ;
-            padding: 1.5rem 0 ;
-            display: flex ;
-            align-items: center ;
-            white-space: nowrap ;
-            text-decoration: none ;
+            letter-spacing: 0.12em;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--forest);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            text-decoration: none;
         }
-        .nav-link:hover { color: var(--copper) ; }
+        .nav-link:hover { color: var(--copper); }
 
-        .dropdown-container { position: relative ; }
+        .dropdown-container { position: relative; }
         .dropdown-menu {
-            position: absolute ;
-            top: 100% ;
-            left: 50% ;
-            transform: translateX(-50%) ;
-            background: var(--parchment) ;
-            border: 1px solid rgba(27, 42, 39, 0.1) ;
-            min-width: 220px ;
-            display: none ;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15) ;
-            z-index: 1000 ;
-            padding: 0.75rem 0 ;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--parchment);
+            border: 1px solid rgba(27, 42, 39, 0.1);
+            min-width: 220px;
+            display: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            z-index: 1000;
+            padding: 0.75rem 0;
         }
 
         @media (min-width: 1024px) {
-            .dropdown-container:hover .dropdown-menu { display: block ; animation: fadeIn 0.3s ease ; }
+            .dropdown-container:hover .dropdown-menu { display: block; animation: fadeIn 0.3s ease; }
         }
         
-        .dropdown-menu.is-visible { display: block !important ; }
+        .dropdown-menu.is-visible { display: block !important; }
 
         @keyframes fadeIn { 
-            from { opacity: 0 ; transform: translate(-50%, 10px) ; } 
-            to { opacity: 1 ; transform: translate(-50%, 0) ; } 
+            from { opacity: 0; transform: translate(-50%, 10px); } 
+            to { opacity: 1; transform: translate(-50%, 0); } 
         }
 
         .dropdown-item {
-            display: block ;
-            padding: 0.8rem 1.5rem ;
-            font-size: 0.85rem ;
-            text-transform: uppercase ;
-            letter-spacing: 0.1em ;
-            color: var(--forest) ;
-            transition: all 0.2s ;
-            text-align: center ;
-            text-decoration: none ;
-            width: 100% ;
+            display: block;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--forest);
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
         }
         .dropdown-item:hover { 
-            background: var(--forest) ; 
-            color: var(--copper) ; 
+            background: var(--forest); 
+            color: var(--copper); 
         }
 
         #mobile-nav-overlay {
-            position: fixed ;
-            inset: 0 ;
-            background: var(--forest) ;
-            z-index: 2000 ;
-            display: none ;
-            flex-direction: column ;
-            padding: 4rem 2rem ;
-            overflow-y: auto ;
-            color: var(--parchment) ;
+            position: fixed;
+            inset: 0;
+            background: var(--forest);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            padding: 4rem 2rem;
+            overflow-y: auto;
+            color: var(--parchment);
         }
-        #mobile-nav-overlay.open { display: flex ; animation: overlayIn 0.4s ease forwards ; }
+        #mobile-nav-overlay.open { display: flex; animation: overlayIn 0.4s ease forwards; }
         
-        @keyframes overlayIn { from { opacity: 0 ; } to { opacity: 1 ; } }
+        @keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
 
-        .mobile-group { margin-bottom: 2.5rem ; }
-        .mobile-label { font-family: 'Cormorant Garamond' , serif ; font-size: 2.2rem ; font-style: italic ; color: var(--copper) ; margin-bottom: 0.5rem ; display: block ; border-bottom: 1px solid rgba(212, 163, 115, 0.2) ; }
-        .mobile-link { display: block ; padding: 0.75rem 0 ; font-size: 1.1rem ; text-transform: uppercase ; letter-spacing: 0.15em ; opacity: 0.8 ; width: 100% ; text-align: left ; background: none ; border: none ; color: inherit ; text-decoration: none ; }
+        .mobile-group { margin-bottom: 2.5rem; }
+        .mobile-label { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-style: italic; color: var(--copper); margin-bottom: 0.5rem; display: block; border-bottom: 1px solid rgba(212, 163, 115, 0.2); }
+        .mobile-link { display: block; padding: 0.75rem 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.8; width: 100%; text-align: left; background: none; border: none; color: inherit; text-decoration: none; }
 
         .brand-logo {
-            text-align: center ;
-            display: flex ;
-            flex-direction: column ;
-            align-items: center ;
-            justify-content: center ;
-            text-decoration: none ;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
         }
         
         .logo-image {
-            height: 100px ;
-            width: auto ;
-            object-fit: contain ;
-            transition: height 0.3s ease ;
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+            transition: height 0.3s ease;
         }
         
         @media (min-width: 768px) {
-            .logo-image { height: 150px ; }
+            .logo-image { height: 150px; }
         }
 
-        .bg-forest { background-color: var(--forest) !important ; }
-        .text-copper { color: var(--copper) !important ; }
+        .bg-forest { background-color: var(--forest) !important; }
+        .text-copper { color: var(--copper) !important; }
 
-        /* Jury Specific Styling */
         .jury-card {
-            background: white ;
-            border: 1px solid rgba(212, 163, 115, 0.1) ;
-            text-align: center ;
-            transition: all 0.3s ease ;
-            height: 100% ;
-            display: flex ;
-            flex-direction: column ;
-            overflow: hidden ;
-            border-radius: 2px ;
-            text-decoration: none ;
+            background: white;
+            border: 1px solid rgba(212, 163, 115, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 2px;
+            text-decoration: none;
         }
         .jury-card:hover {
-            border-color: var(--copper) ;
-            box-shadow: 0 15px 40px rgba(27, 42, 39, 0.08) ;
-            transform: translateY(-4px) ;
+            border-color: var(--copper);
+            box-shadow: 0 15px 40px rgba(27, 42, 39, 0.08);
+            transform: translateY(-4px);
         }
         .jury-info {
-            padding: 1.8rem 1rem ;
-            display: flex ;
-            flex-direction: column ;
-            justify-content: center ;
-            flex-grow: 1 ;
+            padding: 1.8rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
         }
-        .jury-name { font-family: 'Outfit' , sans-serif ; font-size: 1.25rem ; font-weight: 600 ; color: var(--forest) ; margin-bottom: 0.2rem ; }
-        .jury-country { font-family: 'Outfit' , sans-serif ; font-size: 0.7rem ; text-transform: uppercase ; color: var(--copper) ; letter-spacing: 0.15em ; font-weight: 700 ; }
-        .jury-role-label { font-family: 'Cormorant Garamond' , serif ; text-transform: uppercase ; font-size: 0.75rem ; letter-spacing: 0.2em ; color: #999 ; margin-bottom: 0.5rem ; }
+        .jury-name { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--forest); margin-bottom: 0.2rem; }
+        .jury-country { font-family: 'Outfit', sans-serif; font-size: 0.7rem; text-transform: uppercase; color: var(--copper); letter-spacing: 0.15em; font-weight: 700; }
+        .jury-role-label { font-family: 'Cormorant Garamond', serif; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; color: #999; margin-bottom: 0.5rem; }
 
         .jury-image {
-            width: 100% ;
-            aspect-ratio: 1/1 ;
-            object-fit: cover ;
-            background-color: var(--dusty-white) ;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            background-color: var(--dusty-white);
         }
 
         .glass-box {
-            background: rgba(255, 255, 255, 0.03) ;
-            backdrop-filter: blur(8px) ;
-            border: 1px solid rgba(212, 163, 115, 0.2) ;
-            padding: 2.5rem ;
-            height: 100% ;
-            transition: all 0.3s ease ;
-            border-radius: 2px ;
-            text-align: center ;
-            display: flex ;
-            flex-direction: column ;
-            justify-content: center ;
-            text-decoration: none ;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 163, 115, 0.2);
+            padding: 2.5rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
         }
         .glass-box:hover {
-            border-color: var(--copper) ;
-            background: rgba(255, 255, 255, 0.12) ;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2) ;
-            transform: translateY(-4px) ;
+            border-color: var(--copper);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: translateY(-4px);
         }
 
-        /* Semi-finals jury names and country should all be in copper */
         .glass-box .jury-name, 
         .glass-box .jury-country {
-            color: var(--copper) !important ;
+            color: var(--copper) !important;
         }
+
+        .social-circle-footer {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--copper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--copper);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: transparent;
+        }
+        .social-circle-footer:hover {
+            background-color: var(--copper);
+            color: var(--forest);
+        }
+        .social-circle-footer svg { width: 22px; height: 22px; }
     </style>
 </head>
 <body>
@@ -220,7 +237,13 @@
             <span class="mobile-label">Masterclasses</span>
             <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="mobile-link">Winter Masterclass</a>
             <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="mobile-link">Spring Masterclass</a>
-            <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="mobile-link">Summer Masterclass</a>
+            <a href="https://www.masterclass-volodos.com/" class="mobile-link">Volodos Masterclass</a>
+        </div>
+
+        <div class="mobile-group">
+            <span class="mobile-label">Gallery</span>
+            <a href="https://cfipc.github.io/cfipc/media/" class="mobile-link">Media</a>
+            <a href="https://cfipc.github.io/cfipc/gallery/" class="mobile-link">Pictures</a>
         </div>
 
         <div class="mobile-group">
@@ -238,14 +261,13 @@
             <div class="flex justify-between items-center h-32 md:h-48">
                 <div class="flex-1 flex justify-start items-center">
                     <button class="md:hidden flex flex-col items-center justify-center space-y-1 p-2" onclick="toggleMobileMenu()">
-                        <div class="w-6 h-[1.5px] bg-forest"></div>
-                        <div class="w-6 h-[1.5px] bg-forest"></div>
+                        <div class="w-6 h-[1.5px] bg-black"></div>
+                        <div class="w-6 h-[1.5px] bg-black"></div>
                     </button>
 
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <!-- Competition link redirects to home as requested -->
-                            <a href="https://cfipc.github.io/cfipc/" class="nav-link">
+                            <a href="https://cfipc.github.io/cfipc/" class="nav-link" onclick="handleNavClick(event, this)">
                                 Competition 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </a>
@@ -258,22 +280,21 @@
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <!-- Masterclasses link redirects to winter as requested -->
-                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link">
+                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link" onclick="handleNavClick(event, this)">
                                 Masterclasses 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </a>
                             <div class="dropdown-menu">
                                 <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
                                 <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="dropdown-item">Spring Masterclass</a>
-                                <a href="https://cfipc.github.io/cfipc/summer-masterclass/" class="dropdown-item">Summer Masterclass</a>
+                                <a href="https://www.masterclass-volodos.com/" class="dropdown-item">Volodos Masterclass</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <a href="https://cfipc.github.io/cfipc/" class="brand-logo cursor-pointer group px-2">
-                    <img src="https://cfipc.github.io/cfipc/Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none' ; document.getElementById('fallback-logo').style.display='block' ;">
+                <a href="https://cfipc.github.io/cfipc/" class="brand-logo px-2">
+                    <img src="https://cfipc.github.io/cfipc/Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
                     <div id="fallback-logo" class="hidden text-center">
                         <span class="serif italic text-2xl text-copper">CFIPC</span>
                     </div>
@@ -308,7 +329,6 @@
     </nav>
 
     <main class="pt-32 md:pt-48">
-        <!-- SECTION: JURY -->
         <section id="jury" class="page-section py-32 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="text-center mb-24">
@@ -317,14 +337,12 @@
                     <p class="text-stone-400 uppercase tracking-widest text-[11px] mt-6">JURY 2026 TO BE ANNOUNCED SOON !</p>
                 </div>
 
-                <!-- Finals Jury Section -->
                 <div class="mb-24">
                     <div class="flex items-center gap-6 mb-16">
                         <h3 class="serif text-4xl italic text-forest">Finals Jury</h3>
                         <div class="h-[1px] flex-grow bg-forest/5"></div>
                     </div>
                     
-                    <!-- President Card -->
                     <div class="flex justify-center mb-16">
                         <a href="https://olgakern.com" target="_blank" class="jury-card w-full md:w-[420px] border-copper/30">
                             <img src="https://cfipc.github.io/cfipc/Jury%20images/olga.png" class="jury-image" alt="Olga Kern">
@@ -336,7 +354,6 @@
                         </a>
                     </div>
 
-                    <!-- Main Grid -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="jury-card">
                             <img src="https://cfipc.github.io/cfipc/Jury%20images/svetlana.png" class="jury-image" alt="Svetlana Eganian">
@@ -412,7 +429,6 @@
                     </div>
                 </div>
 
-                <!-- Semi-Finals Jury Section -->
                 <div class="bg-forest p-12 md:p-24 rounded-sm shadow-2xl text-copper relative overflow-hidden">
                     <div class="flex items-center gap-6 mb-12">
                         <h3 class="serif text-4xl italic text-copper">Semi-Finals Jury</h3>
@@ -454,10 +470,20 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-forest text-copper pt-32 pb-16 px-8 mt-20">
-        <div class="max-w-[1400px] mx-auto text-center">
-            <p class="text-[9px] uppercase tracking-[0.3em] font-light">&copy; The Music Agency 2026</p>
+    <footer class="bg-[#1B2A27] pt-24 pb-12 px-8">
+        <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-10">
+            <div class="flex gap-6">
+                <a href="https://www.facebook.com/cfipc" target="_blank" class="social-circle-footer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://www.instagram.com/cfipc_official/" target="_blank" class="social-circle-footer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="mailto:office@cfipc.com" class="social-circle-footer" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+            <p class="text-[9px] uppercase tracking-[0.3em] font-light text-copper" style="color: var(--copper) !important; opacity: 1;">&copy; THE MUSIC AGENCY 2026</p>
         </div>
     </footer>
 
@@ -466,9 +492,16 @@
 
         function handleNavClick(event, btn) {
             const menu = btn.nextElementSibling;
-            const wasVisible = menu.classList.contains('is-visible');
-            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
-            if (!wasVisible) menu.classList.add('is-visible');
+            if (!menu || !menu.classList.contains('dropdown-menu')) return;
+            const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            if (isTouch) {
+                const wasVisible = menu.classList.contains('is-visible');
+                document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('is-visible'));
+                if (!wasVisible) {
+                    event.preventDefault(); 
+                    menu.classList.add('is-visible');
+                }
+            }
             event.stopPropagation();
         }
 
@@ -476,11 +509,11 @@
             const overlay = document.getElementById('mobile-nav-overlay');
             if (overlay.classList.contains('open')) {
                 overlay.classList.remove('open');
-                setTimeout(() => { overlay.style.display = 'none' ; }, 400);
+                setTimeout(() => { overlay.style.display = 'none'; }, 400);
                 document.body.style.overflow = 'auto';
             } else {
                 overlay.style.display = 'flex';
-                setTimeout(() => { overlay.classList.add('open') ; }, 10);
+                setTimeout(() => { overlay.classList.add('open'); }, 10);
                 document.body.style.overflow = 'hidden';
             }
         }
