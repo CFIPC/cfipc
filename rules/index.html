@@ -133,7 +133,7 @@
             .logo-image { height: 150px; }
         }
 
-        .bg-forest { background-color: var(--forest); }
+        .bg-forest { background-color: var(--forest) !important; }
         .text-copper { color: var(--copper) !important; }
         .btn-copper { background-color: var(--copper); color: white; transition: all 0.3s ease; }
         .btn-copper:hover { background-color: var(--forest); }
@@ -172,6 +172,25 @@
             transition: all 0.3s ease;
             border-radius: 2px;
         }
+
+        .social-circle-footer {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--copper);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--copper);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: transparent;
+        }
+        .social-circle-footer:hover {
+            background-color: var(--copper);
+            color: var(--forest);
+        }
+        .social-circle-footer svg { width: 22px; height: 22px; }
     </style>
 </head>
 <body>
@@ -425,7 +444,8 @@
         </section>
     </main>
 
-    <footer class="bg-forest pt-32 pb-16 px-8 mt-20">
+    <!-- FOOTER -->
+    <footer class="bg-[#1B2A27] pt-24 pb-12 px-8">
         <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-10">
             <div class="flex gap-6">
                 <a href="https://www.facebook.com/cfipc" target="_blank" class="social-circle-footer" aria-label="Facebook">
