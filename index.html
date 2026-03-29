@@ -3,10 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>César Franck International Piano Competition | CFIPC</title>
+    
+    <!-- PRIMARY SEO -->
+    <title>César Franck International Piano Competition | CFIPC Brussels</title>
+    <meta name="description" content="With 70 participants originating from more than 25 different countries and an internationally acclaimed jury in 2024, the César Franck has already established itself as a leading competition for young musicians worldwide.">
+    <link rel="canonical" href="https://www.cfipc.com/">
+    <meta name="robots" content="index, follow">
+
+    <!-- SOCIAL MEDIA (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cfipc.com/">
+    <meta property="og:title" content="César Franck International Piano Competition | CFIPC">
+    <meta property="og:description" content="Leading international piano competition in Brussels for young musicians. Join participants from 25+ countries. 14th Edition: Dec 2026.">
+    <meta property="og:image" content="https://www.cfipc.com/home.png">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="César Franck International Piano Competition">
+    <meta name="twitter:description" content="Prestigious international piano competition and masterclasses in Brussels, Belgium.">
+    <meta name="twitter:image" content="https://www.cfipc.com/home.png">
+
+    <!-- SCHEMA MARKUP (Tells Google exactly what this is) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicEvent",
+      "name": "14th César Franck International Piano Competition",
+      "startDate": "2026-12-18",
+      "endDate": "2026-12-20",
+      "location": {
+        "@type": "Place",
+        "name": "GC De Lijsterbes",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Lijsterbessenbomenlaan 6",
+          "addressLocality": "Kraainem",
+          "postalCode": "1950",
+          "addressCountry": "BE"
+        }
+      },
+      "description": "International piano competition for young talented musicians worldwide.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "CFIPC",
+        "url": "https://www.cfipc.com"
+      }
+    }
+    </script>
+
+    <!-- SCRIPTS & FONTS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600;1,700&family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --forest: #1B2A27;
@@ -162,32 +211,32 @@
     <div id="mobile-nav-overlay">
         <div class="flex justify-between items-center mb-12">
             <span class="serif italic text-2xl text-parchment">Menu</span>
-            <button onclick="toggleMobileMenu()" class="text-copper text-4xl leading-none">&times;</button>
+            <button onclick="toggleMobileMenu()" class="text-copper text-4xl leading-none" aria-label="Close menu">&times;</button>
         </div>
 
         <div class="mobile-group">
             <span class="mobile-label">Competition</span>
-            <a href="https://cfipc.github.io/cfipc/rules/" class="mobile-link">Rules</a>
-            <a href="https://cfipc.github.io/cfipc/prizes/" class="mobile-link">Prizes</a>
-            <a href="https://cfipc.github.io/cfipc/application/" class="mobile-link">Application</a>
-            <a href="https://cfipc.github.io/cfipc/jury/" class="mobile-link">Jury</a>
-            <a href="https://cfipc.github.io/cfipc/laureates/" class="mobile-link">Laureates</a>
+            <a href="/rules.html" class="mobile-link">Rules</a>
+            <a href="/prizes.html" class="mobile-link">Prizes</a>
+            <a href="/application.html" class="mobile-link">Application</a>
+            <a href="/jury.html" class="mobile-link">Jury</a>
+            <a href="/laureates.html" class="mobile-link">Laureates</a>
         </div>
 
         <div class="mobile-group">
             <span class="mobile-label">Masterclasses</span>
-            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="mobile-link">Winter Masterclass</a>
-            <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="mobile-link">Spring Masterclass</a>
-            <a href="https://www.masterclass-volodos.com/" class="mobile-link">Volodos Masterclass</a>
+            <a href="/winter-masterclass.html" class="mobile-link">Winter Masterclass</a>
+            <a href="/spring-masterclass.html" class="mobile-link">Spring Masterclass</a>
+            <a href="https://www.masterclass-volodos.com/" class="mobile-link" target="_blank">Volodos Masterclass</a>
         </div>
 
         <div class="mobile-group">
             <span class="mobile-label">About</span>
-            <a href="https://cfipc.github.io/cfipc/contact/" class="mobile-link">Contact Us</a>
-            <a href="https://cfipc.github.io/cfipc/about/" class="mobile-link">Legacy</a>
+            <a href="/contact.html" class="mobile-link">Contact Us</a>
+            <a href="/about.html" class="mobile-link">Legacy</a>
         </div>
 
-        <a href="https://cfipc.github.io/cfipc/" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold text-decoration-none">Home</a>
+        <a href="/" class="mt-8 text-copper text-sm uppercase tracking-[0.3em] font-bold text-decoration-none">Home</a>
     </div>
 
     <!-- Main Navigation Header -->
@@ -195,41 +244,41 @@
         <div class="max-w-[1600px] mx-auto px-4 md:px-8">
             <div class="flex justify-between items-center h-32 md:h-48">
                 <div class="flex-1 flex justify-start items-center">
-                    <button class="md:hidden flex flex-col items-center justify-center space-y-1 p-2" onclick="toggleMobileMenu()">
+                    <button class="md:hidden flex flex-col items-center justify-center space-y-1 p-2" onclick="toggleMobileMenu()" aria-label="Open menu">
                         <div class="w-6 h-[1.5px] bg-black"></div>
                         <div class="w-6 h-[1.5px] bg-black"></div>
                     </button>
 
                     <div class="hidden md:flex items-center space-x-10 lg:space-x-12">
                         <div class="dropdown-container">
-                            <a href="https://cfipc.github.io/cfipc/" class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="/" class="nav-link" onclick="handleNavClick(event, this)">
                                 Competition 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </a>
                             <div class="dropdown-menu">
-                                <a href="https://cfipc.github.io/cfipc/rules/" class="dropdown-item">Rules</a>
-                                <a href="https://cfipc.github.io/cfipc/prizes/" class="dropdown-item">Prizes</a>
-                                <a href="https://cfipc.github.io/cfipc/application/" class="dropdown-item">Application</a>
-                                <a href="https://cfipc.github.io/cfipc/jury/" class="dropdown-item">Jury</a>
-                                <a href="https://cfipc.github.io/cfipc/laureates/" class="dropdown-item">Laureates</a>
+                                <a href="/rules.html" class="dropdown-item">Rules</a>
+                                <a href="/prizes.html" class="dropdown-item">Prizes</a>
+                                <a href="/application.html" class="dropdown-item">Application</a>
+                                <a href="/jury.html" class="dropdown-item">Jury</a>
+                                <a href="/laureates.html" class="dropdown-item">Laureates</a>
                             </div>
                         </div>
                         <div class="dropdown-container">
-                            <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="nav-link" onclick="handleNavClick(event, this)">
+                            <a href="/winter-masterclass.html" class="nav-link" onclick="handleNavClick(event, this)">
                                 Masterclasses 
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </a>
                             <div class="dropdown-menu">
-                                <a href="https://cfipc.github.io/cfipc/winter-masterclass/" class="dropdown-item">Winter Masterclass</a>
-                                <a href="https://cfipc.github.io/cfipc/spring-masterclass/" class="dropdown-item">Spring Masterclass</a>
-                                <a href="https://www.masterclass-volodos.com/" class="dropdown-item">Volodos Masterclass</a>
+                                <a href="/winter-masterclass.html" class="dropdown-item">Winter Masterclass</a>
+                                <a href="/spring-masterclass.html" class="dropdown-item">Spring Masterclass</a>
+                                <a href="https://www.masterclass-volodos.com/" class="dropdown-item" target="_blank">Volodos Masterclass</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <a href="https://cfipc.github.io/cfipc/" class="brand-logo px-2">
-                    <img src="https://cfipc.github.io/cfipc/Logo26.png" alt="CFIPC Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
+                <a href="/" class="brand-logo px-2">
+                    <img src="/Logo26.png" alt="César Franck International Piano Competition Logo" class="logo-image" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='block';">
                     <div id="fallback-logo" class="hidden text-center">
                         <span class="serif italic text-2xl text-copper">CFIPC</span>
                     </div>
@@ -243,8 +292,8 @@
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </a>
                             <div class="dropdown-menu">
-                                <a href="https://cfipc.github.io/cfipc/contact/" class="dropdown-item">Contact Us</a>
-                                <a href="https://cfipc.github.io/cfipc/about/" class="dropdown-item">Legacy</a>
+                                <a href="/contact.html" class="dropdown-item">Contact Us</a>
+                                <a href="/about.html" class="dropdown-item">Legacy</a>
                             </div>
                         </div>
                         <div class="dropdown-container">
@@ -253,8 +302,8 @@
                                 <svg class="w-2.5 h-2.5 ml-1 opacity-40" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
                             </a>
                             <div class="dropdown-menu">
-                                <a href="https://cfipc.github.io/cfipc/media/" class="dropdown-item">Media</a>
-                                <a href="https://cfipc.github.io/cfipc/gallery/" class="dropdown-item">Pictures</a>
+                                <a href="/media.html" class="dropdown-item">Media</a>
+                                <a href="/gallery.html" class="dropdown-item">Pictures</a>
                             </div>
                         </div>
                     </div>
@@ -265,9 +314,10 @@
 
     <main class="pt-32 md:pt-48">
         <section id="home">
+            <!-- Hero Section -->
             <div class="relative min-h-[85vh] flex items-center bg-forest overflow-hidden">
                 <div class="absolute inset-0 opacity-65">
-                    <img src="https://cfipc.github.io/cfipc/home.png" class="w-full h-full object-cover" alt="Competition Home" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">
+                    <img src="/home.png" class="w-full h-full object-cover" alt="Performance at César Franck International Piano Competition" onerror="this.src='https://images.unsplash.com/photo-1520527053377-4710dbf6c0fa?q=80&w=2070'">
                 </div>
                 <div class="max-w-[1400px] mx-auto px-8 relative z-10 w-full">
                     <div class="max-w-5xl">
@@ -278,7 +328,7 @@
                             14th Edition | 18-20 December 2026
                         </p>
                         <div class="flex flex-col md:flex-row items-center gap-10">
-                            <a href="https://cfipc.github.io/cfipc/application/" class="btn-copper px-12 py-6 text-sm md:text-base uppercase font-bold tracking-[0.3em] rounded-sm hover:opacity-90 transition w-full md:w-auto text-center">Apply Now</a>
+                            <a href="/application.html" class="btn-copper px-12 py-6 text-sm md:text-base uppercase font-bold tracking-[0.3em] rounded-sm hover:opacity-90 transition w-full md:w-auto text-center">Apply Now</a>
                             <p class="text-copper text-xl md:text-2xl font-bold italic serif leading-relaxed max-w-lg text-center md:text-left [text-shadow:_1px_1px_1px_#000,-1px_-1px_1px_#000,1px_-1px_1px_#000,-1px_1px_1px_#000]">
                                 Honoring the legacy of César Franck. Providing an international stage for the next generation of musical talent in Brussels.
                             </p>
@@ -287,6 +337,7 @@
                 </div>
             </div>
 
+            <!-- Mission Section -->
             <div class="py-32 px-8 bg-[#F2F0E9]">
                 <div class="max-w-[1000px] mx-auto">
                     <div class="text-center mb-16">
@@ -307,6 +358,7 @@
                 </div>
             </div>
 
+            <!-- Venue Section -->
             <div class="py-32 px-8 bg-[#1B2A27]">
                 <div class="max-w-[1400px] mx-auto">
                     <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
@@ -327,17 +379,18 @@
                             </div>
                         </div>
                         <div class="w-full lg:w-[640px] aspect-[16/9] bg-stone-800 shadow-2xl overflow-hidden rounded-sm relative grayscale hover:grayscale-0 transition-all duration-700 border border-copper/20 flex-shrink-0">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.315551973137!2d4.462126752425898!3d50.86235767622139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3dc605379603f%3A0x3e2d4b260549ea02!2sGC%20de%20Lijsterbes!5e0!3m2!1sen!2sbe!4v1774342012257!5m2!1sen!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe title="GC De Lijsterbes Map Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.315551973137!2d4.462126752425898!3d50.86235767622139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3dc605379603f%3A0x3e2d4b260549ea02!2sGC%20de%20Lijsterbes!5e0!3m2!1sen!2sbe!4v1774342012257!5m2!1sen!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Partners Section -->
             <div class="py-24 px-8 border-t border-forest/5 bg-white">
                 <div class="max-w-[1400px] mx-auto text-center">
                     <h4 class="text-stone-400 uppercase tracking-[0.4em] text-[8px] font-bold mb-12">Our Partners</h4>
                     <div class="flex justify-center items-center">
-                        <img src="https://cfipc.github.io/cfipc/partners.png" alt="CFIPC Partners" class="max-w-full h-auto opacity-70 hover:opacity-100 transition duration-700" onerror="this.src='https://via.placeholder.com/1200x200?text=Partners+Image+Logo+Strip'">
+                        <img src="/partners.png" alt="Official Partners of César Franck International Piano Competition" class="max-w-full h-auto opacity-70 hover:opacity-100 transition duration-700" onerror="this.src='https://via.placeholder.com/1200x200?text=Partners+Image+Logo+Strip'">
                     </div>
                 </div>
             </div>
@@ -348,13 +401,13 @@
     <footer class="bg-[#1B2A27] pt-24 pb-12 px-8">
         <div class="max-w-[1400px] mx-auto flex flex-col items-center gap-10">
             <div class="flex gap-6">
-                <a href="https://www.facebook.com/cfipc" target="_blank" class="social-circle-footer" aria-label="Facebook">
+                <a href="https://www.facebook.com/cfipc" target="_blank" rel="noopener" class="social-circle-footer" aria-label="Visit CFIPC on Facebook">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                 </a>
-                <a href="https://www.instagram.com/cfipc_official/" target="_blank" class="social-circle-footer" aria-label="Instagram">
+                <a href="https://www.instagram.com/cfipc_official/" target="_blank" rel="noopener" class="social-circle-footer" aria-label="Visit CFIPC on Instagram">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 </a>
-                <a href="mailto:office@cfipc.com" class="social-circle-footer" aria-label="Email">
+                <a href="mailto:office@cfipc.com" class="social-circle-footer" aria-label="Email CFIPC">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </a>
             </div>
